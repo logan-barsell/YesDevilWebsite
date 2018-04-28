@@ -1,0 +1,321 @@
+html, body {
+	font-family: 'Sancreek';
+	font-size: 22px;
+}
+
+.comingsoon {
+	font-size: 22px;
+	text-align: center;
+}
+
+.yesdevil {
+	font-size: 30px;
+}
+
+nav {
+	font-size: 21px;
+}
+
+.nav-item:hover {
+	text-shadow: 1px 1px crimson;
+}
+
+.navbar-nav {
+	width: 100%;
+}
+
+.sidebar {
+	right: 0;
+	z-index: 2;
+	display: inline-grid;
+	margin-top: 46px;
+}
+
+@media only screen and (max-width: 617px) {
+    .sidebar {
+    	display: none;
+    }
+}
+
+.socmed.sidebar img {
+	width: 55px;
+	margin-top: 4px;
+	background-color: white;
+	border-radius: 13px;
+	box-shadow: 0px 0px 13px white;
+}
+
+.socmed img:hover {
+	background-color: red;
+}
+
+
+.signup {
+	font-size: 16px;
+	font-weight: italic;
+}
+
+
+
+.background-pic img {
+	max-width: 100%;
+}
+
+#upcomingshows {
+	margin: 13px 33px 33px 33px;
+}
+
+#upcomingshows h5 {
+	margin: 27px 0px;
+}
+
+.showad {
+	margin-bottom: 20px;
+	max-width: 366px;
+}
+
+.showad img {
+	border: 3px solid black;
+    border-radius: 7px;
+}
+
+#upcomingshows .card {
+	font-size: 20px;
+	min-width: 288px;
+}
+
+.showinfo {
+	padding: 0px;
+}
+
+.showinfo .card {
+	min-width: 288px;
+	height: inherit;
+	border: none;
+}
+
+.showinfo .card-title {
+	color: darkred;
+	text-shadow: 1px 1px 2px black;
+}
+
+.showinfo button {
+	height: 0px;
+}
+
+.showinfo button span {
+	float: right;
+	margin-right: 10px;
+}
+
+.showinfo .list-group-item span {
+	color: grey;
+	text-shadow: 1px 1px 0px black;
+}
+
+.showinfo .text-center {
+	padding-top: 0px;
+}
+
+
+#upcomingshows .card .card-title {
+	font-size: 27px;
+}
+
+#upcomingshows .card .card-link {
+	font-size: 23px;
+}
+
+.text-center.gettix {
+	padding: 6px 0px;
+}
+
+#music h5 {
+	margin: 16px;
+}
+
+#music .row {
+	padding-bottom: 33px;
+    border-bottom: 1px solid black;
+
+}
+
+#music .col {
+	max-width: 690px;
+    max-height: 388px;
+}
+
+#music ul {
+	max-width: 100%;
+}
+
+#music .list-group {
+	margin: 33px 0px;
+}
+
+.buyalbum {
+	margin: 0px 13px;	
+}
+
+.itunes {
+	width: 106px;
+}
+
+#merch {
+	font-size: 18px;
+}
+
+#merch h5 {
+	margin-top: 24px;
+}
+
+#merch .col-sm {
+	margin: 13px 0px;
+}
+
+#merch .card {
+	max-width: 366px;
+	margin: auto;
+}
+
+#merch .card-img-top {
+	max-height: 366px;
+}
+
+#merch .card-title {
+	font-size: 27px;
+}
+
+#merch .card-body {
+	padding-top: 0px;
+}
+
+#merch .card-text {
+	color: #606060;
+}
+
+#merch .card-text span {
+	color: green;
+}
+
+.ghost {
+	display: none;
+}
+
+#aboutus h5 {
+	margin-top: 18px;
+}
+
+.aboutuspic{
+	max-width: 90%;
+	height: 366px;
+	border: 2px solid black;
+}
+
+#aboutus p {
+	text-indent: 13%;
+	margin: 20px;
+	font-style: italic;
+}
+
+#aboutus p span {
+	font-size: 27px;
+	
+}
+
+#contact .jumbotron {
+	margin-top: 33px;
+}
+
+.socmed.contact img{
+	width: 55px;
+	margin-right: 5px;
+	margin-bottom: 13px;
+	border-radius: 13px;
+	background-color: white;
+}
+
+.socmed.contact img:hover {
+ background-color: red;
+}
+
+#contact .sendmsg {
+	margin: auto;
+}
+
+.jumbotron p img {
+	height: 33px;
+}
+
+#fblike {
+	margin-top: 24px;
+}
+
+#cart .modal-footer {
+	padding: 8px;
+}
+
+#cart img {
+	width: 187px;
+}
+
+.emptymsg {
+	text-align: center;
+}
+
+#cart .item-name {
+	text-align: center;
+}
+
+.item-cost {
+	color: green;
+}
+
+.total-cost span {
+	color: green;
+}
+
+.oi-trash:hover {
+	text-shadow: red 1px 1px;
+}
+
+select.form-control:not([size]):not([multiple]) {
+	height: 33px;
+}
+
+a {
+	color: crimson;
+}
+
+a:hover {
+	color: black;
+}
+
+footer a {
+	color: grey;
+	text-shadow: 1px 1px 0px black;
+}
+
+.footer-copyright a {
+	color: darkred;
+}
+
+a.disabled {
+	color: darkgrey;
+	pointer-events: none;
+}
+
+a.disabled:hover {
+	color: darkgray;
+}
+
+.red {
+	color: darkred;
+}
+
+.tempbutton {
+	margin: auto;
+}
+
+.form-control:focus{border-color: darkred;  box-shadow: none; -webkit-box-shadow: none;} 
+.has-error .form-control:focus{box-shadow: none; -webkit-box-shadow: none;}
