@@ -212,7 +212,7 @@ nav {
 	border: 2px solid black;
 }
 
-#aboutus p {
+.bio p {
 	text-indent: 13%;
 	margin: 20px;
 	font-style: italic;
@@ -222,6 +222,19 @@ nav {
 	font-size: 27px;
 	
 }
+
+.members h5 {
+	text-align: center;
+}
+
+.members img {
+	max-width: 100%;
+	padding-bottom: 27px;
+}
+ .members p {
+ 	margin: auto;
+ 	padding-bottom: 33px;
+ }
 
 #contact .jumbotron {
 	margin-top: 33px;
