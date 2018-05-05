@@ -227,9 +227,14 @@ nav {
 	text-align: center;
 }
 
+.members .row {
+	padding-top: 27px;
+}
+
 .members img {
 	max-width: 100%;
 	padding-bottom: 27px;
+	
 }
  .members p {
  	margin: auto;
