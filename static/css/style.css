@@ -109,8 +109,8 @@ nav {
 }
 
 .showinfo .list-group-item span {
-	color: grey;
-	text-shadow: 1px 1px 0px black;
+	color: #E8E8E8;
+	text-shadow: 0px 0px 2px black;
 }
 
 .showinfo .text-center {
@@ -130,7 +130,7 @@ nav {
 	padding: 6px 0px;
 }
 
-#music h5 {
+h5 {
 	margin: 16px;
 }
 
@@ -142,7 +142,14 @@ nav {
 
 #music .col {
 	max-width: 690px;
+
+}
+.musicvid {
     max-height: 388px;
+}
+
+#music .nav-link.active {
+	color: black;
 }
 
 #music ul {
@@ -153,8 +160,21 @@ nav {
 	margin: 33px 0px;
 }
 
+#lyrics li {
+	text-align: center;
+	font-size: 20px;
+}
+
+#lyrics h5 {
+	text-shadow: 1px 1px .5px darkred;
+}
+
+.credits {
+	font-size: 17px;
+}
+
 .buyalbum {
-	margin: 0px 13px;	
+	margin: 0px 13px 27px 13px;	
 }
 
 .itunes {
@@ -171,6 +191,10 @@ nav {
 
 #merch .col-sm {
 	margin: 13px 0px;
+}
+
+#cart .list-group-item {
+	border: none;
 }
 
 #merch .card {
@@ -194,12 +218,51 @@ nav {
 	color: #606060;
 }
 
-#merch .card-text span {
+.price {
 	color: green;
 }
 
 .ghost {
 	display: none;
+}
+
+#blog .video {
+	margin: 13px auto;
+	width: 66%;
+}
+
+.blog-post .date {
+	padding-left: 6%;
+}
+
+.blog-post .description {
+	padding: 0px 6%;
+	font-size: 18px;
+}
+
+@media only screen and (max-width: 992px) {
+    #blog .video{
+    	width: 90%;
+    }
+}
+
+.seemore {
+	display: flex;
+}
+
+#blog button {
+	margin: 13px auto;
+}
+
+.yt-api-cont {
+	width: 103px;
+	margin: auto;
+	height: 24px;
+	margin-bottom: 7px;
+}
+
+.description {
+	text-align: center;
 }
 
 #aboutus h5 {
@@ -241,6 +304,23 @@ nav {
  	padding-bottom: 33px;
  }
 
+ .followme {
+ 	height: 77px;
+ 	width: 200px;
+ 	margin: auto;
+ 	cursor: pointer;
+ }
+
+.ind-bio {
+	height: 211px;
+	margin: auto;
+
+}
+
+.ind-bio a {
+	margin: auto;
+}
+
 #contact .jumbotron {
 	margin-top: 33px;
 }
@@ -273,8 +353,20 @@ nav {
 	padding: 8px;
 }
 
-#cart img {
+.item-options {
+	margin: auto;
+}
+
+.item-options .col-auto{
+	margin: auto;
+}
+
+#cart .item-image {
 	width: 187px;
+}
+
+.item-options .col-auto .form-group {
+	margin: auto;
 }
 
 .emptymsg {
@@ -289,13 +381,31 @@ nav {
 	color: green;
 }
 
+.cart-button img {
+	width: 27px;
+}
+
+.total-cost {
+	font-size: 20px;
+}
+
 .total-cost span {
 	color: green;
 }
 
-.oi-trash:hover {
-	text-shadow: red 1px 1px;
+.total {
+	font-size: 22px
 }
+
+.trash img {
+	cursor: pointer;
+	transition: transform .2s;
+}
+
+.trash img:hover {
+	 transform: scale(1.15);
+}
+
 
 select.form-control:not([size]):not([multiple]) {
 	height: 33px;
