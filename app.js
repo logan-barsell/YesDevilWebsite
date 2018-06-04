@@ -1,50 +1,50 @@
 
-// 	// Requires the main express library
-// const express = require('express'),
+	// Requires the main express library
+const express = require('express'),
 	
-// 	path = require('path')
-// 	// Creates app from the library
-// 	app = express (),
-// 	// Creates a session middleware for making cookie settings
-// 	session = require('express-session'),
-// 	// enables fs module for file operations
-// 	fs = require('fs'),
-// 	// extracts data from request stream and exposes it on req.body
-// 	bodyParser = require('body-parser'),
-// 	// Enables hashing of passwords
-// 	passwordHash = require('password-hash'),
-// 	// Accesses Postgres server
-// 	pg = require('pg')
+	path = require('path')
+	// Creates app from the library
+	app = express (),
+	// Creates a session middleware for making cookie settings
+	session = require('express-session'),
+	// enables fs module for file operations
+	fs = require('fs'),
+	// extracts data from request stream and exposes it on req.body
+	bodyParser = require('body-parser'),
+	// Enables hashing of passwords
+	passwordHash = require('password-hash'),
+	// Accesses Postgres server
+	pg = require('pg')
 
 
-// // app.set('views', __dirname+'/views')
-//    app.use('/', express.static(path.join(
-// 		__dirname+"/public")))
+// app.set('views', __dirname+'/views')
+   app.use('/', express.static(path.join(
+		__dirname+"/public")))
 
-// 	.use(session({
-// 	  secret: 'secure as fuck',
-// 	  saveUninitialized: false,
-// 	  resave: false,
-// 	  cookie: {
-// 	  	secure: false,
-// 	  	maxAge: 1000 * 60 * 60 * 60 * 60
-// 	   }
-// 	}))
+	.use(session({
+	  secret: 'secure as fuck',
+	  saveUninitialized: false,
+	  resave: false,
+	  cookie: {
+	  	secure: false,
+	  	maxAge: 1000 * 60 * 60 * 60 * 60
+	   }
+	}))
 
-// 	// Middleware that only parses urlencoded bodies
-// 	.use(bodyParser.urlencoded({extended:true}))
+	// Middleware that only parses urlencoded bodies
+	.use(bodyParser.urlencoded({extended:true}))
 
-// 	.use(express.json())
-// 	.use(express.urlencoded({extended:true}))
+	.use(express.json())
+	.use(express.urlencoded({extended:true}))
 
 	
-// 	// Serves static files
-// 	.use('/static', express.static(__dirname+"/static"))
+	// Serves static files
+	.use('/static', express.static(__dirname+"/static"))
 
-// 	.use('/api', require('./routes/api').route)
+	.use('/api', require('./routes/api').route)
 
 
 
-// app.listen(3000, f=> {
-// console.log('Server Running!')
-// })
+app.listen(3000, f=> {
+console.log('Server Running!')
+})
