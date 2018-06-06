@@ -2,6 +2,8 @@
 	// Requires the main express library
 const express = require('express'),
 	
+	http = require('http')
+
 	path = require('path')
 	// Creates app from the library
 	app = express (),
@@ -44,7 +46,8 @@ const express = require('express'),
 	.use('/api', require('./routes/api').route)
 
 
+http.createServer(app).listen(8080, 'localhost')
 
-app.listen(3000, f=> {
-console.log('Server Running!')
-})
+// app.listen(8080, f=> {
+// console.log('Server Running!')
+// })
