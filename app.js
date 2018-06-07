@@ -46,7 +46,7 @@ const express = require('express'),
 	.use('/api', require('./routes/api').route)
 
 
-http.createServer(app).listen(8080, '2601:644:8500:393b:142d:da81:b7b4:dabf')
+http.createServer(app).listen(8080, '165.227.31.234')
 
 // app.listen(8080, f=> {
 // console.log('Server Running!')
