@@ -46,4 +46,4 @@ const express = require('express'),
 	.use('/api', require('./routes/api').route)
 
 
-http.createServer(app).listen(8080, 'yesdevil.com')
+http.createServer(app).listen(8080, 'localhost')

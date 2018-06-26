@@ -210,13 +210,15 @@ $(document).ready( f => {
 	}
 
 
+
 	var products = []
 
+	var count = 0
 
 
-	$('.product a').click( e => {
+	$('.product a').click( e => {	
 
-	
+		var count = Number($('.cart-button span').html())
 
 		var cartItems = $('#cart-items')
 
@@ -243,8 +245,6 @@ $(document).ready( f => {
 		} 
 
 		var product = new Product(itemImg, itemName, itemPrice)
-	
-		// products.push(new Product(itemImg, itemName, itemPrice))
 
 		console.log(products)
 
@@ -266,18 +266,25 @@ $(document).ready( f => {
 
 
 
+		count += 1
+
+		$('.cart-button span').html(count)
+
+		deleteItem(product, count)
+
 
 
 	})
 
-	$('.trash img').click( e => {
+
+	var deleteItem = (product, count) => {
+
+		$('.trash img').click( e => {
 
 			var cartItem = $(e.target).parent().parent().parent().parent()
-			console.log(cartItem)
 			cartItem.remove()
 
 			var items = $('#cart .list-group').children().length
-			console.log(items)
 
 			if (items > 0) {
 				$('.emptymsg').hide()
@@ -289,8 +296,8 @@ $(document).ready( f => {
 
 			 
 			for (var i = products.length - 1; i >= 0; --i) {
-				console.log(itemName)
-			    if (products[i].name == itemName) {
+				console.log(product)
+			    if (products[i].name == product.name) {
 			        products.splice(i,1);
 			    }
 			}
@@ -301,10 +308,77 @@ $(document).ready( f => {
 
 			$('.total span').html(total)
 
+			count -= 1
+			console.log(count)
+			$('.cart-button span').html(count)
+
 		})
+	}
+
+	$('#breadcrumb').hide()
+	$('#personal-info').hide()
+	$('#shipping-info').hide()
+	$('#billing-info').hide()
+	$('#confirmation').hide()
+	$('#confirm').hide()
+	$('#cart .container').hide()
+
+	$('#section-1').submit( e => {
+		e.preventDefault()
+		if (!$('#section-1 .checkout').hasClass('disabled')){
+			$('#section-1').hide()
+			$('#personal-info').show()
+			$('#breadcrumb').show()
+			$('#cart .container.orderInfo').show()
+		}
+	})
+
+	$('#personal-info .previous').click( e => {
+		e.preventDefault()
+		$('#personal-info').hide()
+		$('#section-1').show()
+		$('#breadcrumb').hide()
+		$('#cart .container.orderInfo').hide()
+	})
+
+	$('#personal-info').submit( e => {
+		e.preventDefault()
+		$('#personal-info').hide()
+		$('#shipping-info').show()
+	})
+
+	$('#shipping-info').submit( e => {
+		e.preventDefault()
+		$('#shipping-info').hide()
+		$('#billing-info').show()
+	})
+
+	$('#shipping-info .previous').click( f => {
+		$('#shipping-info').hide()
+		$('#personal-info').show()
+	})
+
+	$('#billing-info').submit( f => {
+		$('#billing-info').hide()
+		$('#breadcrumb').hide()
+		$('#confirmation').show()
+		$('#confirm').show()
+	})
+
+	$('#billing-info .previous').click( f => {
+		$('#billing-info').hide()
+		$('#shipping-info').show()
+	})
+
+	$('#confirmation .previous').click( f => {
+		$('#confirmation').hide()
+		$('#confirm').hide()
+		$('#billing-info').show()
+		$('#breadcrumb').show()
+	})
 
 
-
+	$('.album').hide()
 
 	// function fetchProducts (done) {
 	// 	$.get('/api/products', data => {

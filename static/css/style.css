@@ -137,7 +137,10 @@ h5 {
 #music .row {
 	padding-bottom: 33px;
     border-bottom: 1px solid black;
+}
 
+#music .row.album {
+	border-bottom: none;
 }
 
 #music .col {
@@ -406,10 +409,52 @@ h5 {
 	 transform: scale(1.15);
 }
 
+.breadcrumb {
+	border-radius: 0px;
+	margin: 0px;
+}
+
+#confirmation .col {
+	text-align: center;
+}
+
+.nextPrev {
+	margin: auto;
+	width: fit-content;
+}
+
+#cart .container {
+	margin: 13px 0px;
+}
+
 
 select.form-control:not([size]):not([multiple]) {
 	height: 33px;
 }
+
+#inputState {
+	height: 52px;
+}
+
+#cardType {
+	height: 52px;
+}
+
+#billing-info .input-group {
+	margin-bottom: 21px;
+}
+
+#billing-info .input-group .form-group {
+	margin: 0px;
+	margin-bottom: 0px;
+}
+
+#billing-info .input-group .form-group select {
+	height: 52px;
+}
+
+
+
 
 a {
 	color: crimson;
