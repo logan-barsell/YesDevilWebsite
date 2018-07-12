@@ -75,21 +75,29 @@ $(document).ready( f => {
 	$(window).resize( f => {
 		var windoww = $(window).width() 
 
-		if (windoww <= 1200) {
-			$('.ghost').show()
+		// if (windoww <= 1200) {
+		// 	$('.ghost').show()
 
+		// }
+		// if (windoww <= 992) {
+		// 	$('.ghost').hide()
+
+		// }
+		// if (windoww > 991) {
+		// 	$('.ghost').show()
+
+		// }
+		// if (windoww > 1200) {
+		// 	$('.ghost').hide()
+
+		// }
+
+		if (windoww > 768) {
+			$('#songs .list-group-item').addClass('d-flex')
 		}
-		if (windoww <= 992) {
-			$('.ghost').hide()
 
-		}
-		if (windoww > 991) {
-			$('.ghost').show()
-
-		}
-		if (windoww > 1200) {
-			$('.ghost').hide()
-
+		if (windoww <= 768) {
+			$('#songs .list-group-item').removeClass('d-flex')
 		}
 	})
 
@@ -148,6 +156,7 @@ $(document).ready( f => {
 	})
 
 
+
 	// $('.quantity option').click( f => {
 	// 	$()
 	// })
@@ -176,36 +185,69 @@ $(document).ready( f => {
 
 	function add2cart (product) {
 
-		return $(`
-			<li class="list-group-item">
-				<div class="row justify-content-around">
-					<div class="col-auto">
-						<div class="container">
-							<img class="item-image" src="${product.img}">
-						</div>
-					</div>
-					<div class="row item-options">
+		if (product.name == "Wristbands") {
+			return $(`
+				<li id="wristband" class="list-group-item">
+					<div class="row justify-content-around">
 						<div class="col-auto">
-							<div class="form-group">
-								<select class="form-control quantity" id="item1">
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-									<option value="5">5</option>
-								</select>
+							<div class="container">
+								<img class="item-image" src="${product.img}">
 							</div>
 						</div>
+						<div class="row item-options">
+							<div class="col-auto">
+								<div class="form-group">
+									<select class="form-control quantity" id="item1">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+									</select>
+								</div>
+							</div>
 
-						<div class="col-auto item-cost">$${product.price}</div>
+							<div class="col-auto item-cost">$<span>${product.price}</span></div>
 
-						<div class="col-auto trash">
-							<img src="../static/css/images/trash.svg">
+							<div class="col-auto trash">
+								<img src="../static/css/images/trash.svg">
+							</div>
 						</div>
 					</div>
-				</div>
-			</li>
-		`)
+				</li>
+			`)
+		} else if (product.name == "Devil") {
+			return $(`
+				<li id="devil" class="list-group-item">
+					<div class="row justify-content-around">
+						<div class="col-auto">
+							<div class="container">
+								<img class="item-image" src="${product.img}">
+							</div>
+						</div>
+						<div class="row item-options">
+							<div class="col-auto">
+								<div class="form-group">
+									<select class="form-control quantity" id="item2">
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="col-auto item-cost">$<span>${product.price}</span></div>
+
+							<div class="col-auto trash">
+								<img src="../static/css/images/trash.svg">
+							</div>
+						</div>
+					</div>
+				</li>
+			`)
+		}
 
 	}
 
@@ -217,6 +259,7 @@ $(document).ready( f => {
 
 
 	$('.product a').click( e => {	
+
 
 		var count = Number($('.cart-button span').html())
 
@@ -239,9 +282,11 @@ $(document).ready( f => {
 		if(itemName == 'Wristbands') {
 			var wristband = new Product(itemImg, itemName, itemPrice)
 			products.push(wristband)
+			$('#addWristband').addClass('disabled').html('Added to Cart &nbsp &#10003')
 		} else if (itemName == 'Devil') {
 			var devil = new Product(itemImg, itemName, itemPrice)
 			products.push(devil)
+			$('#addDevil').addClass('disabled').html('Added to Cart &nbsp &#10003')
 		} 
 
 		var product = new Product(itemImg, itemName, itemPrice)
@@ -249,6 +294,8 @@ $(document).ready( f => {
 		console.log(products)
 
 		cartItems.append(add2cart(product))
+
+
 
 		var items = $('#cart .list-group').children().length
 
@@ -260,9 +307,54 @@ $(document).ready( f => {
 			$('.checkout').addClass('disabled')
 		}
 
-		var total = products.map(product => product.price).reduce((prev, next) => prev + next)
+		// var total = products.map(product => product.price).reduce((prev, next) => prev + next)
 
-		$('.total span').html(total)
+		
+		if ($('#item1').val() == undefined) {
+			var wbcost = 0
+		} else {
+			var wbcost = $('#item1').val() * 2
+		}
+
+		if ($('#item2').val() == undefined) {
+			var dcost = 0
+		} else {
+			var dcost = $('#item2').val() * 3
+		}
+
+		$('.total span').html(wbcost + dcost)
+
+			
+
+		$('#item1').change( f => {
+
+			var wbcost = $('#item1').val() * 2
+			$('#wristband .item-cost span').html(wbcost)
+
+			if ($('#item2').val() == undefined) {
+				var dcost = 0
+			} else {
+				var dcost = $('#item2').val() * 3
+			}
+			
+			
+			console.log(wbcost, dcost, wbcost+dcost)
+			$('.total span').html(dcost + wbcost)
+		})
+
+		$('#item2').change( f => {
+			var dcost = $('#item2').val() * 3
+			$('#devil .item-cost span').html(dcost)
+
+			if ($('#item1').val() == undefined) {
+				var wbcost = 0
+			} else {
+				var wbcost = $('#item1').val() * 2
+			}
+			
+			console.log(wbcost, dcost, wbcost+dcost)
+			$('.total span').html(dcost + wbcost)
+		})
 
 
 
@@ -278,10 +370,11 @@ $(document).ready( f => {
 
 
 	var deleteItem = (product, count) => {
-
+		console.log(products)
 		$('.trash img').click( e => {
 
 			var cartItem = $(e.target).parent().parent().parent().parent()
+
 			cartItem.remove()
 
 			var items = $('#cart .list-group').children().length
@@ -293,24 +386,42 @@ $(document).ready( f => {
 				$('.emptymsg').show()
 				$('.checkout').addClass('disabled')
 			}
-
-			 
+			console.log(product)
+			console.log(products)
 			for (var i = products.length - 1; i >= 0; --i) {
 				console.log(product)
 			    if (products[i].name == product.name) {
-			        products.splice(i,1);
+			        products.splice(i,1)
 			    }
 			}
 
 			console.log(products)
 
-			var total = products.map(product => product.price).reduce((prev, next) => prev + next, 0)
+			// var total = products.map(product => product.price).reduce((prev, next) => prev + next, 0)
 
-			$('.total span').html(total)
+			if ($('#item1').val() == undefined) {
+				var wbcost = 0
+			} else {
+				var wbcost = $('#item1').val() * 2
+			}
+
+			if ($('#item2').val() == undefined) {
+				var dcost = 0
+			} else {
+				var dcost = $('#item2').val() * 3
+			}
+
+			$('.total span').html(wbcost + dcost)
 
 			count -= 1
 			console.log(count)
 			$('.cart-button span').html(count)
+			console.log(product)
+			if (cartItem.is('#wristband')) {
+				$('#addWristband').removeClass('disabled').html('Add to Cart')
+			} else if (cartItem.is('#devil')) {
+				$('#addDevil').removeClass('disabled').html('Add to Cart')
+			}
 
 		})
 	}
@@ -323,39 +434,54 @@ $(document).ready( f => {
 	$('#confirm').hide()
 	$('#cart .container').hide()
 
+	const product = {}
 	$('#section-1').submit( e => {
+
+		product.name = $('#firstName').val()
+		product.lastname = $('#lastName').val()
 		e.preventDefault()
 		if (!$('#section-1 .checkout').hasClass('disabled')){
 			$('#section-1').hide()
 			$('#personal-info').show()
 			$('#breadcrumb').show()
 			$('#cart .container.orderInfo').show()
+			$('.breadcrumb-item').removeClass('active')
+			$('#personal.breadcrumb-item').addClass('active')
 		}
 	})
 
 	$('#personal-info .previous').click( e => {
+
 		e.preventDefault()
 		$('#personal-info').hide()
 		$('#section-1').show()
 		$('#breadcrumb').hide()
 		$('#cart .container.orderInfo').hide()
+
 	})
 
 	$('#personal-info').submit( e => {
 		e.preventDefault()
 		$('#personal-info').hide()
 		$('#shipping-info').show()
+		$('.breadcrumb-item').removeClass('active')
+		$('#shipping.breadcrumb-item').addClass('active')
+
 	})
 
 	$('#shipping-info').submit( e => {
 		e.preventDefault()
 		$('#shipping-info').hide()
 		$('#billing-info').show()
+		$('.breadcrumb-item').removeClass('active')
+		$('#billing.breadcrumb-item').addClass('active')
 	})
 
 	$('#shipping-info .previous').click( f => {
 		$('#shipping-info').hide()
 		$('#personal-info').show()
+		$('.breadcrumb-item').removeClass('active')
+		$('#personal.breadcrumb-item').addClass('active')
 	})
 
 	$('#billing-info').submit( f => {
@@ -363,11 +489,14 @@ $(document).ready( f => {
 		$('#breadcrumb').hide()
 		$('#confirmation').show()
 		$('#confirm').show()
+		$('.breadcrumb-item').removeClass('active')
 	})
 
 	$('#billing-info .previous').click( f => {
 		$('#billing-info').hide()
 		$('#shipping-info').show()
+		$('.breadcrumb-item').removeClass('active')
+		$('#shipping.breadcrumb-item').addClass('active')
 	})
 
 	$('#confirmation .previous').click( f => {
@@ -375,10 +504,11 @@ $(document).ready( f => {
 		$('#confirm').hide()
 		$('#billing-info').show()
 		$('#breadcrumb').show()
+		$('.breadcrumb-item').removeClass('active')
+		$('#billing.breadcrumb-item').addClass('active')
 	})
 
 
-	$('.album').hide()
 
 	// function fetchProducts (done) {
 	// 	$.get('/api/products', data => {
@@ -407,6 +537,114 @@ $(document).ready( f => {
 	// 		done(data)
 	// 	})
 	// }
+
+	$('#link2cs').addClass('active')
+	$('#lyrics .list-group-item').hide()
+	$('#cowboysong').show()
+
+	
+
+	$('#link2dfs').click( f => {
+
+		$('#lyrics .list-group-item').hide()
+		$('#dfs').show()
+		
+		$('#lyrics .nav-link').removeClass('active')
+		$('#link2dfs').addClass('active')
+
+	})
+
+	$('#link2ss').click( f => {
+
+		$('#lyrics .list-group-item').hide()
+		$('#sosick').show()
+
+		$('#lyrics .nav-link').removeClass('active')
+		$('#link2ss').addClass('active')
+
+	})
+
+	$('#link2brk').click( f => {
+
+		$('#lyrics .list-group-item').hide()
+		$('#break').show()
+
+		$('#lyrics .nav-link').removeClass('active')
+		$('#link2brk').addClass('active')
+
+	})
+
+	$('#link2gas').click( f => {
+
+		$('#lyrics .list-group-item').hide()
+		$('#giveitashot').show()
+
+		$('#lyrics .nav-link').removeClass('active')
+		$('#link2gas').addClass('active')
+
+	})
+
+	$('#link2d2d').click( f => {
+
+		$('#lyrics .list-group-item').hide()
+		$('#d2d').show()
+
+		$('#lyrics .nav-link').removeClass('active')
+		$('#link2d2d').addClass('active')
+
+	})
+
+	$('#link2cl').click( f => {
+
+		$('#lyrics .list-group-item').hide()
+		$('#candlelight').show()
+
+		$('#lyrics .nav-link').removeClass('active')
+		$('#link2cl').addClass('active')
+
+	})
+
+	$('#link2mp').click( f => {
+
+		$('#lyrics .list-group-item').hide()
+		$('#mindpollution').show()
+
+		$('#lyrics .nav-link').removeClass('active')
+		$('#link2mp').addClass('active')
+
+	})
+
+	$('#link2ls').click( f => {
+
+		$('#lyrics .list-group-item').hide()
+		$('#loosescrew').show()
+
+		$('#lyrics .nav-link').removeClass('active')
+		$('#link2ls').addClass('active')
+
+	})
+
+	$('#link2cs').click( f => {
+
+		$('#lyrics .list-group-item').hide()
+		$('#cowboysong').show()
+
+		$('#lyrics .nav-link').removeClass('active')
+		$('#link2cs').addClass('active')
+
+	})
+
+	$('#link2sm').click( f => {
+
+		$('#lyrics .list-group-item').hide()
+		$('#smokeandmirrors').show()
+
+		$('#lyrics .nav-link').removeClass('active')
+		$('#link2sm').addClass('active')
+
+	})
+
+
 
 
 
