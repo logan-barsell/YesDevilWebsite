@@ -8,11 +8,19 @@ html, body {
 	text-align: center;
 }
 
+.yesdevil {
+	color: darkred;
+	text-shadow: 2px 1px black;
+	font-size: 25px;
+}
+
 .navbar-light .navbar-brand.yesdevil {
 	font-size: 30px;
 	color: darkred;
 	text-shadow: 2px 1px black;
 }
+
+
 
 nav {
 	font-size: 21px;
