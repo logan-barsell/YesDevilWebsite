@@ -351,6 +351,8 @@ h5 {
  .members p {
  	margin: auto;
  	padding-bottom: 33px;
+ 	min-width: 333px;
+ 	text-align: center;
  }
 
  .followme {
