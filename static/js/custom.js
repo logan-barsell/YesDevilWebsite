@@ -324,6 +324,8 @@ $(document).ready( f => {
 
 		$('.total span').html(wbcost + dcost)
 
+		var finalprice = wbcost + dcost
+
 			
 
 		$('#item1').change( f => {

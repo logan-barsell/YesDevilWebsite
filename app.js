@@ -18,6 +18,9 @@ const express = require('express'),
 	// Accesses Postgres server
 	pg = require('pg'),
 
+	keyPublishable = process.env.PUBLISHABLE_KEY,
+	keySecret = process.env.SECRET_KEY,
+
 	stripe = require("stripe")("sk_test_twTNGhW8q7c3a9Nnb3Truojt")
 
 
@@ -50,8 +53,9 @@ const express = require('express'),
 
 	.post('/charge', (req, res) => {
 		const token = req.body.stripeToken
+		const finalprice = ,
 		const charge = stripe.charges.create({
-			amount: 200,
+			amount: finalprice,
 			currency: 'usd',
 			source: token,
 			receipt_email: 'loganjbars@gmail.com'
