@@ -53,7 +53,7 @@ const express = require('express'),
 
 	.post('/charge', (req, res) => {
 		const token = req.body.stripeToken
-		const finalprice = ,
+		const finalprice = 0
 		const charge = stripe.charges.create({
 			amount: finalprice,
 			currency: 'usd',

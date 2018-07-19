@@ -355,6 +355,15 @@ h5 {
  	text-align: center;
  }
 
+ .a2a_kit {
+ 	margin: auto;
+ }
+
+ span.a2a_svg {
+ 	height: 44px;
+ 	width: 44px;
+ }
+
  .followme {
  	height: 77px;
  	width: 200px;
