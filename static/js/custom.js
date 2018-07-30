@@ -251,6 +251,32 @@ $(document).ready( f => {
 
 	}
 
+	function confirmation (product) {
+
+		if (product.name == "Wristbands") {
+			return $(`
+				<li id="wristband-conf" class="list-group-item">
+					<div class="row justify-content-around">
+						<div class="col-auto">
+							<div class="container">
+								<img class="item-image" src="${product.img}">
+							</div>
+						</div>
+						<div class="row item-options">
+							<div class="howmany col-auto">
+								
+							</div>
+
+							<div class="col-auto item-cost">$<span>${product.price}</span></div>
+
+						</div>
+					</div>
+				</li>
+			`)
+		} 
+
+	}
+
 
 
 	var products = []
@@ -295,6 +321,10 @@ $(document).ready( f => {
 
 		cartItems.append(add2cart(product))
 
+		console.log(confirmation(product))
+
+		$('#billing-info #order-items').html(confirmation(product))
+
 
 
 		var items = $('#cart .list-group').children().length
@@ -329,7 +359,7 @@ $(document).ready( f => {
 			
 
 		$('#item1').change( f => {
-
+			$('.howmany').html('X' + $('#item1').val())
 			var wbcost = $('#item1').val() * 2
 			$('#wristband .item-cost span').html(wbcost)
 
@@ -436,11 +466,14 @@ $(document).ready( f => {
 	$('#confirm').hide()
 	$('#cart .container').hide()
 
-	const product = {}
+	const wristband = {}
+
 	$('#section-1').submit( e => {
 
-		product.name = $('#firstName').val()
-		product.lastname = $('#lastName').val()
+		wristband.quantity = $('#item1.quantity').val()
+		$('.howmany').html('x ' + wristband.quantity)
+
+
 		e.preventDefault()
 		if (!$('#section-1 .checkout').hasClass('disabled')){
 			$('#section-1').hide()
@@ -462,16 +495,56 @@ $(document).ready( f => {
 
 	})
 
+	const customer = {}
+
 	$('#personal-info').submit( e => {
+
+		const subtotal = wristband.quantity * 200
+
+
+
+		customer.firstName = $('#firstName').val()
+		customer.lastName = $('#lastName').val()
+		customer.email = $('#inputEmail').val()
+		
+
 		e.preventDefault()
 		$('#personal-info').hide()
 		$('#shipping-info').show()
 		$('.breadcrumb-item').removeClass('active')
 		$('#shipping.breadcrumb-item').addClass('active')
+		$('#paymentButton').remove()
+		$('#billing-info .nextPrev').append(`
+	    	<form action="/charge" method="POST" id="paymentButton">
+			  <script
+			    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+			    data-key="pk_test_K3QH6a1oie72u4tR9dHKMj1I"
+			    data-amount=${subtotal}
+			    data-currency="usd"
+			    data-name="Yes Devil"
+			    data-description="Billing Information"
+			    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+			    data-locale="auto"
+			    data-email=${customer.email}
+			    data-allow-remember-me="false"
+			    >
+			  </script>
+			  
+			</form>
+
+		`)
 
 	})
 
+	const shipping = {}
+
 	$('#shipping-info').submit( e => {
+		shipping.address = $('#inputAddress').val()
+		shipping.city = $('#inputCity').val()
+		shipping.state = $('#inputState').val()
+		shipping.zip = $('#inputZip').val()
+		shipping.aptSuite = $('#aptSuite').val() 
+
 		e.preventDefault()
 		$('#shipping-info').hide()
 		$('#billing-info').show()
@@ -492,6 +565,7 @@ $(document).ready( f => {
 		$('#confirmation').show()
 		$('#confirm').show()
 		$('.breadcrumb-item').removeClass('active')
+		console.log(customer, shipping)
 	})
 
 	$('#billing-info .previous').click( f => {

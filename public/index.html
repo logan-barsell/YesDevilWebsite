@@ -24,7 +24,7 @@
 				        <a class="nav-item nav-link link2blog" href="#" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">Blog</a>
 				        <a class="nav-item nav-link link2aboutus" href="#" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">About Us</a>
 				        <a class="nav-item nav-link link2contact" href="#" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">Contact</a>
-				        <!-- <a class="nav-item nav-link" href="#">
+				       <!--  <a class="nav-item nav-link" href="#">
 				        	<button type="button" class="btn btn-danger cart-button" data-toggle="modal" data-target="#cart">
 							Cart <img src="../static/css/images/cart.png"> (<span>0</span>)
 							</button>
@@ -125,14 +125,7 @@
 							      <input type="text" class="form-control" id="aptSuite" placeholder="N/A">
 							    </div>
 							  </div>
-							  <div class="modal-footer row shippingCost justify-content-center">
-						    		<div>
-						      			Shipping Cost:
-						      		</div>
-						      		<div id="cost2ship">
-						      			<span class="align-middle">$5</span>
-						      		</div>
-							    </div>
+							 
 							  <div class="nextPrev">
 						    	<button type="button" class="btn btn-secondary previous">Back</button>
 						    	<button type="submit" class="btn btn-danger next">Next</button>
@@ -140,7 +133,9 @@
 						</form>
 
 						<div id="billing-info">
-
+							<div class="text-center">Confirmation:</div>
+							<div id="order-items">
+							</div>
 
 							<div class="modal-footer total-cost total justify-content-center">
 					        Sub-total:&nbsp <div class="price">$<span>0</span></div>
@@ -154,22 +149,7 @@
 
 							<div class="nextPrev row justify-content-center">
 						    	<button type="button" class="btn btn-secondary previous">Back</button>
-						    	<form action="/charge" method="POST" id="paymentButton">
-								  <script
-								    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-								    data-key="pk_test_K3QH6a1oie72u4tR9dHKMj1I"
-								    data-amount="200"
-								    data-currency="usd"
-								    data-name="Yes Devil"
-								    data-description="Billing Information"
-								    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-								    data-locale="auto"
-								    data-email=""
-								    data-allow-remember-me="false"
-								    >
-								  </script>
-								  
-								</form>
+						    	<div id="#payBtn-cont"></div>
 						    </div>
 
 						    
@@ -323,72 +303,10 @@
 						  	<div class="row justify-content-around">
 
 
-						  		
-
-
-								<!-- <div class="col-sm showad">
-
-							      	<div class="card">
-									  	<img class="card-img-top" src="../static/css/images/lexxxpromo.png" alt="PromoFlyer">
-									</div>
-
-									<div class="col-sm showinfo" id="show1">
-									    <div class="card">
-
-											<div class="card-body text-center">
-											    <h5 class="card-title">One-Fam</h5>
-											    <p class="card-text">Oakland</p>
-										    </div>
-
-										    <ul class="list-group list-group-flush">
-											    <li class="list-group-item">Date: <span>June 16th, 2018</span></li>
-											    <li class="list-group-item">Time: <span>Doors open at 7pm</span></li>
-											    <li class="list-group-item">Price:<span> $10 adv/$12 door</span></li>
-										  	</ul>
-
-										    <div class="card-body text-center gettix">
-										    	<a href="https://m.bpt.me/event/3422864" class="card-link" target="_blank">Get Tickets</a>
-										    </div>
-
-										</div>
-									</div>
-
-								</div>
- -->
-								<!-- <div class="col-sm showad">
-
-							      	<div class="card">
-									  		<img class="card-img-top" src="../static/css/images/summerfest.jpeg" alt="PromoFlyer">
-									</div>
-
-									<div class="col-sm showinfo" id="show2">
-									    <div class="card">
-
-		
-											<div class="card-body text-center">
-											    <h5 class="card-title">2187 Granite Drive</h5>
-											    <p class="card-text">Alamo</p>
-										    </div>
-
-										    <ul class="list-group list-group-flush">
-											    <li class="list-group-item">Date: <span>June 23rd, 2018</span></li>
-											    <li class="list-group-item">Time: <span>Starts at 4pm</span></li>
-											    <li class="list-group-item">Price: <span>Free</span></li>
-										  	</ul>
-
-										    <div class="card-body text-center gettix">
-										    	<a href="https://www.ticketweb.com/event/yes-devil-novicain-road-brick-and-mortar-music-hall-tickets/8275255?pl=brickmortar&REFID=clientsitewp" class="card-link disabled" target="_blank">Get Tickets</a>
-										    </div>
-
-										</div>
-									</div>
-								</div>
-
- -->
 								<div class="col-sm showad">
 
 							      	<div class="card">
-									  	<img class="card-img-top" src="../static/css/images/bothpromo.jpg" alt="PromoFlyer">
+									  	<img class="card-img-top" src="../static/css/images/bothpromo1.jpg" alt="PromoFlyer">
 									</div>
 
 									<div class="col-sm showinfo" id="show3">
@@ -1109,10 +1027,10 @@
 
 				<div id="merch" class="container">
 					<div class="comingsoon">COMING SOON</div>
-					<!-- <h5>Band Merchandise:</h5>
+					<!-- <h5>Band Merchandise:</h5> -->
 					<div class="row" id="product-list">
 
-						<div class="col-sm">
+						<!-- <div class="col-sm">
 							<div class="card product">
 							  <img class="card-img-top" src="../static/css/images/bracelet1.jpg" alt="Card image cap">
 							  <div class="card-body">
@@ -1121,8 +1039,8 @@
 							    <a href="#" id="addWristband" class="btn btn-danger btn-block" data-toggle="modal" data-target="#cart">Add to Cart</a>
 							  </div>
 							</div>
-						</div> -->
-
+						</div>
+ -->
 						<!-- <div class="col-sm">
 							<div class="card product">
 							  <img class="card-img-top" src="../static/css/images/devil.jpg" alt="Card image cap">

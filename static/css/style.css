@@ -420,6 +420,9 @@ h5 {
 .item-options .col-auto{
 	margin: auto;
 }
+#wristband-conf {
+	margin-bottom: 27px;
+}
 
 #cart .item-image {
 	width: 187px;

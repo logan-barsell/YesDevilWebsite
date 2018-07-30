@@ -51,44 +51,22 @@ const express = require('express'),
 	.use('/api', require('./routes/api').route)
 
 
-	.post('/charge', (req, res) => {
-		const token = req.body.stripeToken
-		const finalprice = 0
-		const charge = stripe.charges.create({
-			amount: finalprice,
-			currency: 'usd',
-			source: token,
-			receipt_email: 'loganjbars@gmail.com'
-		})
-		// console.log(req.body.)
-		res.redirect('/')
-	})
+	
 
 
-
-
-
-// const charge = stripe.charges.create({
-//   amount: 999,
-//   currency: 'usd',
-//   source: 'tok_visa',
-//   receipt_email: 'loganjbars@gmail.com',
-// })
-// var stripe = require("stripe")("sk_test_twTNGhW8q7c3a9Nnb3Truojt")
-
-// const product = stripe.products.create({
-//   name: 'Wristband',
-//   type: '',
-//   attributes: ['color', 'color2', 'text'],
-//   description: 'Black wristband with red letters that spell Yes Devil The High Cost of Living Low',
-// })
+const product = stripe.products.create({
+  name: 'Wristband',
+  type: 'good',
+  attributes: ['color', 'color2', 'text'],
+  description: 'Yes Devil, The High Cost of Living Low',
+});
 
 // (async () => {
 //   const sku1 = await stripe.skus.create({
 //     currency: 'usd',
 //     inventory: {'type': 'finite', 'quantity': 25},
 //     price: 2,
-//     product: 'wristband',
+//     product: 'Wristband',
 //     attributes: {'color': 'black', 'color2': 'red', 'text':'Yes Devil The High Cost of Living Low'}
 //   })
 //   const sku2 = await stripe.skus.create({
@@ -101,36 +79,73 @@ const express = require('express'),
 // })()
 
 
-// const apiKey = 'VcdkpUI3V1wRPTiRCdvuKQ'
-// const EasyPost = require('@easypost/api')
+const apiKey = 'VcdkpUI3V1wRPTiRCdvuKQ'
+const EasyPost = require('@easypost/api')
 
-// const api = new EasyPost(apiKey)
+const api = new EasyPost(apiKey)
 
-// // set addresses
-// const toAddress = new api.Address({
-//   name: 'Dr. Steve Brule',
-//   street1: '179 N Harbor Dr',
-//   city: 'Redondo Beach',
-//   state: 'CA',
-//   zip: '90277',
-//   country: 'US',
-//   phone: '310-808-5243'
-// })
+// set addresses
+const toAddress = new api.Address({
+  name: 'Dr. Steve Brule',
+  street1: '179 N Harbor Dr',
+  city: 'Redondo Beach',
+  state: 'CA',
+  zip: '90277',
+  country: 'US',
+  phone: '310-808-5243'
+})
 
-// const fromAddress = new api.Address({
-//   name: 'Yes Devil',
-//   street1: '327 Cindy Ct.',
-//   street2: '',
-//   city: 'San Ramon',
-//   state: 'CA',
-//   zip: '94583',
-//   phone: '925-262-7761'
-// })
+const fromAddress = new api.Address({
+  name: 'Yes Devil',
+  street1: '327 Cindy Ct.',
+  street2: '',
+  city: 'San Ramon',
+  state: 'CA',
+  zip: '94583',
+  phone: '925-262-7761'
+})
 
-// /* es5 with promises: */
+ // es5 with promises: 
 // fromAddress.save().then(addr => {
 //   console.log(addr.id)
-// })
+// }).catch()
+
+
+
+app.post('/charge', (req, res) => {
+	const token = req.body.stripeToken
+	const shipping = req.body.shipping
+	const customer = req.body.customer
+	const order = stripe.orders.create({
+	  currency: 'usd',
+	  email: customer.email,
+	  items: [
+	    {
+	      object: 'Wristband',
+	      type: 'good',
+	      quantity: req.body.wbquantity,
+	    },
+	  ],
+	  shipping: {
+	    name: customer.firstName + ' ' + customer.lastName,
+	    address: {
+	      line1: shipping.inputAddress,
+	      city: shipping.inputCity,
+	      state: shipping.inputState,
+	      postal_code: shipping.inputZip,
+	      country: 'US',
+	    },
+	  },
+	})
+	const charge = stripe.charges.create({
+		amount: req.body.wbquantity * 2 ,
+		currency: 'usd',
+		source: token,
+		receipt_email: customer.email
+	})
+	// console.log(req.body.)
+	res.redirect('/')
+})
 
 
 http.createServer(app).listen(8080, 'localhost')
