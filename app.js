@@ -24,8 +24,8 @@ const express = require('express'),
 	stripe = require("stripe")("sk_test_twTNGhW8q7c3a9Nnb3Truojt")
 
 
-// app.set('views', __dirname+'/views')
-   app.use('/', express.static(path.join(
+// app.set('views', __dirname+'/public')
+   app.use(express.static(path.join(
 		__dirname+"/public")))
 
 	.use(session({
@@ -50,34 +50,129 @@ const express = require('express'),
 
 	.use('/api', require('./routes/api').route)
 
+	.get('/', (req, res) => {
+		
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            bb
+		res.render("index", {products: product})
+	})
 
-	
+	.get('/products', (req, res) => {
+		const product = stripe.products.retrieve("prod_DLVedTElOKLEH9", (err, product) => {})
+		res.send(product)
+	})
 
 
-const product = stripe.products.create({
+
+const wristband = stripe.products.create({
   name: 'Wristband',
   type: 'good',
-  attributes: ['color', 'color2', 'text'],
   description: 'Yes Devil, The High Cost of Living Low',
+  attributes: ['color', 'txt_color']
 });
 
-// (async () => {
-//   const sku1 = await stripe.skus.create({
-//     currency: 'usd',
-//     inventory: {'type': 'finite', 'quantity': 25},
-//     price: 2,
-//     product: 'Wristband',
-//     attributes: {'color': 'black', 'color2': 'red', 'text':'Yes Devil The High Cost of Living Low'}
-//   })
-//   const sku2 = await stripe.skus.create({
-//     currency: 'usd',
-//     inventory: {'type': 'finite', 'quantity': 666},
-//     price: 666,
-//     product: 'devil',
-//     attributes: {'the': 'devil', 'was': 'here'}
-//   })
-// })()
 
+
+
+
+// (async () => {
+
+//   const sku_1 = await stripe.skus.create({
+//     currency: 'usd',
+//     inventory: {'type': 'finite', 'quantity': 500},
+//     price: 200,
+//     product: 'prod_DLVedTElOKLEH9',
+//     attributes: {'color': 'black', 'txt_color': 'red'}
+//   })
+
+// })().catch(console.log.bind(console))
+
+
+
+
+
+
+
+app.post('/order', (req, res) => {
+
+	const shipping = req.body.shipping_info
+	const customer = req.body.customer_info
+
+	console.log(customer, shipping)
+
+	const order = stripe.orders.create({
+	  currency: 'usd',
+	  email: customer.email,
+	  items: [
+	    {
+	      quantity: req.body.wbquantity,
+	      type: 'sku',
+	      parent: 'sku_DLWOgG7Z7LVWTe'
+	    },
+	  ],
+	  shipping: {
+	    name: customer.firstName + ' ' + customer.lastName,
+	    address: {
+	      line1: shipping.address,
+	      city: shipping.inputCity,
+	      state: shipping.inputState,
+	      postal_code: shipping.inputZip,
+	      country: 'US'
+	    }
+	  },
+	}).catch(console.log.bind(console))
+
+	res.send('hi')
+})
+
+ 
+
+
+.post('/charge', (req, res) => {
+	const token = req.body.stripeToken
+	
+	if (req.body.wbquantity == 1) {
+		const charge = stripe.charges.create({
+			amount: 200,
+			currency: 'usd',
+			source: token,
+			receipt_email: 'loganjbars@gmail.com'
+		}).catch(console.log.bind(console))
+	} else if (req.body.wbquantity == 2) {
+		const charge = stripe.charges.create({
+		amount: 400,
+		currency: 'usd',
+		source: token,
+		receipt_email: 'loganjbars@gmail.com'
+	}).catch(console.log.bind(console))
+	} else if (req.body.wbquantity == 2) {
+		const charge = stripe.charges.create({
+		amount: 600,
+		currency: 'usd',
+		source: token,
+		receipt_email: 'loganjbars@gmail.com'
+	}).catch(console.log.bind(console))
+	} else if (req.body.wbquantity == 2) {
+		const charge = stripe.charges.create({
+		amount: 800,
+		currency: 'usd',
+		source: token,
+		receipt_email: 'loganjbars@gmail.com'
+	}).catch(console.log.bind(console))
+	} else if (req.body.wbquantity == 5) {
+		const charge = stripe.charges.create({
+		amount: 1000,
+		currency: 'usd',
+		source: token,
+		receipt_email: 'loganjbars@gmail.com'
+	}).catch(console.log.bind(console))
+	} else {
+		console.log("oh")
+	}
+
+
+	// console.log(req.body.)
+	res.redirect('/')
+})
 
 const apiKey = 'VcdkpUI3V1wRPTiRCdvuKQ'
 const EasyPost = require('@easypost/api')
@@ -109,43 +204,6 @@ const fromAddress = new api.Address({
 // fromAddress.save().then(addr => {
 //   console.log(addr.id)
 // }).catch()
-
-
-
-app.post('/charge', (req, res) => {
-	const token = req.body.stripeToken
-	const shipping = req.body.shipping
-	const customer = req.body.customer
-	const order = stripe.orders.create({
-	  currency: 'usd',
-	  email: customer.email,
-	  items: [
-	    {
-	      object: 'Wristband',
-	      type: 'good',
-	      quantity: req.body.wbquantity,
-	    },
-	  ],
-	  shipping: {
-	    name: customer.firstName + ' ' + customer.lastName,
-	    address: {
-	      line1: shipping.inputAddress,
-	      city: shipping.inputCity,
-	      state: shipping.inputState,
-	      postal_code: shipping.inputZip,
-	      country: 'US',
-	    },
-	  },
-	})
-	const charge = stripe.charges.create({
-		amount: req.body.wbquantity * 2 ,
-		currency: 'usd',
-		source: token,
-		receipt_email: customer.email
-	})
-	// console.log(req.body.)
-	res.redirect('/')
-})
 
 
 http.createServer(app).listen(8080, 'localhost')

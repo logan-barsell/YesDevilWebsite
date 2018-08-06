@@ -362,6 +362,7 @@ $(document).ready( f => {
 			$('.howmany').html('X' + $('#item1').val())
 			var wbcost = $('#item1').val() * 2
 			$('#wristband .item-cost span').html(wbcost)
+			$('#wristband-conf .item-cost span').html(wbcost)
 
 			if ($('#item2').val() == undefined) {
 				var dcost = 0
@@ -536,6 +537,24 @@ $(document).ready( f => {
 
 	})
 
+	// function ajaxPost (customer, shipping){
+    	
+ //    	// DO POST
+ //    	$.ajax({
+	// 		type : "POST",
+	// 		contentType : "application/json",
+	// 		url: "/order",
+	// 		data : JSON.stringify(customer, shipping),
+	// 		dataType : 'json',
+	// 		success : data => {
+	// 			console.log(data)
+	// 		},
+	// 		error : e => {
+	// 			console.log("ERROR: ", e)
+	// 		}
+	// 	})
+ //    }
+
 	const shipping = {}
 
 	$('#shipping-info').submit( e => {
@@ -550,6 +569,12 @@ $(document).ready( f => {
 		$('#billing-info').show()
 		$('.breadcrumb-item').removeClass('active')
 		$('#billing.breadcrumb-item').addClass('active')
+
+		// ajaxPost(shipping, customer)
+
+		$.post('/order', {customer_info: customer, shipping_info: shipping, order_info: wristband}, res => {
+			console.log("hello")
+		})
 	})
 
 	$('#shipping-info .previous').click( f => {
@@ -557,16 +582,9 @@ $(document).ready( f => {
 		$('#personal-info').show()
 		$('.breadcrumb-item').removeClass('active')
 		$('#personal.breadcrumb-item').addClass('active')
+		
 	})
 
-	$('#billing-info').submit( f => {
-		$('#billing-info').hide()
-		$('#breadcrumb').hide()
-		$('#confirmation').show()
-		$('#confirm').show()
-		$('.breadcrumb-item').removeClass('active')
-		console.log(customer, shipping)
-	})
 
 	$('#billing-info .previous').click( f => {
 		$('#billing-info').hide()
@@ -575,24 +593,6 @@ $(document).ready( f => {
 		$('#shipping.breadcrumb-item').addClass('active')
 	})
 
-	$('#confirmation .previous').click( f => {
-		$('#confirmation').hide()
-		$('#confirm').hide()
-		$('#billing-info').show()
-		$('#breadcrumb').show()
-		$('.breadcrumb-item').removeClass('active')
-		$('#billing.breadcrumb-item').addClass('active')
-	})
-
-
-
-	// function fetchProducts (done) {
-	// 	$.get('/api/products', data => {
-	// 		done(data)
-	// 	})
-	// }
-
-	
 
 	// $(function () {
 
