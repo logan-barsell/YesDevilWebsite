@@ -614,9 +614,9 @@ $(document).ready( f => {
 	// 	})
 	// }
 
-	$('#link2cs').addClass('active')
+	$('#link2d2d').addClass('active')
 	$('#lyrics .list-group-item').hide()
-	$('#cowboysong').show()
+	$('#d2d').show()
 
 	
 
