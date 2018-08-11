@@ -173,8 +173,15 @@ h5 {
 }
 
 .cbsingle {
-	max-width: 666px;
+	min-width: 270px;
+	max-width: 370px;
 	margin-bottom: 33px;
+
+}
+
+.album h5 {
+	width: 100%;
+	text-align: center;
 }
 
 .cbsingle img {
@@ -220,8 +227,14 @@ h5 {
 	text-shadow: 1px 1px .5px darkred;
 }
 
-.credits {
-	font-size: 17px;
+#credits {
+	text-align: center;
+	font-size: 20px;
+}
+
+#credits h6 {
+	text-shadow: 1px 1px .5px darkred;
+	margin: 33px 0px 13px 0px;
 }
 
 .buyalbum {

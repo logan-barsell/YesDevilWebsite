@@ -140,12 +140,14 @@ $(document).ready( f => {
 
 	
 	$('#lyrics').hide()
+	$('#credits').hide()
 
 	$('.songs').click( f => {
 		$('.nav-link').removeClass('active')
 		$('.songs').addClass('active')
 		$('#songs').show()
 		$('#lyrics').hide()
+		$('#credits').hide()
 	})
 
 	$('.lyrics').click( f => {
@@ -153,7 +155,18 @@ $(document).ready( f => {
 		$('.lyrics').addClass('active')
 		$('#lyrics').show()
 		$('#songs').hide()
+		$('#credits').hide()
 	})
+
+	$('.credits').click( f => {
+		$('.nav-link').removeClass('active')
+		$('.credits').addClass('active')
+		$('#lyrics').hide()
+		$('#songs').hide()
+		$('#credits').show()
+	})
+
+
 
 
 
