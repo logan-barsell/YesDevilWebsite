@@ -1,3 +1,5 @@
+
+
 $(document).ready( f => {
 
 
@@ -7,25 +9,34 @@ $(document).ready( f => {
 	$('#aboutus').hide()
 	$('#contact').hide()
 
-	$('.link2home').click( f => {
+	$('.link2home').click( e => {
+		e.preventDefault()
+		$('html, body').animate({ scrollTop: 0 }, 'fast')
 		$('#home').show()
 		$('#music').hide()
 		$('#merch').hide()
 		$('#blog').hide()
 		$('#aboutus').hide()
 		$('#contact').hide()
+
 	})
 
-	$('.link2music').click( f => {
+	$('.link2music').click( e => {
+		e.preventDefault()
+		$('html, body').animate({ scrollTop: 0 }, 'fast')
 		$('#home').hide()
 		$('#music').show()
 		$('#merch').hide()
 		$('#blog').hide()
 		$('#aboutus').hide()
 		$('#contact').hide()
+		$.get('/music', f => {
+			
+		})
 	})
 
 	$('.link2merch').click( f => {
+		$('html, body').animate({ scrollTop: 0 }, 'fast')
 		$('#home').hide()
 		$('#music').hide()
 		$('#merch').show()
@@ -35,6 +46,7 @@ $(document).ready( f => {
 	})
 
 	$('.link2blog').click( f => {
+		$('html, body').animate({ scrollTop: 0 }, 'fast')
 		$('#home').hide()
 		$('#music').hide()
 		$('#merch').hide()
@@ -44,6 +56,7 @@ $(document).ready( f => {
 	})
 
 	$('.link2aboutus').click( f => {
+		$('html, body').animate({ scrollTop: 0 }, 'fast')
 		$('#home').hide()
 		$('#music').hide()
 		$('#merch').hide()
@@ -53,6 +66,7 @@ $(document).ready( f => {
 	})
 
 	$('.link2contact').click( f => {
+		$('html, body').animate({ scrollTop: 0 }, 'fast')
 		$('#home').hide()
 		$('#music').hide()
 		$('#merch').hide()
@@ -61,14 +75,14 @@ $(document).ready( f => {
 		$('#contact').show()
 	})
 
-	$('.link2cart').click( f => {
-		$('#home').hide()
-		$('#music').hide()
-		$('#merch').hide()
-		$('#blog').hide()
-		$('#aboutus').hide()
-		$('#contact').hide()
-	})
+	// $('.link2cart').click( f => {
+	// 	$('#home').hide()
+	// 	$('#music').hide()
+	// 	$('#merch').hide()
+	// 	$('#blog').hide()
+	// 	$('#aboutus').hide()
+	// 	$('#contact').hide()
+	// })
 
 
 
@@ -627,9 +641,11 @@ $(document).ready( f => {
 	// 	})
 	// }
 
-	$('#link2d2d').addClass('active')
+	$('#link2dfs').addClass('active')
 	$('#lyrics .list-group-item').hide()
-	$('#d2d').show()
+	$('#dfs').show()
+
+	$('#songs').css('max-width','100%')
 
 	
 

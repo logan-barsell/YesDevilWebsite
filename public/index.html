@@ -207,7 +207,7 @@
 					  </a>
 					</div>
 
-					<div id="upcomingshows" >
+				<!-- 	<div id="upcomingshows" >
 						<h5>Upcoming Shows:</h5>
 
 						  	<div class="row justify-content-around">
@@ -245,7 +245,7 @@
 						</div>
 
 
-					</div>
+					</div> -->
 
 				</div>
 
@@ -290,7 +290,10 @@
 							<img id="cowboysingle" src="../static/css/images/d2dcover.jpg">
 						</div> -->
 
-						<h5>The High Cost of Living Low</h5>
+						<h5 id="album-name">The High Cost of Living Low</h5>
+						<div id="stem">
+							<img id="leaves" src="../static/css/images/levidsey2.jpeg">
+						</div>
 
 						<div>
 
@@ -310,14 +313,16 @@
 
 							<ul id="songs" class="list-group justify-content-center">
 
-<!-- 
+
 								<li class="list-group-item justify-content-between d-flex align-items-center">
 
-								    <div>D.F.S.</div>
+								    <div class="container cbsingle">
+										<img id="cowboysingle" src="../static/css/images/dfs.jpg">
+									</div>
 
 								    <div>
 									    <audio controls>
-										  <source src="" type="audio/mpeg">
+										  <source src="../static/audio/dfs.wav" type="audio/mpeg">
 										  Your browser does not support the audio tag.
 										</audio>
 									</div>
@@ -329,7 +334,7 @@
 										 </div>
 								    </div>
 								</li>
-								<li class="list-group-item d-flex justify-content-between align-items-center">
+								<!-- <li class="list-group-item d-flex justify-content-between align-items-center">
 
 								    <div>So Sick</div>
 
@@ -386,7 +391,7 @@
 								    <div class="container cbsingle">
 										<img id="cowboysingle" src="../static/css/images/d2dcover.jpg">
 									</div>
-								    <!-- <div>Diamonds to Dust</div> -->
+								    
 
 								    <div>
 									    <audio controls>
@@ -502,16 +507,16 @@
 							<ul class="list-group" id="lyrics" >
 
 								<ul class="nav justify-content-center">
-								 <!--  <li class="nav-item">
+								  <li class="nav-item">
 								    <a id="link2dfs" class="nav-link active" href="#!">D.F.S.</a>
 								  </li>
-								  <li class="nav-item">
+								  <!-- <li class="nav-item">
 								    <a id="link2ss" class="nav-link" href="#!">So Sick</a>
-								  </li>
-								  <li class="nav-item">
+								  </li> -->
+								  <!-- <li class="nav-item">
 								    <a id="link2brk" class="nav-link" href="#!">Break</a>
-								  </li>
-								  <li class="nav-item">
+								  </li> -->
+								  <!-- <li class="nav-item">
 								    <a id="link2gas" class="nav-link" href="#!">Give it a Shot</a>
 								  </li> -->
 								  <li class="nav-item">
@@ -534,7 +539,7 @@
 								  </li> -->
 								</ul>
 
-						<!-- 		<li id="dfs" class="list-group-item">
+								<li id="dfs" class="list-group-item">
 									<h5>D.F.S.</h5>
 									I took a walk to see <br>
 									See what I could find <br>
@@ -575,11 +580,11 @@
 									Just slide it back to the start <br>
 									All you gotta do is bite the apple <br>
 									<br>
-									<div class="credits">Written by Hunter Barsell</div>
+									
 
 								</li>
 
-								<li id="break" class="list-group-item">
+								<!-- <li id="break" class="list-group-item">
 									<h5>Break</h5>
 									I'm so sick and tired of hearing you talk your talk <br>
 									Why dont we step outside, it's a nice day for a walk <br>
@@ -692,8 +697,8 @@
 									<br>
 									<div class="credits">Written by Hunter Barsell</div>
 
-								</li> -->
-
+								</li>
+ -->
 								<li id="d2d" class="list-group-item">
 									<h5>Diamonds to Dust</h5>
 									Step right in and make some chitter chatter <br>
@@ -940,6 +945,13 @@
 
 							<div id="credits">
 
+								<h6>D.F.S.</h6>
+								<div>Vocals - Logan Barsell (written by Hunter Barsell)</div>
+								<div>Lead Guitar - Matt Abbott</div>
+								<div>Drums - Eyan Stran</div>
+								<div>Rhythm Guitar - Logan Barsell</div>
+								<div>Bass - Nick Abbott</div>
+
 								<h6>Diamonds to Dust</h6>
 								<div>Vocals - Logan Barsell (written by Hunter Barsell)</div>
 								<div>Lead Guitar - Matt Abbott</div>
@@ -955,6 +967,8 @@
 								<div>Rhythm Guitar - Logan Barsell</div>
 								<div>Bass - Nick Abbott</div>
 								<div>Back-up Vocals - Zach Scherer, Hunter Barsell, Logan Barsell, Matt Abbott, Nick Abbott, and Eyan Stran</div>
+
+								
 							</div>
 
 						
@@ -1135,7 +1149,7 @@
 							<form action="https://formspree.io/loganjbars@gmail.com" method="POST">
 							  <div class="form-group">
 							    <label for="exampleFormControlInput1">Email address</label>
-							    <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+							    <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="email@example.com">
 							  </div>
 							  <div class="form-group">
 							    <label for="exampleFormControlInput1">Subject</label>
@@ -1208,8 +1222,11 @@
 		            <div class="col-md-5">
 		                <h5 class="text-uppercase">Links</h5>
 		                <ul class="list-unstyled">
+		                	<li>
+		                        <a href="/home" class="link2home">Home</a>
+		                    </li>
 		                    <li>
-		                        <a href="#!" class="link2music">Music</a>
+		                        <a href="/music" class="link2music">Music</a>
 		                    </li>
 		                    <li>
 		                        <a href="#!" class="link2merch">Merch</a>

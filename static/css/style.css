@@ -119,8 +119,8 @@ nav {
 }
 
 .showinfo .list-group-item span {
-	color: #E8E8E8;
-	text-shadow: 0px 0px 2px black;
+	color: black;
+	text-shadow: 1px 1px 1px darkred;
 }
 
 .showinfo .text-center {
@@ -155,9 +155,31 @@ h5 {
 	max-width: 433px;
 }
 
+#album-name {
+	text-shadow: 2px 1px 0px black;
+	text-decoration: underline;
+	margin: 0px 16px;
+	color: black;
+}
+
+#stem {
+	width: 100%;
+
+}
+
+#leaves {
+	display: block;
+	width: 333px;
+	height: 77px;
+	margin: auto;
+	margin-bottom: 27px;
+}
+
 #album-cover {
 	max-width: 100%;
 }
+
+
 
 .hcll {
 	height: 200px;
@@ -173,10 +195,9 @@ h5 {
 }
 
 .cbsingle {
-	min-width: 270px;
-	max-width: 370px;
+	min-width: 300px;
+	max-width: 420px;
 	margin-bottom: 33px;
-
 }
 
 .album h5 {
@@ -207,6 +228,7 @@ h5 {
 
 #songs .list-group-item {
 	text-align: center;
+	max-width: 100%;
 }
 
 #lyrics .list-group-item {

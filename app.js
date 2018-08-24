@@ -50,10 +50,15 @@ const express = require('express'),
 
 	.use('/api', require('./routes/api').route)
 
-	.get('/', (req, res) => {
-		
-		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            bb
+	.get('/', (req, res) => {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       bb
 		res.render("index", {products: product})
+	})
+
+	.get('/home', (req, res) => {
+		res.send('hi')
+	})
+	.get('/music', (req, res) => {
+		res.send('hi')
 	})
 
 	.get('/products', (req, res) => {
