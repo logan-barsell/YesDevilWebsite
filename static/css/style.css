@@ -179,6 +179,10 @@ h5 {
 	max-width: 100%;
 }
 
+#album-stuff {
+	max-width: 90%;
+}
+
 
 
 .hcll {
@@ -220,6 +224,20 @@ h5 {
 
 #music .list-group {
 	margin: 33px 0px;
+	max-width: 100%;
+}
+
+
+
+@media only screen and (max-width: 513px) {
+	#shit {
+		max-width: 100%;
+	}
+}
+
+
+#music .list-group-item {
+	max-width: 100%;
 }
 
 #lyrics .nav-link.active {
