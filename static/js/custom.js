@@ -10,7 +10,7 @@ $(document).ready( f => {
 	$('#contact').hide()
 
 	$('.link2home').click( e => {
-		e.preventDefault()
+		
 		$('html, body').animate({ scrollTop: 0 }, 'fast')
 		$('#home').show()
 		$('#music').hide()
@@ -22,7 +22,7 @@ $(document).ready( f => {
 	})
 
 	$('.link2music').click( e => {
-		e.preventDefault()
+		
 		$('html, body').animate({ scrollTop: 0 }, 'fast')
 		$('#home').hide()
 		$('#music').show()
@@ -30,12 +30,11 @@ $(document).ready( f => {
 		$('#blog').hide()
 		$('#aboutus').hide()
 		$('#contact').hide()
-		$.get('/music', f => {
-			
-		})
+	
 	})
 
-	$('.link2merch').click( f => {
+	$('.link2merch').click( e => {
+
 		$('html, body').animate({ scrollTop: 0 }, 'fast')
 		$('#home').hide()
 		$('#music').hide()
@@ -45,7 +44,8 @@ $(document).ready( f => {
 		$('#contact').hide()
 	})
 
-	$('.link2blog').click( f => {
+	$('.link2blog').click( e => {
+	
 		$('html, body').animate({ scrollTop: 0 }, 'fast')
 		$('#home').hide()
 		$('#music').hide()
@@ -55,7 +55,8 @@ $(document).ready( f => {
 		$('#contact').hide()
 	})
 
-	$('.link2aboutus').click( f => {
+	$('.link2aboutus').click( e => {
+	
 		$('html, body').animate({ scrollTop: 0 }, 'fast')
 		$('#home').hide()
 		$('#music').hide()
@@ -65,7 +66,8 @@ $(document).ready( f => {
 		$('#contact').hide()
 	})
 
-	$('.link2contact').click( f => {
+	$('.link2contact').click( e => {
+	
 		$('html, body').animate({ scrollTop: 0 }, 'fast')
 		$('#home').hide()
 		$('#music').hide()

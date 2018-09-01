@@ -57,9 +57,9 @@ const express = require('express'),
 	.get('/home', (req, res) => {
 		res.send('hi')
 	})
-	.get('/music', (req, res) => {
-		res.send('hi')
-	})
+	// .get('/music', (req, res) => {
+	// 	res.send('hi')
+	// })
 
 	.get('/products', (req, res) => {
 		const product = stripe.products.retrieve("prod_DLVedTElOKLEH9", (err, product) => {})
