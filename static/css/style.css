@@ -156,15 +156,22 @@ h5 {
 }
 
 #album-name {
-	text-shadow: 2px 1px 0px black;
 	text-decoration: underline;
 	margin: 0px 16px;
+	
 	color: black;
+	text-shadow: 2px 1px 0px black;
 }
 
-#stem {
+.stem {
 	width: 100%;
 
+}
+
+.stem.text-center {
+	color: darkred;
+	text-shadow: 1px 1px 0px black;
+	margin-bottom: 33px;
 }
 
 #leaves {
@@ -173,6 +180,13 @@ h5 {
 	height: 77px;
 	margin: auto;
 	margin-bottom: 27px;
+}
+
+#vango {
+	width: 133px;
+	display: block;
+	margin: auto;
+	margin-bottom: 13px;
 }
 
 #album-cover {
@@ -195,7 +209,10 @@ h5 {
 
 }
 .musicvid {
-    max-height: 388px;
+    max-height: 394px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border: 7px darkred groove;
 }
 
 .cbsingle {
@@ -205,8 +222,12 @@ h5 {
 }
 
 .album h5 {
-	width: 100%;
 	text-align: center;
+
+}
+
+#featured {
+	text-shadow: 2px 1px darkred;
 }
 
 .cbsingle img {
@@ -230,7 +251,7 @@ h5 {
 
 
 @media only screen and (max-width: 513px) {
-	#shit {
+	.shit {
 		max-width: 100%;
 	}
 }
@@ -264,7 +285,7 @@ h5 {
 }
 
 #lyrics h5 {
-	text-shadow: 1px 1px .5px darkred;
+	text-shadow: 1px 1px 0px darkred;
 }
 
 #credits {
@@ -597,8 +618,7 @@ a:hover {
 }
 
 footer a {
-	color: grey;
-	text-shadow: 1px 1px 0px black;
+	color: #7c7c7d;
 }
 
 .footer-copyright a {

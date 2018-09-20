@@ -50,20 +50,22 @@ const express = require('express'),
 
 	.use('/api', require('./routes/api').route)
 
-	.get('/', (req, res) => {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       bb
-		res.render("index", {products: product})
+	.get('/', (req, res) => {        
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            bb
+		res.render("index")
 	})
 
 	.get('/home', (req, res) => {
 		res.send('hi')
 	})
-	// .get('/music', (req, res) => {
-	// 	res.send('hi')
-	// })
 
-	.get('/products', (req, res) => {
-		const product = stripe.products.retrieve("prod_DLVedTElOKLEH9", (err, product) => {})
-		res.send(product)
+	
+
+	app.get('/products', (req, res) => {
+		const allProducts = stripe.products.list( { limit: 3 }, (err, products) => {
+			res.send(products)
+		})
+		
 	})
 
 

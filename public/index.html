@@ -24,7 +24,7 @@
 				        <a class="nav-item nav-link link2blog" href="#blog">Blog</a>
 				        <a class="nav-item nav-link link2aboutus" href="#aboutus">About Us</a>
 				        <a class="nav-item nav-link link2contact" href="#contact">Contact</a>
-				        <!-- <a class="nav-item nav-link" href="#">
+				       <!--  <a class="nav-item nav-link" href="#">
 				        	<button type="button" class="btn btn-danger cart-button" data-toggle="modal" data-target="#cart">
 							Cart <img src="../static/css/images/cart.png"> (<span>0</span>)
 							</button>
@@ -254,15 +254,27 @@
 				<div id="music" class="container">
 					<div class="comingsoon invisible">COMING SOON</div>
 
-					<!-- <h5>Featured Music Video:</h5>
+
+
+					<h5 id="featured">Featured Music Video:</h5>
 
 					<div class="row justify-content-center">
 						<div class="col musicvid">
 							<div class="embed-responsive embed-responsive-16by9">
-								<iframe class="embed-responsive embed-responsive-16by9" src="https://www.youtube.com" frameborder="0" allow="encrypted-media" allowfullscreen></iframe>
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/xHpkknyqrRc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 							</div>
+							
 						</div>
-					</div> -->
+
+
+						</div>
+						<div class="yt-api-cont">
+						<div class="g-ytsubscribe" data-channelid="UC_jExvqWhRlM-gBt9iEsLxA" data-layout="default" data-count="default"></div>
+						
+					</div>
+					
+
+					<hr>
 
 						
 	<!-- 				<div class="row justify-content-center">
@@ -290,10 +302,23 @@
 							<img id="cowboysingle" src="../static/css/images/d2dcover.jpg">
 						</div> -->
 
+					
+
+						<div class="stem">
+							<img id="vango" src="../static/css/images/vango.png">
+						</div>
+
+							<div class="stem">
 						<h5 id="album-name">The High Cost of Living Low</h5>
-						<div id="stem">
+						</div>
+
+						<div class="stem">
 							<img id="leaves" src="../static/css/images/levidsey2.jpeg">
 						</div>
+
+						<div class="stem text-center">-Full Album Release November 2nd-</div>
+
+
 
 						<div id="album-stuff">
 
@@ -313,6 +338,27 @@
 
 							<ul id="songs" class="list-group justify-content-center">
 
+								<li class="list-group-item d-flex justify-content-between align-items-center">
+								    <div class="shit">
+									    <div class="container cbsingle">
+											<img id="cowboysingle" src="../static/css/images/giveitashot.png">
+										</div>
+
+									    <div>
+										    <audio controls>
+											  <source src="../static/audio/Give_it_a_Shot.wav" type="audio/mpeg">
+											  Your browser does not support the audio tag.
+											</audio>
+										</div>
+
+									    <div class="drop-down">
+									    	<button class="badge badge-danger dropdown-toggle" type="button" id="song4dd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Buy Song</button>
+									    	<div class="dropdown-menu" aria-labelledby="song4dd">
+											    <a class="dropdown-item" href="#"><img class="itunes" src="../static/css/images/itunes.png"></a>
+											 </div>
+									    </div>
+									</div>
+								</li>
 
 								<li class="list-group-item justify-content-between d-flex align-items-center">
 									<div id="shit">
@@ -337,7 +383,7 @@
 
 									</div>
 								</li>
-								<!-- <li class="list-group-item d-flex justify-content-between align-items-center">
+							<!-- 	<li class="list-group-item d-flex justify-content-between align-items-center">
 
 								    <div>So Sick</div>
 
@@ -354,8 +400,8 @@
 										    <a class="dropdown-item" href="#"><img class="itunes" src="../static/css/images/itunes.png"></a>
 										 </div>
 								    </div>
-								</li>
-								<li class="list-group-item d-flex justify-content-between align-items-center">
+								</li> -->
+								<!-- <li class="list-group-item d-flex justify-content-between align-items-center">
 								    
 								    <div>Break</div>
 
@@ -371,28 +417,11 @@
 								    	<div class="dropdown-menu" aria-labelledby="song3dd">
 										    <a class="dropdown-item" href="#"><img class="itunes" src="../static/css/images/itunes.png"></a>									 </div>
 								    </div>
-								</li>
-								<li class="list-group-item d-flex justify-content-between align-items-center">
-								    
-								    <div>Give it a Shot</div>
-
-								    <div>
-									    <audio controls>
-										  <source src="" type="audio/mpeg">
-										  Your browser does not support the audio tag.
-										</audio>
-									</div>
-
-								    <div class="drop-down">
-								    	<button class="badge badge-danger dropdown-toggle" type="button" id="song4dd" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Buy Song</buttom>
-								    	<div class="dropdown-menu" aria-labelledby="song4dd">
-										    <a class="dropdown-item" href="#"><img class="itunes" src="../static/css/images/itunes.png"></a>
-										 </div>
-								    </div>
 								</li> -->
+								
 								<li class="list-group-item d-flex justify-content-between align-items-center">
 
-									<div id="shit">
+									<div class="shit">
 									    <div class="container cbsingle">
 											<img id="cowboysingle" src="../static/css/images/d2dcover.jpg">
 										</div>
@@ -468,7 +497,7 @@
 								    </div>
 								</li> -->
 								<li class="list-group-item d-flex justify-content-between align-items-center">
-									<div id="shit">
+									<div class="shit">
 										<div class="container cbsingle">
 											<img id="cowboysingle" src="../static/css/images/cowboysingle.png">
 										</div>
@@ -515,6 +544,9 @@
 
 								<ul class="nav justify-content-center">
 								  <li class="nav-item">
+								    <a id="link2gas" class="nav-link" href="#!">Give it a Shot</a>
+								  </li>
+								  <li class="nav-item">
 								    <a id="link2dfs" class="nav-link active" href="#!">D.F.S.</a>
 								  </li>
 								  <!-- <li class="nav-item">
@@ -522,9 +554,6 @@
 								  </li> -->
 								  <!-- <li class="nav-item">
 								    <a id="link2brk" class="nav-link" href="#!">Break</a>
-								  </li> -->
-								  <!-- <li class="nav-item">
-								    <a id="link2gas" class="nav-link" href="#!">Give it a Shot</a>
 								  </li> -->
 								  <li class="nav-item">
 								    <a id="link2d2d" class="nav-link" href="#!">Diamonds to Dust</a>
@@ -591,7 +620,7 @@
 
 								</li>
 
-								<!-- <li id="break" class="list-group-item">
+								<li id="break" class="list-group-item">
 									<h5>Break</h5>
 									I'm so sick and tired of hearing you talk your talk <br>
 									Why dont we step outside, it's a nice day for a walk <br>
@@ -668,7 +697,7 @@
 									To be a sick man <br>
 									So sick <br>
 									<br>
-									<div class="credits">Written by Hunter Barsell</div>
+									
 
 								</li>
 
@@ -691,7 +720,7 @@
 									Place your bets and say your prayers <br>
 									The heat is rising through the air <br>
 									Shifting swift, a change of pace <br>
-									Theres no calling off the chase <br>
+									There's no calling off the chase <br>
 									<br>
 									Put out a fight, yeah <br>
 									Don't hesitate, a second thought may be a second too late <br>
@@ -702,10 +731,10 @@
 									Give it a shot <br>
 									Give it a shot <br>
 									<br>
-									<div class="credits">Written by Hunter Barsell</div>
+									
 
 								</li>
- -->
+
 								<li id="d2d" class="list-group-item">
 									<h5>Diamonds to Dust</h5>
 									Step right in and make some chitter chatter <br>
@@ -827,7 +856,7 @@
 									Drowning in a sea of mind pollution <br>
 									Can I take the heat? <br>
 									<br>
-									<div class="credits">Written by Hunter Barsell</div>
+									
 
 								</li>
 
@@ -859,7 +888,7 @@
 									Somebody better keep me away from you <br>
 									<br>
 									
-									<div class="credits">Written by Hunter Barsell</div>
+									
 
 								</li> -->
 
@@ -952,6 +981,14 @@
 
 							<div id="credits">
 
+								<h6>Give it a Shot</h6>
+								<div>Vocals - Logan Barsell (written by Hunter Barsell)</div>
+								<div>Lead Guitar - Matt Abbott</div>
+								<div>Drums - Eyan Stran</div>
+								<div>Rhythm Guitar - Logan Barsell</div>
+								<div>Bass - Nick Abbott</div>
+								<div>Back-up Vocals - Zach Scherer, Hunter Barsell, Logan Barsell, Matt Abbott, Nick Abbott, and Eyan Stran</div>
+
 								<h6>D.F.S.</h6>
 								<div>Vocals - Logan Barsell (written by Hunter Barsell)</div>
 								<div>Lead Guitar - Matt Abbott</div>
@@ -986,10 +1023,10 @@
 
 				<div id="merch" class="container">
 					<div class="comingsoon">COMING SOON</div>
-					<!-- <h5>Band Merchandise:</h5> -->
+					<!-- <h5>Band Merchandise:</h5>
 					<div class="row" id="product-list">
 
-						<!-- <div class="col-sm">
+						<div class="col-sm">
 							<div class="card product">
 							  <img class="card-img-top" src="../static/css/images/bracelet1.jpg" alt="Card image cap">
 							  <div class="card-body">
@@ -998,9 +1035,9 @@
 							    <a href="#" id="addWristband" class="btn btn-danger btn-block" data-toggle="modal" data-target="#cart">Add to Cart</a>
 							  </div>
 							</div>
-						</div> -->
+						</div>
 
-						<!-- <div class="col-sm">
+						<div class="col-sm">
 							<div class="card product">
 							  <img class="card-img-top" src="../static/css/images/devil.jpg" alt="Card image cap">
 							  <div class="card-body">
@@ -1011,17 +1048,18 @@
 							</div>
 						</div>
 
-						<div class="col-sm ghost"> -->
+						<div class="col-sm ghost">
 				
-						<!-- </div>  -->
+						</div> 
 
-					</div>
+					</div> -->
 				</div>
 
 				
 				<div id="blog" class="container">
 
 				<h5>Blog Feed:</h5>
+				
 
 				<div class="blog-post">
 					<div class="date">Saturday, September 1st, 2018</div>
@@ -1036,7 +1074,7 @@
 						 <div class="yesdevil">-YES DEVIL</div>
 					</div>
 				</div>
-
+<hr/>
 				<div class="blog-post">
 					<div class="date">Friday, July 13th, 2018</div>
 					<div class="video embed-responsive embed-responsive-16by9">
@@ -1245,10 +1283,10 @@
 		                <h5 class="text-uppercase">Links</h5>
 		                <ul class="list-unstyled">
 		                	<li>
-		                        <a href="/home" class="link2home">Home</a>
+		                        <a href="#!" class="link2home">Home</a>
 		                    </li>
 		                    <li>
-		                        <a href="/music" class="link2music">Music</a>
+		                        <a href="#!" class="link2music">Music</a>
 		                    </li>
 		                    <li>
 		                        <a href="#!" class="link2merch">Merch</a>

@@ -9,8 +9,12 @@ $(document).ready( f => {
 	$('#aboutus').hide()
 	$('#contact').hide()
 
+	$('#navbarNavAltMarkup .navbar-nav').click( f => {
+		$('#navbarNavAltMarkup').collapse('hide')
+	})
+
 	$('.link2home').click( e => {
-		
+
 		$('html, body').animate({ scrollTop: 0 }, 'fast')
 		$('#home').show()
 		$('#music').hide()
@@ -77,14 +81,6 @@ $(document).ready( f => {
 		$('#contact').show()
 	})
 
-	// $('.link2cart').click( f => {
-	// 	$('#home').hide()
-	// 	$('#music').hide()
-	// 	$('#merch').hide()
-	// 	$('#blog').hide()
-	// 	$('#aboutus').hide()
-	// 	$('#contact').hide()
-	// })
 
 
 
@@ -185,6 +181,114 @@ $(document).ready( f => {
 	})
 
 
+$('#link2gas').addClass('active')
+	$('#lyrics .list-group-item').hide()
+	$('#giveitashot').show()
+
+	$('#songs').css('max-width','100%')
+
+	
+
+	$('#link2dfs').click( f => {
+
+		$('#lyrics .list-group-item').hide()
+		$('#dfs').show()
+		
+		$('#lyrics .nav-link').removeClass('active')
+		$('#link2dfs').addClass('active')
+
+	})
+
+	$('#link2ss').click( f => {
+
+		$('#lyrics .list-group-item').hide()
+		$('#sosick').show()
+
+		$('#lyrics .nav-link').removeClass('active')
+		$('#link2ss').addClass('active')
+
+	})
+
+	$('#link2brk').click( f => {
+
+		$('#lyrics .list-group-item').hide()
+		$('#break').show()
+
+		$('#lyrics .nav-link').removeClass('active')
+		$('#link2brk').addClass('active')
+
+	})
+
+	$('#link2gas').click( f => {
+
+		$('#lyrics .list-group-item').hide()
+		$('#giveitashot').show()
+
+		$('#lyrics .nav-link').removeClass('active')
+		$('#link2gas').addClass('active')
+
+	})
+
+	$('#link2d2d').click( f => {
+
+		$('#lyrics .list-group-item').hide()
+		$('#d2d').show()
+
+		$('#lyrics .nav-link').removeClass('active')
+		$('#link2d2d').addClass('active')
+
+	})
+
+	$('#link2cl').click( f => {
+
+		$('#lyrics .list-group-item').hide()
+		$('#candlelight').show()
+
+		$('#lyrics .nav-link').removeClass('active')
+		$('#link2cl').addClass('active')
+
+	})
+
+	$('#link2mp').click( f => {
+
+		$('#lyrics .list-group-item').hide()
+		$('#mindpollution').show()
+
+		$('#lyrics .nav-link').removeClass('active')
+		$('#link2mp').addClass('active')
+
+	})
+
+	$('#link2ls').click( f => {
+
+		$('#lyrics .list-group-item').hide()
+		$('#loosescrew').show()
+
+		$('#lyrics .nav-link').removeClass('active')
+		$('#link2ls').addClass('active')
+
+	})
+
+	$('#link2cs').click( f => {
+
+		$('#lyrics .list-group-item').hide()
+		$('#cowboysong').show()
+
+		$('#lyrics .nav-link').removeClass('active')
+		$('#link2cs').addClass('active')
+
+	})
+
+	$('#link2sm').click( f => {
+
+		$('#lyrics .list-group-item').hide()
+		$('#smokeandmirrors').show()
+
+		$('#lyrics .nav-link').removeClass('active')
+		$('#link2sm').addClass('active')
+
+	})
+
 
 
 
@@ -213,6 +317,12 @@ $(document).ready( f => {
 
 	// MERCH STORE JS
 
+
+	$.get('/products', (allProducts, status) => {
+		console.log(allProducts.data[0])
+		var wristband1 = allProducts.data[0]
+
+	})
 
 	function add2cart (product) {
 
@@ -645,113 +755,7 @@ $(document).ready( f => {
 	// 	})
 	// }
 
-	$('#link2dfs').addClass('active')
-	$('#lyrics .list-group-item').hide()
-	$('#dfs').show()
-
-	$('#songs').css('max-width','100%')
-
 	
-
-	$('#link2dfs').click( f => {
-
-		$('#lyrics .list-group-item').hide()
-		$('#dfs').show()
-		
-		$('#lyrics .nav-link').removeClass('active')
-		$('#link2dfs').addClass('active')
-
-	})
-
-	$('#link2ss').click( f => {
-
-		$('#lyrics .list-group-item').hide()
-		$('#sosick').show()
-
-		$('#lyrics .nav-link').removeClass('active')
-		$('#link2ss').addClass('active')
-
-	})
-
-	$('#link2brk').click( f => {
-
-		$('#lyrics .list-group-item').hide()
-		$('#break').show()
-
-		$('#lyrics .nav-link').removeClass('active')
-		$('#link2brk').addClass('active')
-
-	})
-
-	$('#link2gas').click( f => {
-
-		$('#lyrics .list-group-item').hide()
-		$('#giveitashot').show()
-
-		$('#lyrics .nav-link').removeClass('active')
-		$('#link2gas').addClass('active')
-
-	})
-
-	$('#link2d2d').click( f => {
-
-		$('#lyrics .list-group-item').hide()
-		$('#d2d').show()
-
-		$('#lyrics .nav-link').removeClass('active')
-		$('#link2d2d').addClass('active')
-
-	})
-
-	$('#link2cl').click( f => {
-
-		$('#lyrics .list-group-item').hide()
-		$('#candlelight').show()
-
-		$('#lyrics .nav-link').removeClass('active')
-		$('#link2cl').addClass('active')
-
-	})
-
-	$('#link2mp').click( f => {
-
-		$('#lyrics .list-group-item').hide()
-		$('#mindpollution').show()
-
-		$('#lyrics .nav-link').removeClass('active')
-		$('#link2mp').addClass('active')
-
-	})
-
-	$('#link2ls').click( f => {
-
-		$('#lyrics .list-group-item').hide()
-		$('#loosescrew').show()
-
-		$('#lyrics .nav-link').removeClass('active')
-		$('#link2ls').addClass('active')
-
-	})
-
-	$('#link2cs').click( f => {
-
-		$('#lyrics .list-group-item').hide()
-		$('#cowboysong').show()
-
-		$('#lyrics .nav-link').removeClass('active')
-		$('#link2cs').addClass('active')
-
-	})
-
-	$('#link2sm').click( f => {
-
-		$('#lyrics .list-group-item').hide()
-		$('#smokeandmirrors').show()
-
-		$('#lyrics .nav-link').removeClass('active')
-		$('#link2sm').addClass('active')
-
-	})
 
 
 
