@@ -212,8 +212,11 @@ h5 {
     max-height: 394px;
     padding-left: 0px;
     padding-right: 0px;
-    border: 7px darkred groove;
+    border: 3px darkred solid;
+    background-color: black;
+    margin: 0px 5%;
 }
+
 
 .cbsingle {
 	min-width: 300px;
@@ -228,6 +231,8 @@ h5 {
 
 #featured {
 	text-shadow: 2px 1px darkred;
+	text-align: center;
+	
 }
 
 .cbsingle img {
