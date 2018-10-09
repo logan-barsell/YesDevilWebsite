@@ -324,6 +324,11 @@ $('#link2gas').addClass('active')
 
 	})
 
+
+
+
+
+
 	function add2cart (product) {
 
 		if (product.name == "Wristbands") {
@@ -635,19 +640,23 @@ $('#link2gas').addClass('active')
 		$('#breadcrumb').hide()
 		$('#cart .container.orderInfo').hide()
 
+		
+
 	})
 
-	const customer = {}
+	
 
 	$('#personal-info').submit( e => {
+
+		$.post('/newCustomer', (customer, status) => {
+			console.log(customer)
+		})
 
 		const subtotal = wristband.quantity * 200
 
 
 
-		customer.firstName = $('#firstName').val()
-		customer.lastName = $('#lastName').val()
-		customer.email = $('#inputEmail').val()
+		
 		
 
 		e.preventDefault()

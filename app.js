@@ -61,11 +61,20 @@ const express = require('express'),
 
 	
 
-	app.get('/products', (req, res) => {
+	.get('/products', (req, res) => {
 		const allProducts = stripe.products.list( { limit: 3 }, (err, products) => {
 			res.send(products)
 		})
 		
+	})
+
+	.post('/newCustomer', (req, res) => {
+		const newCustomer = stripe.customers.create({
+		  email: req.body.inputEmail,
+		  source: "src_18eYalAHEMiOZZp1l9ZTjSU0",
+		}, (err, customer) => {
+			res.send(customer)
+		})
 	})
 
 
