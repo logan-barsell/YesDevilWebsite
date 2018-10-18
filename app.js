@@ -4,6 +4,8 @@ const express = require('express'),
 	
 	http = require('http')
 
+	url = require('url')
+
 	path = require('path')
 	// Creates app from the library
 	app = express (),
@@ -56,7 +58,7 @@ const express = require('express'),
 	})
 
 	.get('/home', (req, res) => {
-		res.send('hi')
+		res.render("index")
 	})
 
 	
