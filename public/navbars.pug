@@ -1,0 +1,194 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+		meta(name='description', content='We are Yes Devil, a hard rock band based out of the San Francisco Bay Area. Our sound is shaped by a wide range of influences from a variety of genres. From the bluesy origins of rock n roll to in your face heavy metal, we have a modern take on the classic sounds that have shaped rock music into what it is today.')
+		link(rel='shortcut icon', href='../static/css/images/logos/vango.png')
+		title Yes Devil
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', integrity='sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm', crossorigin='anonymous')
+		link(href='https://fonts.googleapis.com/css?family=Sancreek', rel='stylesheet')
+		link(href='../static/css/style.css', rel='stylesheet', type='text/css')
+	body
+		nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-top
+			a.navbar-brand.yesdevil(href='.') YES DEVIL
+			button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavAltMarkup', aria-controls='navbarNavAltMarkup', aria-expanded='false', aria-label='Toggle navigation')
+				span.navbar-toggler-icon
+			#navbarNavAltMarkup.collapse.navbar-collapse
+				.navbar-nav.justify-content-around
+					a.nav-item.nav-link.link2home(href='/home')
+						| Home
+						span.sr-only (current)
+					a.nav-item.nav-link.link2music(href='/music') Music
+					a.nav-item.nav-link.link2merch(href='/store') Store
+					a.nav-item.nav-link.link2blog(href='/media') Media
+					a.nav-item.nav-link.link2aboutus(href='/aboutus') About Us
+					a.nav-item.nav-link.link2contact(href='/contact') Contact
+					//- a.nav-item.nav-link(href='#')
+					//- 	button.btn.btn-danger.cart-button(type='button', data-toggle='modal', data-target='#cart')
+					//- 		| Cart 
+					//- 		img(src='../static/css/images/icons/cart.png')
+					//- 		|  (
+					//- 		span 0
+					//- 		| )
+		#cart.modal.fade(tabindex='-1', role='dialog', aria-labelledby='shoppingcart', aria-hidden='true')
+			.modal-dialog(role='document')
+				.modal-content
+					.modal-header
+						h5#shoppingcart.modal-title Shopping Cart
+						button.close(type='button', data-dismiss='modal', aria-label='Close')
+							span(aria-hidden='true') ×
+					nav#breadcrumb(aria-label='breadcrumb')
+						ol.breadcrumb.justify-content-center
+							li#personal.breadcrumb-item(aria-current='page')
+								a(href='#') Personal
+							li#shipping.breadcrumb-item
+								a(href='#') Shipping
+							li#billing.breadcrumb-item
+								a(href='#') Billing
+					nav#confirm(aria-label='confirm')
+						ol.breadcrumb.justify-content-center
+							li.breadcrumb-item.active(aria-current='page')
+								a(href='#') Confirm Order
+					form#section-1
+						.modal-body
+							.emptymsg Your cart is empty.
+							ul#cart-items.list-group.list-group-flush
+						.modal-footer.total-cost.total.justify-content-center
+							| Sub-total:  
+							.price
+								| $
+								span 0
+						.modal-footer.justify-content-center
+							button.checkout.btn.disabled.btn-danger(disabled="" type='submit') Proceed to Check Out
+					.container.orderInfo
+						form#personal-info
+							.form-row
+								.form-group.col-md-6
+									label(for='firstName') First Name
+									input#firstName.form-control(type='text', required='')
+								.form-group.col-md-6
+									label(for='lastName') Last Name
+									input#lastName.form-control(type='text', required='')
+							.form-group
+								label(for='inputEmail') Email
+								input#inputEmail.form-control(type='email', required='')
+							.nextPrev
+								button.btn.btn-secondary.previous(type='button') Back
+								button.btn.btn-danger.next(type='submit') Next
+						form#shipping-info
+							.form-group
+								label(for='inputAddress') Address
+								input#inputAddress.form-control(type='text', required='')
+							.form-row
+								.form-group.col-md-6
+									label(for='inputCity') City
+									input#inputCity.form-control(type='text', required='')
+								.form-group.col-md-6
+									label(for='inputState') State
+									select#inputState.form-control(required='')
+										option(selected='') Choose...
+										option California
+										option Other
+								.form-group.col-md-4
+									label(for='inputZip') Zip
+									input#inputZip.form-control(type='text', required='')
+								.form-group.col-md-3
+									label(for='aptSuite') Apt./Suite
+									input#aptSuite.form-control(type='text', placeholder='N/A')
+							.nextPrev
+								button.btn.btn-secondary.previous(type='button') Back
+								button.btn.btn-danger.next(type='submit') Next
+						#billing-info
+							.text-center Confirmation:
+							#order-items
+							.modal-footer.total-cost.total.justify-content-center
+								| Sub-total:  
+								.price
+									| $
+									span 0
+							.modal-footer.total-cost.total.justify-content-center
+								| Shipping:  
+								.price
+									| $
+									span 0
+							.modal-footer.total-cost.total.justify-content-center
+								| Total:  
+								.price
+									| $
+									span 0
+							.nextPrev.row.justify-content-center
+								button.btn.btn-secondary.previous(type='button') Back
+								div(id='#payBtn-cont')
+		.socmed.sidebar.position-fixed(class='.d-none')
+			a(href='mailto:contact@yesdevil.com')
+				img(src='../static/css/images/icons/email.svg')
+			a(target='_blank', href='https://www.facebook.com/YESDEVIL/')
+				img(src='../static/css/images/icons/facebook.svg')
+			a(target='_blank', href='https://www.instagram.com/yes_devil/?hl=en')
+				img(src='../static/css/images/icons/instagram.svg')
+			a(target='_blank', href='https://www.youtube.com/channel/UC_jExvqWhRlM-gBt9iEsLxA')
+				img(src='../static/css/images/icons/youtube.svg')
+			a(target='_blank', href='https://soundcloud.com/yesdevil')
+				img(src='../static/css/images/icons/soundcloud.svg')
+			//- a(target='_blank', href='#!')
+			//- 	img(src='../static/css/images/icons/spotify.svg')
+
+		block content
+
+		nav.navbar.navbar-light.bg-light
+			form.form-inline.newsletter(action='https://formspree.io/contact@yesdevil.com', method='POST')
+				input.form-control.mr-sm-2(name='email', type='email', placeholder='Enter your email here to', required='')
+				button.btn.btn-outline-dark.my-2.my-sm-0(value='send', type='submit', data-target='#thankyou') Sign up for our newsletter!
+				#thankyou.modal.fade(tabindex='-1', role='dialog', aria-labelledby='thankyou', aria-hidden='true')
+					.modal-dialog(role='document')
+						.modal-content
+							.modal-header
+								h5#exampleModalLabel.modal-title Thank you!
+								button.close(type='button', data-dismiss='modal', aria-label='Close')
+									span(aria-hidden='true') ×
+							.modal-body Keep an eye out for exciting Yes Devil news!
+							span You're one step closer to exclusive content.
+							.modal-body
+								.input-group.mb-3
+									.input-group-prepend
+										.input-group-text
+											input(type='checkbox', aria-label='Checkbox for following text input')
+										div
+											| I want to be notified about special offers and deals, upcoming shows, and other Yes Devil news.
+							.modal-footer
+								button.btn.btn-secondary.tempbutton(type='button', data-dismiss='modal') Close
+								button.btn.btn-primary(type='button') Sign me up!!!
+			iframe#fblike(src='https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FYESDEVIL%2F&width=450&layout=standard&action=like&size=small&show_faces=true&share=true&height=80&appId', width='450', height='80', style='border:none;overflow:hidden', scrolling='no', frameborder='0', allowtransparency='true')
+		footer.page-footer.font-small.mt-4
+			// Footer Links
+			.container-fluid.text-center.text-md-left
+				.row
+					.col-md-7
+						h5.text-uppercase Disclaimer:
+						p Viewer Discrection Advised.
+					.col-md-5
+						h5.text-uppercase Links
+						ul.list-unstyled
+							li
+								a.link2home(href='/home') Home
+							li
+								a.link2music(href='/music') Music
+							li
+								a.link2merch(href='/store') Store
+							li
+								a.link2blog(href='/media') Media
+							li
+								a.link2aboutus(href='/aboutus') About Us
+							li
+								a.link2contact(href='/contact') Contact
+			// Copyright
+			.footer-copyright.py-3.text-center.bg-light
+				| © 2018 Copyright:
+				a(href='.') yesdevil.com
+		script(async='', src='https://static.addtoany.com/menu/page.js')
+		script(src='https://apis.google.com/js/platform.js')
+		script(src='https://code.jquery.com/jquery-3.3.1.min.js', integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=', crossorigin='anonymous')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', integrity='sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q', crossorigin='anonymous')
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', integrity='sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl', crossorigin='anonymous')
+		script(src='../static/js/custom.js')

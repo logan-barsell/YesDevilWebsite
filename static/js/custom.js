@@ -2,87 +2,9 @@
 
 $(document).ready( f => {
 
-
-	$('#music').hide()
-	$('#merch').hide()
-	$('#blog').hide()
-	$('#aboutus').hide()
-	$('#contact').hide()
-
 	$('#navbarNavAltMarkup .navbar-nav').click( f => {
 		$('#navbarNavAltMarkup').collapse('hide')
 	})
-
-	$('.link2home').click( e => {
-
-		$('html, body').animate({ scrollTop: 0 }, 'fast')
-		$('#home').show()
-		$('#music').hide()
-		$('#merch').hide()
-		$('#blog').hide()
-		$('#aboutus').hide()
-		$('#contact').hide()
-
-	})
-
-	$('.link2music').click( e => {
-		
-		$('html, body').animate({ scrollTop: 0 }, 'fast')
-		$('#home').hide()
-		$('#music').show()
-		$('#merch').hide()
-		$('#blog').hide()
-		$('#aboutus').hide()
-		$('#contact').hide()
-	
-	})
-
-	$('.link2merch').click( e => {
-
-		$('html, body').animate({ scrollTop: 0 }, 'fast')
-		$('#home').hide()
-		$('#music').hide()
-		$('#merch').show()
-		$('#blog').hide()
-		$('#aboutus').hide()
-		$('#contact').hide()
-	})
-
-	$('.link2blog').click( e => {
-	
-		$('html, body').animate({ scrollTop: 0 }, 'fast')
-		$('#home').hide()
-		$('#music').hide()
-		$('#merch').hide()
-		$('#blog').show()
-		$('#aboutus').hide()
-		$('#contact').hide()
-	})
-
-	$('.link2aboutus').click( e => {
-	
-		$('html, body').animate({ scrollTop: 0 }, 'fast')
-		$('#home').hide()
-		$('#music').hide()
-		$('#merch').hide()
-		$('#blog').hide()
-		$('#aboutus').show()
-		$('#contact').hide()
-	})
-
-	$('.link2contact').click( e => {
-	
-		$('html, body').animate({ scrollTop: 0 }, 'fast')
-		$('#home').hide()
-		$('#music').hide()
-		$('#merch').hide()
-		$('#blog').hide()
-		$('#aboutus').hide()
-		$('#contact').show()
-	})
-
-
-
 
 	$(window).resize( f => {
 		var windoww = $(window).width() 
@@ -113,7 +35,24 @@ $(document).ready( f => {
 		}
 	})
 
-	
+	// MEDIA.JS
+
+	$('#videos').hide()
+
+	$('.pictures').click( f=> {
+		$('.nav-link').removeClass('active')
+		$('.pictures').addClass('active')
+		$('#pictures').show()
+		$('#videos').hide()
+	})
+
+	$('.videos').click( f=> {
+		$('.nav-link').removeClass('active')
+		$('.videos').addClass('active')
+		$('#videos').show()
+		$('#pictures').hide()
+	})
+
 
 
 
@@ -183,7 +122,7 @@ $(document).ready( f => {
 
 $('#link2gas').addClass('active')
 	$('#lyrics .list-group-item').hide()
-	$('#giveitashot').show()
+	$('#dfs').show()
 
 	$('#songs').css('max-width','100%')
 
@@ -325,7 +264,15 @@ $('#link2gas').addClass('active')
 	})
 
 
+	$('.shit button a').click( e => {
+		e.preventDefault()
+		window.open('https://itunes.apple.com/us/album/the-high-cost-of-living-low/1441189549', '_blank')
+	})
 
+	$('#buyalbum a').click( e => {
+		e.preventDefault()
+		window.open('https://itunes.apple.com/us/album/the-high-cost-of-living-low/1441189549', '_blank')
+	})
 
 
 

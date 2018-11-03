@@ -3,6 +3,8 @@ html, body {
 	font-size: 22px;
 }
 
+
+
 .comingsoon {
 	font-size: 22px;
 	text-align: center;
@@ -106,7 +108,7 @@ nav {
 
 .showinfo .card-title {
 	color: darkred;
-	text-shadow: 1px 1px 2px black;
+	text-shadow: 1.5px 1px black;
 }
 
 .showinfo button {
@@ -120,7 +122,11 @@ nav {
 
 .showinfo .list-group-item span {
 	color: black;
-	text-shadow: 1px 1px 1px darkred;
+	text-shadow: 1px 1px darkred;
+}
+
+#alboom {
+	text-shadow: 1.5px 1px darkred;
 }
 
 .showinfo .text-center {
@@ -145,16 +151,13 @@ h5 {
 }
 
 #music .row {
-	padding-bottom: 33px;
 	margin: 0px;
 }
 
 /*#music .row.album {
 	padding-top: 44px;
 }*/
-.img-container {
-	max-width: 433px;
-}
+
 
 #album-name {
 	text-decoration: underline;
@@ -192,23 +195,29 @@ h5 {
 
 #album-cover {
 	max-width: 100%;
+	border: 5px solid black;
 }
 
 #album-stuff {
-	max-width: 90%;
+	max-width: 535px;
 }
 
 
 
 .hcll {
-	height: 200px;
+	height: auto;
 	margin: auto;
 }
 
 #music .col {
-	max-width: 690px;
+	max-width: 333px;
 
 }
+
+#music .col.img-container {
+	max-width: 420px;
+}
+
 .musicvid {
     max-height: 394px;
     padding-left: 0px;
@@ -246,7 +255,7 @@ h5#featured{
 	border-radius: 7px;
 }
 
-#music .nav-link.active {
+.nav-tabs .nav-link.active {
 	color: black;
 }
 
@@ -257,6 +266,7 @@ h5#featured{
 #music .list-group {
 	margin: 33px 0px;
 	max-width: 100%;
+	min-width: 300px;
 }
 
 
@@ -267,6 +277,9 @@ h5#featured{
 	}
 }
 
+.alboom {
+	font-style: italic;
+}
 
 #music .list-group-item {
 	max-width: 100%;
@@ -311,12 +324,12 @@ h5#featured{
 }
 
 .buyalbum {
-	margin: 0px 13px 27px 13px;	
+	margin: 29px 29%;	
 }
-
+/*
 #songs button {
 	background-color: #ec7a88;
-}
+}*/
 
 .itunes {
 	width: 106px;
@@ -328,6 +341,7 @@ h5#featured{
 
 #merch h5 {
 	margin-top: 24px;
+	text-shadow: 1.5px 1px darkred;
 }
 
 #merch .col-sm {
@@ -347,8 +361,9 @@ h5#featured{
 	max-height: 366px;
 }
 
-#merch .card-title {
+#merch h5.card-title {
 	font-size: 27px;
+	text-shadow: none;
 }
 
 #merch .card-body {
@@ -367,42 +382,81 @@ h5#featured{
 	display: none;
 }
 
+#blog .img-container {
+	margin-top: 33px;
+}
+
+#blog .img-container img:hover {
+	opacity: 0.7;
+
+}
+
+#blog .img-container img {
+	width: 100%;
+	border: 2px solid black;
+	border-radius: 5px;
+	min-width: 300px;
+}
+
+#blog h5 {
+	text-shadow: 1.5px 1px darkred;
+}
+
+
 #blog .video {
 	margin: 13px auto;
-	width: 66%;
+	width: 100%;
+	background-color: black;
+	border: 1px solid black;
 }
 
 .blog-post {
-	margin: 33px 0px;
+	margin: 33px auto;
+	max-width: 420px;
+	border: 2px solid black;
+	border-radius: 5px;
 }
 
-.blog-post .date {
-	padding-left: 6%;
+.blog-post .title {
+	text-shadow: 1.5px 1px darkred;
+}
+
+.blog-post hr {
+	margin: 5px 0px;
+}
+
+.blog-post {
+	text-align: center;
+	padding-top: 15px;
+}
+
+.blog-post .card-header {
+	padding: 0px;
 }
 
 .blog-post .description {
-	padding: 0px 6%;
+	padding: 13px 6%;
 	font-size: 18px;
 }
 
-@media only screen and (max-width: 992px) {
-    #blog .video{
-    	width: 90%;
-    }
+.accordion {
+	margin-top: 21px;
+	text-align: center;
 }
 
-.seemore {
-	display: flex;
+.accordion .btn-link {
+	color: black;
 }
 
-#blog button {
-	margin: 13px auto;
+.accordion .btn-link:hover {
+	color: darkred;
 }
+
 
 .yt-api-cont {
 	width: 103px;
-	margin: auto;
-	height: 24px;
+	margin: 19px auto;
+	height: 19px;
 	margin-bottom: 7px;
 }
 
@@ -412,12 +466,12 @@ h5#featured{
 
 #aboutus h5 {
 	margin-top: 18px;
+	text-shadow: 1.5px 1px darkred;
 }
 
 .aboutuspic{
 	max-width: 90%;
 	height: 366px;
-	border: 2px solid black;
 }
 
 .bio p {
@@ -682,4 +736,20 @@ a.disabled:hover {
 #cost2ship {
 	color: green;
 	width: fit-content;
+}
+
+.btn-danger {
+	background-color: darkred;
+}
+
+.btn-danger:hover {
+	background-color: black;
+}
+
+.badge-danger {
+	background-color: darkred;
+}
+
+.badge-danger:hover {
+	background-color: black;
 }

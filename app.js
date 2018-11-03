@@ -11,6 +11,8 @@ const express = require('express'),
 	app = express (),
 	// Creates a session middleware for making cookie settings
 	session = require('express-session'),
+	// enables use of pug for view engine
+	pug = require('pug'),
 	// enables fs module for file operations
 	fs = require('fs'),
 	// extracts data from request stream and exposes it on req.body
@@ -26,9 +28,12 @@ const express = require('express'),
 	stripe = require("stripe")("sk_test_twTNGhW8q7c3a9Nnb3Truojt")
 
 
-// app.set('views', __dirname+'/public')
-   app.use(express.static(path.join(
-		__dirname+"/public")))
+
+	app.set('views', __dirname+'/public')
+	// Sets view engine to pug
+	.set('view engine', 'pug')
+
+
 
 	.use(session({
 	  secret: 'secure as fuck',
@@ -53,12 +58,32 @@ const express = require('express'),
 	.use('/api', require('./routes/api').route)
 
 	.get('/', (req, res) => {        
-		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            bb
-		res.render("index")
+		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+		res.render("home")
 	})
 
 	.get('/home', (req, res) => {
-		res.render("index")
+		res.render("home")
+	})
+
+	.get('/music', (req, res) => {
+		res.render("music")
+	})
+
+	.get('/store', (req, res) => {
+		res.render("store")
+	})
+
+	.get('/media', (req, res) => {
+		res.render("media")
+	})
+
+	.get('/aboutus', (req, res) => {
+		res.render("aboutus")
+	})
+
+	.get('/contact', (req, res) => {
+		res.render("contact")
 	})
 
 	
@@ -67,7 +92,6 @@ const express = require('express'),
 		const allProducts = stripe.products.list( { limit: 3 }, (err, products) => {
 			res.send(products)
 		})
-		
 	})
 
 	.post('/newCustomer', (req, res) => {

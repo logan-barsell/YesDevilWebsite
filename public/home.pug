@@ -1,0 +1,90 @@
+extends navbars.pug
+
+block content
+
+	#home
+		#carouselExampleIndicators.carousel.slide(data-ride='carousel')
+			ol.carousel-indicators
+				li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
+				li(data-target='#carouselExampleIndicators', data-slide-to='1')
+				li(data-target='#carouselExampleIndicators', data-slide-to='2')
+				li(data-target='#carouselExampleIndicators', data-slide-to='3')
+			.carousel-inner
+				.carousel-item.active
+					img.d-block.w-100(src='../static/css/images/home/yesdevil1.jpg', alt='First slide')
+				.carousel-item
+					img.d-block.w-100(src='../static/css/images/home/yesdevil2.jpg', alt='Second slide')
+				.carousel-item
+					img.d-block.w-100(src='../static/css/images/home/yesdevil3.jpg', alt='Third slide')
+				.carousel-item
+					img.d-block.w-100(src='../static/css/images/home/yesdevil4.jpg', alt='Fourth slide')
+			a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
+				span.carousel-control-prev-icon(aria-hidden='true')
+				span.sr-only Previous
+			a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
+				span.carousel-control-next-icon(aria-hidden='true')
+				span.sr-only Next
+		#upcomingshows
+			h5 Upcoming Shows:
+			.row.justify-content-around
+				.col-sm.showad
+					.card
+						img.card-img-top(src='../static/css/images/home/pirates.jpg', alt='PromoFlyer')
+					#show3.col-sm.showinfo
+						.card
+							.card-body.text-center
+								h5.card-title Pirates of Emerson
+								p.card-text Pleasanton, CA
+							ul.list-group.list-group-flush
+								li.list-group-item
+									| Date: 
+									span October 19th, 30th, 31st
+								li.list-group-item
+									| Time: 
+									span 7:00pm
+								li.list-group-item
+									| Price:
+									span  $10 for entry only, $30 for access to theme park attractions
+							.card-body.text-center.gettix
+								a.card-link(href='http://www.piratesofemerson.com/ticketing.htm', target='_blank') Get Tickets
+				.col-sm.showad
+					.card
+						img.card-img-top(src='../static/css/images/home/musicroom.jpg', alt='PromoFlyer')
+					#show3.col-sm.showinfo
+						.card
+							.card-body.text-center
+								h5.card-title The Music Room
+								p.card-text Gilroy, CA
+							ul.list-group.list-group-flush
+								li.list-group-item
+									| Date: 
+									span October 27th
+								li.list-group-item
+									| Time: 
+									span 5:00pm
+								li.list-group-item
+									| Price:
+									span  $2 with costume, $4 without
+							.card-body.text-center.gettix
+								a.card-link(target='_blank') Get Tickets
+				.col-sm.showad
+					.card
+						img.card-img-top(src='../static/css/images/home/gilman.jpg', alt='PromoFlyer')
+					#show3.col-sm.showinfo
+						.card
+							.card-body.text-center
+								h5.card-title 924 Gilman St.
+								p.card-text Berkeley, CA
+							ul.list-group.list-group-flush
+								li.list-group-item
+									| Date: 
+									span Nov. 3rd
+								li.list-group-item
+									| Time: 
+									span 6:30pm
+								li.list-group-item
+									| Price:
+									span  $10 with membership card, $12 without
+							.card-body.text-center.gettix
+								a.card-link(target='_blank') Get Tickets
+
