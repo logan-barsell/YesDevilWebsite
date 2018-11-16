@@ -12,7 +12,7 @@ const express = require('express'),
 	// Creates a session middleware for making cookie settings
 	session = require('express-session'),
 	// enables use of pug for view engine
-	pug = require('pug'),
+	pug = require('gulp-pug'),
 	// enables fs module for file operations
 	fs = require('fs'),
 	// extracts data from request stream and exposes it on req.body
@@ -27,11 +27,16 @@ const express = require('express'),
 
 	stripe = require("stripe")("sk_test_twTNGhW8q7c3a9Nnb3Truojt")
 
+	var gulp = require('gulp')
 
+	gulp.task('views', buildHTML => {
+		return gulp.src(__dirname+'/views/*.pug')
+		.pipe(pug())
+	})
 
-	app.set('views', __dirname+'/public')
+	// app.set('views', __dirname+'/public')
 	// Sets view engine to pug
-	.set('view engine', 'pug')
+	app.set('view engine', 'pug')
 
 
 
@@ -57,9 +62,8 @@ const express = require('express'),
 
 	.use('/api', require('./routes/api').route)
 
-	.get('/', (req, res) => {        
-		                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
-		res.render("home")
+	.get('/', (req, res) => {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+		res.render("home.pug")
 	})
 
 	.get('/home', (req, res) => {
