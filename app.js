@@ -64,6 +64,7 @@ const express = require('express'),
 
 	.get('/', (req, res) => {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 		res.render("home")
+		console.log("HELLOOOOOOOO")
 	})
 
 	.get('/home', (req, res) => {
