@@ -34,7 +34,7 @@ const express = require('express'),
 		.pipe(pug())
 	})
 
-	// app.set('views', __dirname+'/public')
+	app.set('views', __dirname+'/views')
 	// Sets view engine to pug
 	app.set('view engine', 'pug')
 
@@ -63,7 +63,7 @@ const express = require('express'),
 	.use('/api', require('./routes/api').route)
 
 	.get('/', (req, res) => {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-		res.render("home.pug")
+		res.render("home")
 	})
 
 	.get('/home', (req, res) => {
@@ -89,6 +89,7 @@ const express = require('express'),
 	.get('/contact', (req, res) => {
 		res.render("contact")
 	})
+
 
 	
 
