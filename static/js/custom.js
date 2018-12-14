@@ -2,6 +2,77 @@
 
 $(document).ready( f => {
 
+
+
+	$('#music').hide()
+	$('#merch').hide()
+	$('#blog').hide()
+	$('#aboutus').hide()
+	$('#contact').hide()
+
+	$('.link2home').click( f => {
+		$('#home').show()
+		$('#music').hide()
+		$('#merch').hide()
+		$('#blog').hide()
+		$('#aboutus').hide()
+		$('#contact').hide()
+	})
+
+	$('.link2music').click( f => {
+		$('#home').hide()
+		$('#music').show()
+		$('#merch').hide()
+		$('#blog').hide()
+		$('#aboutus').hide()
+		$('#contact').hide()
+	})
+
+	$('.link2merch').click( f => {
+		$('#home').hide()
+		$('#music').hide()
+		$('#merch').show()
+		$('#blog').hide()
+		$('#aboutus').hide()
+		$('#contact').hide()
+	})
+
+	$('.link2blog').click( f => {
+		$('#home').hide()
+		$('#music').hide()
+		$('#merch').hide()
+		$('#blog').show()
+		$('#aboutus').hide()
+		$('#contact').hide()
+	})
+
+	$('.link2aboutus').click( f => {
+		$('#home').hide()
+		$('#music').hide()
+		$('#merch').hide()
+		$('#blog').hide()
+		$('#aboutus').show()
+		$('#contact').hide()
+	})
+
+	$('.link2contact').click( f => {
+		$('#home').hide()
+		$('#music').hide()
+		$('#merch').hide()
+		$('#blog').hide()
+		$('#aboutus').hide()
+		$('#contact').show()
+	})
+
+	$('.link2cart').click( f => {
+		$('#home').hide()
+		$('#music').hide()
+		$('#merch').hide()
+		$('#blog').hide()
+		$('#aboutus').hide()
+		$('#contact').hide()
+	})
+
 	$('#navbarNavAltMarkup .navbar-nav').click( f => {
 		$('#navbarNavAltMarkup').collapse('hide')
 	})

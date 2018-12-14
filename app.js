@@ -11,8 +11,8 @@ const express = require('express'),
 	app = express (),
 	// Creates a session middleware for making cookie settings
 	session = require('express-session'),
-	// enables use of pug for view engine
-	pug = require('gulp-pug'),
+	// // enables use of pug for view engine
+	// pug = require('gulp-pug'),
 	// enables fs module for file operations
 	fs = require('fs'),
 	// extracts data from request stream and exposes it on req.body
@@ -27,16 +27,18 @@ const express = require('express'),
 
 	stripe = require("stripe")("sk_test_twTNGhW8q7c3a9Nnb3Truojt")
 
-	var gulp = require('gulp')
+	// var gulp = require('gulp')
 
-	gulp.task('views', buildHTML => {
-		return gulp.src(__dirname+'/views/*.pug')
-		.pipe(pug())
-	})
+	// gulp.task('views', buildHTML => {
+	// 	return gulp.src(__dirname+'/views/*.pug')
+	// 	.pipe(pug())
+	// })
 
-	app.set('views', __dirname+'/views')
+	app.set('views', __dirname+'/public')
 	// Sets view engine to pug
-	app.set('view engine', 'pug')
+	// app.set('view engine', 'pug')
+	app.use('/', express.static(path.join(
+		__dirname+"/public")))
 
 
 
@@ -63,33 +65,29 @@ const express = require('express'),
 	.use('/api', require('./routes/api').route)
 
 	.get('/', (req, res) => {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-		res.render("home")
-		console.log("HELLOOOOOOOO")
+		res.render('index')
 	})
 
-	.get('/home', (req, res) => {
-		res.render("home")
-	})
 
-	.get('/music', (req, res) => {
-		res.render("music")
-	})
+	// .get('/music', (req, res) => {
+	// 	res.render("music")
+	// })
 
-	.get('/store', (req, res) => {
-		res.render("store")
-	})
+	// .get('/store', (req, res) => {
+	// 	res.render("store")
+	// })
 
-	.get('/media', (req, res) => {
-		res.render("media")
-	})
+	// .get('/media', (req, res) => {
+	// 	res.render("media")
+	// })
 
-	.get('/aboutus', (req, res) => {
-		res.render("aboutus")
-	})
+	// .get('/aboutus', (req, res) => {
+	// 	res.render("aboutus")
+	// })
 
-	.get('/contact', (req, res) => {
-		res.render("contact")
-	})
+	// .get('/contact', (req, res) => {
+	// 	res.render("contact")
+	// })
 
 
 	
