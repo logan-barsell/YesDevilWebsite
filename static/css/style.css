@@ -496,13 +496,14 @@ h5#featured{
 
 .aboutuspic{
 	max-width: 90%;
-	height: 366px;
+	height: 315px;
 }
 
 .bio p {
 	text-indent: 13%;
 	margin: 20px;
 	font-style: italic;
+	text-align: center;
 }
 
 .bio a {
