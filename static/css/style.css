@@ -1,9 +1,9 @@
 html, body {
 	font-family: 'Sancreek';
 	font-size: 22px;
+	background-color: #272727;
+
 }
-
-
 
 .comingsoon {
 	font-size: 22px;
@@ -19,17 +19,18 @@ html, body {
 .navbar-light .navbar-brand.yesdevil {
 	font-size: 30px;
 	color: darkred;
-	text-shadow: 2px 1px black;
+	text-shadow: 2px 1px #3B0600 ;
 }
-
-
 
 nav {
 	font-size: 21px;
+	background-color: black;
 }
 
-.nav-item:hover {
-	text-shadow: 1px 1px darkred;
+
+
+.navbar-nav a.nav-link.nav-item:hover {
+	color: darkred;
 }
 
 .navbar-nav {
@@ -127,6 +128,7 @@ nav {
 
 #alboom {
 	text-shadow: 1.5px 1px darkred;
+	color: white;
 }
 
 .showinfo .text-center {
@@ -255,8 +257,17 @@ h5#featured{
 	border-radius: 7px;
 }
 
+#album-stuff .nav {
+	color: white;
+}
+
 .nav-tabs .nav-link.active {
-	color: black;
+	color: white;
+	background-color: black;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: white;
 }
 
 #music ul {
@@ -286,7 +297,7 @@ h5#featured{
 }
 
 #lyrics .nav-link.active {
-	color: black;
+	color: darkred;
 }
 
 #songs .list-group-item {
@@ -316,11 +327,13 @@ h5#featured{
 	text-align: center;
 	font-size: 20px;
 	max-width: 472px;
+	color: white;
 }
 
 #credits h6 {
-	text-shadow: 1px 1px .5px darkred;
+	text-shadow: 1px 1px white;
 	margin: 33px 0px 13px 0px;
+	color: darkred;
 }
 
 .buyalbum {
@@ -337,6 +350,8 @@ h5#featured{
 
 #merch {
 	font-size: 18px;
+
+	color: white;
 }
 
 #merch h5 {
@@ -386,10 +401,8 @@ h5#featured{
 	margin-top: 33px;
 }
 
-#blog .img-container img:hover {
-	opacity: 0.7;
 
-}
+
 
 #blog .img-container img {
 	width: 100%;
@@ -399,6 +412,7 @@ h5#featured{
 }
 
 #blog h5 {
+	color: white;
 	text-shadow: 1.5px 1px darkred;
 }
 
@@ -415,6 +429,10 @@ h5#featured{
 	max-width: 420px;
 	border: 2px solid black;
 	border-radius: 5px;
+	background-color: white;
+}
+.a2a_s_snapchat {
+	border: 1px solid yellow;
 }
 
 .blog-post .title {
@@ -452,7 +470,6 @@ h5#featured{
 	color: darkred;
 }
 
-
 .yt-api-cont {
 	width: 103px;
 	margin: 19px auto;
@@ -462,6 +479,10 @@ h5#featured{
 
 .description {
 	text-align: center;
+}
+
+#aboutus {
+	color: white;
 }
 
 #aboutus h5 {
@@ -480,6 +501,10 @@ h5#featured{
 	font-style: italic;
 }
 
+.bio a {
+	color: darkred;
+}
+
 #aboutus p span {
 	font-size: 27px;
 	
@@ -496,6 +521,7 @@ h5#featured{
 .members img {
 	max-width: 100%;
 	padding-bottom: 27px;
+	border-radius: 5px;
 	
 }
  .members p {
@@ -549,6 +575,10 @@ h5#featured{
 
 #contact .sendmsg {
 	margin: auto;
+}
+
+#contact a {
+	color: darkred;
 }
 
 .jumbotron p img {
@@ -675,16 +705,28 @@ select.form-control:not([size]):not([multiple]) {
 
 
 a {
+	cursor: pointer;
+}
+
+
+footer {
+	color: white;
+}
+
+#footer-links li {
+	text-shadow: 1.5px 1px darkred;
+}
+
+#footer-links li:hover {
 	color: darkred;
+	text-shadow: 1.5px 1px white;
 }
 
-a:hover {
+.footer-copyright {
 	color: black;
+	border: 6px solid black;
 }
 
-footer a {
-	color: #7c7c7d;
-}
 
 .footer-copyright a {
 	color: darkred;
@@ -752,4 +794,13 @@ a.disabled:hover {
 
 .badge-danger:hover {
 	background-color: black;
+}
+
+#facebook {
+	color: white;
+}
+
+#contact .form-group {
+	color: darkred;
+	text-shadow: 1px 1px black;
 }
