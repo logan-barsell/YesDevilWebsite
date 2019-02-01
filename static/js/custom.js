@@ -306,11 +306,11 @@ $('#link2gas').addClass('active')
 	// MERCH STORE JS
 
 
-	$.get('/products', (allProducts, status) => {
-		console.log(allProducts.data[0])
-		var wristband1 = allProducts.data[0]
+	// $.get('/products', (allProducts, status) => {
+	// 	console.log(allProducts.data[0])
+	// 	var wristband1 = allProducts.data[0]
 
-	})
+	// })
 
 
 	$('.shit button a').click( e => {
