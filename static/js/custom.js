@@ -299,28 +299,6 @@ $('#link2gas').addClass('active')
 
 	})
 
-
-
-
-	// $('.quantity option').click( f => {
-	// 	$()
-	// })
-
-	// $('.quantity option.selected').val()
-
-	
-	
-	// $('.newsletter').on('submit', e => {
-	// 	e.preventDefault()
-	// 	$('#thankyou').modal()
-	// })
-
-	// $('').click( f => {
-
-	// 	var shirts = $('.quantity').children().val()
-	// 	console.log(shirts)
-
-	// })
 	
 
 
@@ -347,363 +325,363 @@ $('#link2gas').addClass('active')
 
 
 
-	function add2cart (product) {
+	// function add2cart (product) {
 
-		if (product.name == "Wristbands") {
-			return $(`
-				<li id="wristband" class="list-group-item">
-					<div class="row justify-content-around">
-						<div class="col-auto">
-							<div class="container">
-								<img class="item-image" src="${product.img}">
-							</div>
-						</div>
-						<div class="row item-options">
-							<div class="col-auto">
-								<div class="form-group">
-									<select class="form-control quantity" id="item1">
-										<option value="1">1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-										<option value="4">4</option>
-										<option value="5">5</option>
-									</select>
-								</div>
-							</div>
+	// 	if (product.name == "Wristbands") {
+	// 		return $(`
+	// 			<li id="wristband" class="list-group-item">
+	// 				<div class="row justify-content-around">
+	// 					<div class="col-auto">
+	// 						<div class="container">
+	// 							<img class="item-image" src="${product.img}">
+	// 						</div>
+	// 					</div>
+	// 					<div class="row item-options">
+	// 						<div class="col-auto">
+	// 							<div class="form-group">
+	// 								<select class="form-control quantity" id="item1">
+	// 									<option value="1">1</option>
+	// 									<option value="2">2</option>
+	// 									<option value="3">3</option>
+	// 									<option value="4">4</option>
+	// 									<option value="5">5</option>
+	// 								</select>
+	// 							</div>
+	// 						</div>
 
-							<div class="col-auto item-cost">$<span>${product.price}</span></div>
+	// 						<div class="col-auto item-cost">$<span>${product.price}</span></div>
 
-							<div class="col-auto trash">
-								<img src="../static/css/images/trash.svg">
-							</div>
-						</div>
-					</div>
-				</li>
-			`)
-		} else if (product.name == "Devil") {
-			return $(`
-				<li id="devil" class="list-group-item">
-					<div class="row justify-content-around">
-						<div class="col-auto">
-							<div class="container">
-								<img class="item-image" src="${product.img}">
-							</div>
-						</div>
-						<div class="row item-options">
-							<div class="col-auto">
-								<div class="form-group">
-									<select class="form-control quantity" id="item2">
-										<option value="1">1</option>
-										<option value="2">2</option>
-										<option value="3">3</option>
-										<option value="4">4</option>
-										<option value="5">5</option>
-									</select>
-								</div>
-							</div>
+	// 						<div class="col-auto trash">
+	// 							<img src="../static/css/images/trash.svg">
+	// 						</div>
+	// 					</div>
+	// 				</div>
+	// 			</li>
+	// 		`)
+	// 	} else if (product.name == "Devil") {
+	// 		return $(`
+	// 			<li id="devil" class="list-group-item">
+	// 				<div class="row justify-content-around">
+	// 					<div class="col-auto">
+	// 						<div class="container">
+	// 							<img class="item-image" src="${product.img}">
+	// 						</div>
+	// 					</div>
+	// 					<div class="row item-options">
+	// 						<div class="col-auto">
+	// 							<div class="form-group">
+	// 								<select class="form-control quantity" id="item2">
+	// 									<option value="1">1</option>
+	// 									<option value="2">2</option>
+	// 									<option value="3">3</option>
+	// 									<option value="4">4</option>
+	// 									<option value="5">5</option>
+	// 								</select>
+	// 							</div>
+	// 						</div>
 
-							<div class="col-auto item-cost">$<span>${product.price}</span></div>
+	// 						<div class="col-auto item-cost">$<span>${product.price}</span></div>
 
-							<div class="col-auto trash">
-								<img src="../static/css/images/trash.svg">
-							</div>
-						</div>
-					</div>
-				</li>
-			`)
-		}
+	// 						<div class="col-auto trash">
+	// 							<img src="../static/css/images/trash.svg">
+	// 						</div>
+	// 					</div>
+	// 				</div>
+	// 			</li>
+	// 		`)
+	// 	}
 
-	}
+	// }
 
-	function confirmation (product) {
+	// function confirmation (product) {
 
-		if (product.name == "Wristbands") {
-			return $(`
-				<li id="wristband-conf" class="list-group-item">
-					<div class="row justify-content-around">
-						<div class="col-auto">
-							<div class="container">
-								<img class="item-image" src="${product.img}">
-							</div>
-						</div>
-						<div class="row item-options">
-							<div class="howmany col-auto">
+	// 	if (product.name == "Wristbands") {
+	// 		return $(`
+	// 			<li id="wristband-conf" class="list-group-item">
+	// 				<div class="row justify-content-around">
+	// 					<div class="col-auto">
+	// 						<div class="container">
+	// 							<img class="item-image" src="${product.img}">
+	// 						</div>
+	// 					</div>
+	// 					<div class="row item-options">
+	// 						<div class="howmany col-auto">
 								
-							</div>
+	// 						</div>
 
-							<div class="col-auto item-cost">$<span>${product.price}</span></div>
+	// 						<div class="col-auto item-cost">$<span>${product.price}</span></div>
 
-						</div>
-					</div>
-				</li>
-			`)
-		} 
+	// 					</div>
+	// 				</div>
+	// 			</li>
+	// 		`)
+	// 	} 
 
-	}
-
-
-
-	var products = []
-
-	var count = 0
-
-
-	$('.product a').click( e => {	
-
-
-		var count = Number($('.cart-button span').html())
-
-		var cartItems = $('#cart-items')
-
-		var item = $(e.target).parent().parent()
-
-		var itemImg = item.find('img').attr('src')
-
-		var itemName = item.find('.product-name').html()
-
-		var itemPrice = Number(item.find('.price span').html())
-
-		function Product(img, name, price) {
-			this.img = img
-			this.name = itemName
-			this.price = itemPrice
-		}
-
-		if(itemName == 'Wristbands') {
-			var wristband = new Product(itemImg, itemName, itemPrice)
-			products.push(wristband)
-			$('#addWristband').addClass('disabled').html('Added to Cart &nbsp &#10003')
-		} else if (itemName == 'Devil') {
-			var devil = new Product(itemImg, itemName, itemPrice)
-			products.push(devil)
-			$('#addDevil').addClass('disabled').html('Added to Cart &nbsp &#10003')
-		} 
-
-		var product = new Product(itemImg, itemName, itemPrice)
-
-		console.log(products)
-
-		cartItems.append(add2cart(product))
-
-		console.log(confirmation(product))
-
-		$('#billing-info #order-items').html(confirmation(product))
+	// }
 
 
 
-		var items = $('#cart .list-group').children().length
+	// var products = []
 
-		if (items > 0) {
-			$('.emptymsg').hide()
-			$('.checkout').removeClass('disabled')
-		} else {
-			$('.emptymsg').show()
-			$('.checkout').addClass('disabled')
-		}
+	// var count = 0
 
-		// var total = products.map(product => product.price).reduce((prev, next) => prev + next)
+
+	// $('.product a').click( e => {	
+
+
+	// 	var count = Number($('.cart-button span').html())
+
+	// 	var cartItems = $('#cart-items')
+
+	// 	var item = $(e.target).parent().parent()
+
+	// 	var itemImg = item.find('img').attr('src')
+
+	// 	var itemName = item.find('.product-name').html()
+
+	// 	var itemPrice = Number(item.find('.price span').html())
+
+	// 	function Product(img, name, price) {
+	// 		this.img = img
+	// 		this.name = itemName
+	// 		this.price = itemPrice
+	// 	}
+
+	// 	if(itemName == 'Wristbands') {
+	// 		var wristband = new Product(itemImg, itemName, itemPrice)
+	// 		products.push(wristband)
+	// 		$('#addWristband').addClass('disabled').html('Added to Cart &nbsp &#10003')
+	// 	} else if (itemName == 'Devil') {
+	// 		var devil = new Product(itemImg, itemName, itemPrice)
+	// 		products.push(devil)
+	// 		$('#addDevil').addClass('disabled').html('Added to Cart &nbsp &#10003')
+	// 	} 
+
+	// 	var product = new Product(itemImg, itemName, itemPrice)
+
+	// 	console.log(products)
+
+	// 	cartItems.append(add2cart(product))
+
+	// 	console.log(confirmation(product))
+
+	// 	$('#billing-info #order-items').html(confirmation(product))
+
+
+
+	// 	var items = $('#cart .list-group').children().length
+
+	// 	if (items > 0) {
+	// 		$('.emptymsg').hide()
+	// 		$('.checkout').removeClass('disabled')
+	// 	} else {
+	// 		$('.emptymsg').show()
+	// 		$('.checkout').addClass('disabled')
+	// 	}
+
+	// 	// var total = products.map(product => product.price).reduce((prev, next) => prev + next)
 
 		
-		if ($('#item1').val() == undefined) {
-			var wbcost = 0
-		} else {
-			var wbcost = $('#item1').val() * 2
-		}
+	// 	if ($('#item1').val() == undefined) {
+	// 		var wbcost = 0
+	// 	} else {
+	// 		var wbcost = $('#item1').val() * 2
+	// 	}
 
-		if ($('#item2').val() == undefined) {
-			var dcost = 0
-		} else {
-			var dcost = $('#item2').val() * 3
-		}
+	// 	if ($('#item2').val() == undefined) {
+	// 		var dcost = 0
+	// 	} else {
+	// 		var dcost = $('#item2').val() * 3
+	// 	}
 
-		$('.total span').html(wbcost + dcost)
+	// 	$('.total span').html(wbcost + dcost)
 
-		var finalprice = wbcost + dcost
+	// 	var finalprice = wbcost + dcost
 
 			
 
-		$('#item1').change( f => {
-			$('.howmany').html('X' + $('#item1').val())
-			var wbcost = $('#item1').val() * 2
-			$('#wristband .item-cost span').html(wbcost)
-			$('#wristband-conf .item-cost span').html(wbcost)
+	// 	$('#item1').change( f => {
+	// 		$('.howmany').html('X' + $('#item1').val())
+	// 		var wbcost = $('#item1').val() * 2
+	// 		$('#wristband .item-cost span').html(wbcost)
+	// 		$('#wristband-conf .item-cost span').html(wbcost)
 
-			if ($('#item2').val() == undefined) {
-				var dcost = 0
-			} else {
-				var dcost = $('#item2').val() * 3
-			}
+	// 		if ($('#item2').val() == undefined) {
+	// 			var dcost = 0
+	// 		} else {
+	// 			var dcost = $('#item2').val() * 3
+	// 		}
 			
 			
-			console.log(wbcost, dcost, wbcost+dcost)
-			$('.total span').html(dcost + wbcost)
-		})
+	// 		console.log(wbcost, dcost, wbcost+dcost)
+	// 		$('.total span').html(dcost + wbcost)
+	// 	})
 
-		$('#item2').change( f => {
-			var dcost = $('#item2').val() * 3
-			$('#devil .item-cost span').html(dcost)
+	// 	$('#item2').change( f => {
+	// 		var dcost = $('#item2').val() * 3
+	// 		$('#devil .item-cost span').html(dcost)
 
-			if ($('#item1').val() == undefined) {
-				var wbcost = 0
-			} else {
-				var wbcost = $('#item1').val() * 2
-			}
+	// 		if ($('#item1').val() == undefined) {
+	// 			var wbcost = 0
+	// 		} else {
+	// 			var wbcost = $('#item1').val() * 2
+	// 		}
 			
-			console.log(wbcost, dcost, wbcost+dcost)
-			$('.total span').html(dcost + wbcost)
-		})
+	// 		console.log(wbcost, dcost, wbcost+dcost)
+	// 		$('.total span').html(dcost + wbcost)
+	// 	})
 
 
 
-		count += 1
+	// 	count += 1
 
-		$('.cart-button span').html(count)
+	// 	$('.cart-button span').html(count)
 
-		deleteItem(product, count)
-
-
-
-	})
+	// 	deleteItem(product, count)
 
 
-	var deleteItem = (product, count) => {
-		console.log(products)
-		$('.trash img').click( e => {
 
-			var cartItem = $(e.target).parent().parent().parent().parent()
-
-			cartItem.remove()
-
-			var items = $('#cart .list-group').children().length
-
-			if (items > 0) {
-				$('.emptymsg').hide()
-				$('.checkout').removeClass('disabled')
-			} else {
-				$('.emptymsg').show()
-				$('.checkout').addClass('disabled')
-			}
-			console.log(product)
-			console.log(products)
-			for (var i = products.length - 1; i >= 0; --i) {
-				console.log(product)
-			    if (products[i].name == product.name) {
-			        products.splice(i,1)
-			    }
-			}
-
-			console.log(products)
-
-			// var total = products.map(product => product.price).reduce((prev, next) => prev + next, 0)
-
-			if ($('#item1').val() == undefined) {
-				var wbcost = 0
-			} else {
-				var wbcost = $('#item1').val() * 2
-			}
-
-			if ($('#item2').val() == undefined) {
-				var dcost = 0
-			} else {
-				var dcost = $('#item2').val() * 3
-			}
-
-			$('.total span').html(wbcost + dcost)
-
-			count -= 1
-			console.log(count)
-			$('.cart-button span').html(count)
-			console.log(product)
-			if (cartItem.is('#wristband')) {
-				$('#addWristband').removeClass('disabled').html('Add to Cart')
-			} else if (cartItem.is('#devil')) {
-				$('#addDevil').removeClass('disabled').html('Add to Cart')
-			}
-
-		})
-	}
-
-	$('#breadcrumb').hide()
-	$('#personal-info').hide()
-	$('#shipping-info').hide()
-	$('#billing-info').hide()
-	$('#confirmation').hide()
-	$('#confirm').hide()
-	$('#cart .container').hide()
-
-	const wristband = {}
-
-	$('#section-1').submit( e => {
-
-		wristband.quantity = $('#item1.quantity').val()
-		$('.howmany').html('x ' + wristband.quantity)
+	// })
 
 
-		e.preventDefault()
-		if (!$('#section-1 .checkout').hasClass('disabled')){
-			$('#section-1').hide()
-			$('#personal-info').show()
-			$('#breadcrumb').show()
-			$('#cart .container.orderInfo').show()
-			$('.breadcrumb-item').removeClass('active')
-			$('#personal.breadcrumb-item').addClass('active')
-		}
-	})
+	// var deleteItem = (product, count) => {
+	// 	console.log(products)
+	// 	$('.trash img').click( e => {
 
-	$('#personal-info .previous').click( e => {
+	// 		var cartItem = $(e.target).parent().parent().parent().parent()
 
-		e.preventDefault()
-		$('#personal-info').hide()
-		$('#section-1').show()
-		$('#breadcrumb').hide()
-		$('#cart .container.orderInfo').hide()
+	// 		cartItem.remove()
+
+	// 		var items = $('#cart .list-group').children().length
+
+	// 		if (items > 0) {
+	// 			$('.emptymsg').hide()
+	// 			$('.checkout').removeClass('disabled')
+	// 		} else {
+	// 			$('.emptymsg').show()
+	// 			$('.checkout').addClass('disabled')
+	// 		}
+	// 		console.log(product)
+	// 		console.log(products)
+	// 		for (var i = products.length - 1; i >= 0; --i) {
+	// 			console.log(product)
+	// 		    if (products[i].name == product.name) {
+	// 		        products.splice(i,1)
+	// 		    }
+	// 		}
+
+	// 		console.log(products)
+
+	// 		// var total = products.map(product => product.price).reduce((prev, next) => prev + next, 0)
+
+	// 		if ($('#item1').val() == undefined) {
+	// 			var wbcost = 0
+	// 		} else {
+	// 			var wbcost = $('#item1').val() * 2
+	// 		}
+
+	// 		if ($('#item2').val() == undefined) {
+	// 			var dcost = 0
+	// 		} else {
+	// 			var dcost = $('#item2').val() * 3
+	// 		}
+
+	// 		$('.total span').html(wbcost + dcost)
+
+	// 		count -= 1
+	// 		console.log(count)
+	// 		$('.cart-button span').html(count)
+	// 		console.log(product)
+	// 		if (cartItem.is('#wristband')) {
+	// 			$('#addWristband').removeClass('disabled').html('Add to Cart')
+	// 		} else if (cartItem.is('#devil')) {
+	// 			$('#addDevil').removeClass('disabled').html('Add to Cart')
+	// 		}
+
+	// 	})
+	// }
+
+	// $('#breadcrumb').hide()
+	// $('#personal-info').hide()
+	// $('#shipping-info').hide()
+	// $('#billing-info').hide()
+	// $('#confirmation').hide()
+	// $('#confirm').hide()
+	// $('#cart .container').hide()
+
+	// const wristband = {}
+
+	// $('#section-1').submit( e => {
+
+	// 	wristband.quantity = $('#item1.quantity').val()
+	// 	$('.howmany').html('x ' + wristband.quantity)
+
+
+	// 	e.preventDefault()
+	// 	if (!$('#section-1 .checkout').hasClass('disabled')){
+	// 		$('#section-1').hide()
+	// 		$('#personal-info').show()
+	// 		$('#breadcrumb').show()
+	// 		$('#cart .container.orderInfo').show()
+	// 		$('.breadcrumb-item').removeClass('active')
+	// 		$('#personal.breadcrumb-item').addClass('active')
+	// 	}
+	// })
+
+	// $('#personal-info .previous').click( e => {
+
+	// 	e.preventDefault()
+	// 	$('#personal-info').hide()
+	// 	$('#section-1').show()
+	// 	$('#breadcrumb').hide()
+	// 	$('#cart .container.orderInfo').hide()
 
 		
 
-	})
+	// })
 
 	
 
-	$('#personal-info').submit( e => {
+	// $('#personal-info').submit( e => {
 
-		$.post('/newCustomer', (customer, status) => {
-			console.log(customer)
-		})
+	// 	$.post('/newCustomer', (customer, status) => {
+	// 		console.log(customer)
+	// 	})
 
-		const subtotal = wristband.quantity * 200
+	// 	const subtotal = wristband.quantity * 200
 
 
 
 		
 		
 
-		e.preventDefault()
-		$('#personal-info').hide()
-		$('#shipping-info').show()
-		$('.breadcrumb-item').removeClass('active')
-		$('#shipping.breadcrumb-item').addClass('active')
-		$('#paymentButton').remove()
-		$('#billing-info .nextPrev').append(`
-	    	<form action="/charge" method="POST" id="paymentButton">
-			  <script
-			    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-			    data-key="pk_test_K3QH6a1oie72u4tR9dHKMj1I"
-			    data-amount=${subtotal}
-			    data-currency="usd"
-			    data-name="Yes Devil"
-			    data-description="Billing Information"
-			    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-			    data-locale="auto"
-			    data-email=${customer.email}
-			    data-allow-remember-me="false"
-			    >
-			  </script>
+	// 	e.preventDefault()
+	// 	$('#personal-info').hide()
+	// 	$('#shipping-info').show()
+	// 	$('.breadcrumb-item').removeClass('active')
+	// 	$('#shipping.breadcrumb-item').addClass('active')
+	// 	$('#paymentButton').remove()
+	// 	$('#billing-info .nextPrev').append(`
+	//     	<form action="/charge" method="POST" id="paymentButton">
+	// 		  <script
+	// 		    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+	// 		    data-key="pk_test_K3QH6a1oie72u4tR9dHKMj1I"
+	// 		    data-amount=${subtotal}
+	// 		    data-currency="usd"
+	// 		    data-name="Yes Devil"
+	// 		    data-description="Billing Information"
+	// 		    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+	// 		    data-locale="auto"
+	// 		    data-email=${customer.email}
+	// 		    data-allow-remember-me="false"
+	// 		    >
+	// 		  </script>
 			  
-			</form>
+	// 		</form>
 
-		`)
+	// 	`)
 
-	})
+	// })
 
 	// function ajaxPost (customer, shipping){
     	
@@ -723,43 +701,43 @@ $('#link2gas').addClass('active')
 	// 	})
  //    }
 
-	const shipping = {}
+	// const shipping = {}
 
-	$('#shipping-info').submit( e => {
-		shipping.address = $('#inputAddress').val()
-		shipping.city = $('#inputCity').val()
-		shipping.state = $('#inputState').val()
-		shipping.zip = $('#inputZip').val()
-		shipping.aptSuite = $('#aptSuite').val() 
+	// $('#shipping-info').submit( e => {
+	// 	shipping.address = $('#inputAddress').val()
+	// 	shipping.city = $('#inputCity').val()
+	// 	shipping.state = $('#inputState').val()
+	// 	shipping.zip = $('#inputZip').val()
+	// 	shipping.aptSuite = $('#aptSuite').val() 
 
-		e.preventDefault()
-		$('#shipping-info').hide()
-		$('#billing-info').show()
-		$('.breadcrumb-item').removeClass('active')
-		$('#billing.breadcrumb-item').addClass('active')
+	// 	e.preventDefault()
+	// 	$('#shipping-info').hide()
+	// 	$('#billing-info').show()
+	// 	$('.breadcrumb-item').removeClass('active')
+	// 	$('#billing.breadcrumb-item').addClass('active')
 
-		// ajaxPost(shipping, customer)
+	// 	// ajaxPost(shipping, customer)
 
-		$.post('/order', {customer_info: customer, shipping_info: shipping, order_info: wristband}, res => {
-			console.log("hello")
-		})
-	})
+	// 	$.post('/order', {customer_info: customer, shipping_info: shipping, order_info: wristband}, res => {
+	// 		console.log("hello")
+	// 	})
+	// })
 
-	$('#shipping-info .previous').click( f => {
-		$('#shipping-info').hide()
-		$('#personal-info').show()
-		$('.breadcrumb-item').removeClass('active')
-		$('#personal.breadcrumb-item').addClass('active')
+	// $('#shipping-info .previous').click( f => {
+	// 	$('#shipping-info').hide()
+	// 	$('#personal-info').show()
+	// 	$('.breadcrumb-item').removeClass('active')
+	// 	$('#personal.breadcrumb-item').addClass('active')
 		
-	})
+	// })
 
 
-	$('#billing-info .previous').click( f => {
-		$('#billing-info').hide()
-		$('#shipping-info').show()
-		$('.breadcrumb-item').removeClass('active')
-		$('#shipping.breadcrumb-item').addClass('active')
-	})
+	// $('#billing-info .previous').click( f => {
+	// 	$('#billing-info').hide()
+	// 	$('#shipping-info').show()
+	// 	$('.breadcrumb-item').removeClass('active')
+	// 	$('#shipping.breadcrumb-item').addClass('active')
+	// })
 
 
 	// $(function () {

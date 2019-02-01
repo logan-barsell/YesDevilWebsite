@@ -381,8 +381,17 @@ h5#featured{
 }
 
 #merch h5.card-title {
+	color: black;
 	font-size: 27px;
 	text-shadow: none;
+}
+
+#merch h5.card-title.black {
+	color: white;
+}
+
+#merch .card-body.black-bg {
+	background-color: black;
 }
 
 #merch .card-body {
