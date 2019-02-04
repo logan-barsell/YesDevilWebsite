@@ -83,7 +83,10 @@ nav {
 }
 
 #upcomingshows h5 {
+	text-align: center;
 	margin: 27px 0px;
+	color: darkred;
+	text-shadow: 1px 1px black;
 }
 
 .showad {
@@ -117,7 +120,7 @@ nav {
 }
 
 .showinfo button {
-	height: 0px;
+	margin-top: 5px;
 }
 
 .showinfo button span {
@@ -125,9 +128,13 @@ nav {
 	margin-right: 10px;
 }
 
+.showinfo .list-group-item {
+	text-shadow: 1px 1px darkred;
+}
+
 .showinfo .list-group-item span {
 	color: black;
-	text-shadow: 1px 1px darkred;
+	text-shadow: none;
 }
 
 #alboom {
