@@ -77,6 +77,21 @@ $(document).ready( f => {
 		$('#navbarNavAltMarkup').collapse('hide')
 	})
 
+	var windoww = $(window).width()
+
+	if (windoww <= 992) {
+			$('.nav.merchstore').css('top','81px')
+			$('.nav.thcoll').css('top','81px')
+			$('.nav.upcomingshows').css('top','81px')
+		}
+	if (windoww > 768) {
+			$('#songs .list-group-item').addClass('d-flex')
+		}
+
+	if (windoww <= 768) {
+		$('#songs .list-group-item').removeClass('d-flex')
+	}
+
 	$(window).resize( f => {
 		var windoww = $(window).width() 
 
@@ -84,11 +99,13 @@ $(document).ready( f => {
 		// 	$('.ghost').show()
 
 		// }
-		// if (windoww <= 992) {
-		// 	$('.ghost').hide()
-
+		if (windoww <= 992) {
+			$('.nav.thcoll').css('top','81px')
+			$('.nav.merchstore').css('top','81px')
+			$('.nav.upcomingshows').css('top','81px')
+		}
 		// }
-		// if (windoww > 991) {
+		// i().css({windoww > 991) {
 		// 	$('.ghost').show()
 
 		// }
@@ -104,6 +121,40 @@ $(document).ready( f => {
 		if (windoww <= 768) {
 			$('#songs .list-group-item').removeClass('d-flex')
 		}
+	})
+
+	var windowTop = $(window).scrollTop()
+	var shows = $('.nav.upcomingshows')
+	var showsNav = shows.offset().top - 95.5
+	if (windowTop > showsNav || windoww > 992) {
+			$('.nav.upcomingshows').css({'position':'sticky', 'z-index': '1', 'top': '95.5px', 'width': '100%'})
+		}
+	if (windowTop > showsNav || windoww <= 992) {
+			$('.nav.upcomingshows').css({'position':'sticky', 'z-index': '1', 'top': '81px', 'width': '100%'})
+		}
+
+	// var carousel = $('.carousel')
+	// var carouselHeight = carousel.height()
+	// var shows = $('.nav.upcomingshows')
+	// shows.css('margin-top', carouselHeight)
+
+	$(window).scroll( f => {
+
+		var windowTop = $(window).scrollTop()
+		var showsNav = $('.nav.upcomingshows').offset().top - 95
+
+		if (windowTop > showsNav || windoww > 992) {
+			$('.nav.upcomingshows').css({'position':'sticky', 'z-index': '1', 'top': '95.5px', 'width': '100%'})
+		}
+		if (windowTop > showsNav || windoww <= 992) {
+			$('.nav.upcomingshows').css({'position':'sticky', 'z-index': '1', 'top': '81px', 'width': '100%'})
+		}
+
+		// var carouselHeight = $('.carousel').height()
+
+		// if()
+		// shows.css('margin-top', carouselHeight)
+
 	})
 
 	// MEDIA.JS

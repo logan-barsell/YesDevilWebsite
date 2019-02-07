@@ -72,14 +72,28 @@ nav {
 	font-weight: italic;
 }
 
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
 
 .background-pic img {
 	max-width: 100%;
 }
 
+.nav.upcomingshows {
+	background-color: black;
+	color: darkred;
+	text-shadow: 2px 1px #3B0600;
+	box-shadow: 0px -1px 13px black;
+}
+
 #upcomingshows {
-	margin: 13px 33px 33px 33px;
+	margin: 33px 33px 0px 33px;
+	padding-bottom: 33px;
 }
 
 #upcomingshows h5 {
@@ -138,7 +152,7 @@ nav {
 }
 
 #alboom {
-	text-shadow: 1.5px 1px darkred;
+	text-shadow: 1.5px 1px #cf212a;
 	color: white;
 }
 
@@ -170,6 +184,16 @@ h5 {
 /*#music .row.album {
 	padding-top: 44px;
 }*/
+
+.nav.thcoll {
+	background-color: black;
+	border-top: .5px solid white;
+	box-shadow: 0px -1px 13px black;
+	position: sticky;
+	z-index: 100;
+	top: 95.5px;
+	width: 100%;
+}
 
 
 #album-name {
@@ -358,6 +382,18 @@ h5#featured{
 .itunes {
 	width: 106px;
 }
+.nav.merchstore {
+	background-color: black;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border:.5px solid white;
+	border-top: none;
+	box-shadow: 0px -1px 13px black;
+	position: sticky;
+	z-index: 1;
+	top: 95.5px;
+	width: 100%;
+}
 
 #merch {
 	font-size: 18px;
@@ -365,9 +401,15 @@ h5#featured{
 	color: white;
 }
 
+#product-list {
+	margin-top: 30px;
+	padding-bottom: 30px;
+}
+
 #merch h5 {
 	margin-top: 24px;
-	text-shadow: 1.5px 1px darkred;
+	color: darkred;
+	text-shadow: 2px 1px #3B0600;
 }
 
 #merch .col-sm {
@@ -405,12 +447,21 @@ h5#featured{
 	padding-top: 0px;
 }
 
+#merch .card-body p {
+	margin-bottom: 0px;
+}
+
 #merch .card-text {
 	color: #606060;
 }
 
+.product .card-body {
+	text-align: center;
+}
+
 .price {
 	color: green;
+	margin-bottom: 10px;
 }
 
 .ghost {
@@ -505,14 +556,12 @@ h5#featured{
 	color: white;
 }
 
-#aboutus h5 {
-	margin-top: 18px;
-	text-shadow: 1.5px 1px darkred;
-}
+
 
 .aboutuspic{
 	max-width: 90%;
 	height: 315px;
+	margin-top: 30px;
 }
 
 .bio p {
