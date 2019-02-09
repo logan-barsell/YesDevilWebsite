@@ -17,7 +17,7 @@ html, body {
 }
 
 .navbar-light .navbar-brand.yesdevil {
-	font-size: 30px;
+	font-size: 35px;
 	color: darkred;
 	text-shadow: 2px 1px #3B0600 ;
 }
@@ -181,9 +181,6 @@ h5 {
 	margin: 0px;
 }
 
-/*#music .row.album {
-	padding-top: 44px;
-}*/
 
 .nav.thcoll {
 	background-color: black;
@@ -472,12 +469,14 @@ h5#featured{
 	margin-top: 33px;
 }
 
-
+.img-thumbnail {
+	background-color: black;
+}
 
 
 #blog .img-container img {
 	width: 100%;
-	border: 2px solid black;
+	border: 2px solid white;
 	border-radius: 5px;
 	min-width: 300px;
 }
@@ -500,56 +499,34 @@ h5#featured{
 	max-width: 420px;
 	border: 2px solid black;
 	border-radius: 5px;
-	background-color: white;
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding-top: 15px;
 }
 .a2a_s_snapchat {
 	border: 1px solid yellow;
 }
 
 .blog-post .title {
-	text-shadow: 1.5px 1px darkred;
+	color: darkred;
+	text-shadow: 1px .5px #3B0600;
 }
 
 .blog-post hr {
 	margin: 5px 0px;
 }
 
-.blog-post {
-	text-align: center;
-	padding-top: 15px;
-}
-
 .blog-post .card-header {
 	padding: 0px;
 }
 
-.blog-post .description {
-	padding: 13px 6%;
-	font-size: 18px;
-}
 
-.accordion {
-	margin-top: 21px;
-	text-align: center;
-}
-
-.accordion .btn-link {
-	color: black;
-}
-
-.accordion .btn-link:hover {
-	color: darkred;
-}
 
 .yt-api-cont {
 	width: 103px;
-	margin: 19px auto;
+	margin: 16px auto;
 	height: 19px;
-	margin-bottom: 7px;
-}
-
-.description {
-	text-align: center;
 }
 
 #aboutus {

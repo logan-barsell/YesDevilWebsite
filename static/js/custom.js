@@ -77,6 +77,12 @@ $(document).ready( f => {
 		$('#navbarNavAltMarkup').collapse('hide')
 	})
 
+
+
+
+
+
+
 	var windoww = $(window).width()
 
 	if (windoww <= 992) {
@@ -103,6 +109,13 @@ $(document).ready( f => {
 			$('.nav.thcoll').css('top','81px')
 			$('.nav.merchstore').css('top','81px')
 			$('.nav.upcomingshows').css('top','81px')
+		} 
+		console.log("nsdaf")
+
+		if (windoww > 992) {
+			$('.nav.thcoll').css('top','95.5px')
+			$('.nav.merchstore').css('top','95.5px')
+			$('.nav.upcomingshows').css('top','95.5px')
 		}
 		// }
 		// i().css({windoww > 991) {
@@ -123,13 +136,17 @@ $(document).ready( f => {
 		}
 	})
 
+
+
+
+
 	var windowTop = $(window).scrollTop()
 	var shows = $('.nav.upcomingshows')
 	var showsNav = shows.offset().top - 95.5
-	if (windowTop > showsNav || windoww > 992) {
+	if (windowTop > showsNav && windoww > 992) {
 			$('.nav.upcomingshows').css({'position':'sticky', 'z-index': '1', 'top': '95.5px', 'width': '100%'})
 		}
-	if (windowTop > showsNav || windoww <= 992) {
+	if (windowTop > showsNav && windoww <= 992) {
 			$('.nav.upcomingshows').css({'position':'sticky', 'z-index': '1', 'top': '81px', 'width': '100%'})
 		}
 
@@ -143,10 +160,10 @@ $(document).ready( f => {
 		var windowTop = $(window).scrollTop()
 		var showsNav = $('.nav.upcomingshows').offset().top - 95
 
-		if (windowTop > showsNav || windoww > 992) {
+		if (windowTop > showsNav && windoww > 992) {
 			$('.nav.upcomingshows').css({'position':'sticky', 'z-index': '1', 'top': '95.5px', 'width': '100%'})
 		}
-		if (windowTop > showsNav || windoww <= 992) {
+		if (windowTop > showsNav && windoww <= 992) {
 			$('.nav.upcomingshows').css({'position':'sticky', 'z-index': '1', 'top': '81px', 'width': '100%'})
 		}
 
@@ -156,6 +173,15 @@ $(document).ready( f => {
 		// shows.css('margin-top', carouselHeight)
 
 	})
+
+
+
+
+
+
+
+
+
 
 	// MEDIA.JS
 
