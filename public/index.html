@@ -11,10 +11,16 @@
     <link href="../static/css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top"><a class="navbar-brand yesdevil" href=".">YES DEVIL</a>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top"><a class="navbar-brand yesdevil hvr-grow" href=".">YES DEVIL</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav justify-content-around"><a class="nav-item nav-link link2home">Home<span class="sr-only">(current)</span></a><a class="nav-item nav-link link2music">Music</a><a class="nav-item nav-link link2merch">Store</a><a class="nav-item nav-link link2blog">Media</a><a class="nav-item nav-link link2aboutus"">About Us</a><a class="nav-item nav-link link2contact"">Contact</a>
+        <div class="navbar-nav justify-content-around">
+          <a class="nav-item nav-link link2home hvr-sink">Home<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link link2music hvr-sink">Music</a>
+          <a class="nav-item nav-link link2merch hvr-sink">Store</a>
+          <a class="nav-item nav-link link2blog hvr-sink">Media</a>
+          <a class="nav-item nav-link link2aboutus hvr-sink"">About Us</a>
+          <a class="nav-item nav-link link2contact hvr-sink"">Contact</a>
         <a class="nav-item nav-link snipcart-checkout">
           <button type="button" class="btn btn-danger cart-button" data-toggle="modal" data-target="#cart">
            Cart <img src="../static/css/images/merch/cart.png">
@@ -24,7 +30,13 @@
       </div>
     </nav>
    
-    <div class="socmed sidebar position-fixed .d-none"><a href="mailto:contact@yesdevil.com"><img src="../static/css/images/icons/email.svg"></a><a target="_blank" href="https://www.facebook.com/YESDEVIL/"><img src="../static/css/images/icons/facebook.svg"></a><a target="_blank" href="https://www.instagram.com/yes_devil/?hl=en"><img src="../static/css/images/icons/instagram.svg"></a><a target="_blank" href="https://www.youtube.com/channel/UC_jExvqWhRlM-gBt9iEsLxA"><img src="../static/css/images/icons/youtube.svg"></a><a target="_blank" href="https://soundcloud.com/yesdevil"><img src="../static/css/images/icons/soundcloud.svg"></a><a target="_blank" href="https://open.spotify.com/album/0AHnuZiQ2wPtntjP9jOXHj?si=L2X71tETRMujmALGs8wzjg"><img src="../static/css/images/icons/spotify.svg"></a></div>
+    <div class="socmed sidebar position-fixed .d-none">
+      <a class="hvr-backward" href="mailto:contact@yesdevil.com"><img src="../static/css/images/icons/email.svg"></a>
+      <a class="hvr-backward" target="_blank" href="https://www.facebook.com/YESDEVIL/"><img src="../static/css/images/icons/facebook.svg"></a>
+      <a class="hvr-backward" target="_blank" href="https://www.instagram.com/yes_devil/?hl=en"><img src="../static/css/images/icons/instagram.svg"></a>
+      <a class="hvr-backward" target="_blank" href="https://www.youtube.com/channel/UC_jExvqWhRlM-gBt9iEsLxA"><img src="../static/css/images/icons/youtube.svg"></a>
+      <a class="hvr-backward" target="_blank" href="https://soundcloud.com/yesdevil"><img src="../static/css/images/icons/soundcloud.svg"></a>
+      <a class="hvr-backward" target="_blank" href="https://open.spotify.com/album/0AHnuZiQ2wPtntjP9jOXHj?si=L2X71tETRMujmALGs8wzjg"><img src="../static/css/images/icons/spotify.svg"></a></div>
 
 
     <div id="home">
@@ -61,7 +73,8 @@
 
           <div class="col-sm showad">
             <div class="card"><img class="card-img-top" src="../static/css/images/home/whisky218(2).png" alt="PromoFlyer"/></div>
-            <div class="col-sm showinfo" id="show3">
+            <button class="btn btn-dark btn-block" type="button" data-toggle="collapse" data-target="#show1" aria-expanded="false" aria-controls="show1">Show Info</button>
+            <div class="col-sm showinfo collapse multi-collapse" id="show1">
               <div class="card">
                 <div class="card-body text-center">
                   <h5 class="card-title">Whisky a Go Go</h5>
@@ -73,7 +86,9 @@
                   <li class="list-group-item">Price:<span> $15 presale, $20 door</span></li>
                 </ul>
               </div>
-              <button
+              
+            </div>
+            <button
                   class="snipcart-add-item btn btn-danger btn-block"
                   data-item-id="4"
                   data-item-name="Yes Devil @ The Whisky a Go Go 2/18"
@@ -85,7 +100,6 @@
                   >
                   Get Tickets
               </button>
-            </div>
           </div>
 
          <!--  <div class="col-sm showad">
@@ -834,7 +848,12 @@
             <hr class="my-4"/>
             <p><img src="../static/css/images/icons/envelope-closed.svg"/><a href="mailto:contact@yesdevil.com"> &nbsp contact@yesdevil.com</a></p>
             <hr class="my-4"/>
-            <div class="socmed contact"><a href="https://www.facebook.com/YESDEVIL/" target="_blank"><img src="../static/css/images/icons/facebook.svg"/></a><a href="https://www.instagram.com/yes_devil/?hl=en" target="_blank"><img src="../static/css/images/icons/instagram.svg"/></a><a href="https://www.youtube.com/channel/UC_jExvqWhRlM-gBt9iEsLxA" target="_blank"><img src="../static/css/images/icons/youtube.svg"/></a><a href="https://soundcloud.com/yesdevil" target="_blank"><img src="../static/css/images/icons/soundcloud.svg"/></a><a href="https://open.spotify.com/album/0AHnuZiQ2wPtntjP9jOXHj?si=L2X71tETRMujmALGs8wzjg" target="_blank"><img src="../static/css/images/icons/spotify.svg"/></a></div>
+            <div class="socmed contact">
+              <a class="hvr-grow" href="https://www.facebook.com/YESDEVIL/" target="_blank"><img src="../static/css/images/icons/facebook.svg"/></a>
+              <a class="hvr-grow" href="https://www.instagram.com/yes_devil/?hl=en" target="_blank"><img src="../static/css/images/icons/instagram.svg"/></a>
+              <a class="hvr-grow" href="https://www.youtube.com/channel/UC_jExvqWhRlM-gBt9iEsLxA" target="_blank"><img src="../static/css/images/icons/youtube.svg"/></a>
+              <a class="hvr-grow" href="https://soundcloud.com/yesdevil" target="_blank"><img src="../static/css/images/icons/soundcloud.svg"/></a>
+              <a class="hvr-grow" href="https://open.spotify.com/album/0AHnuZiQ2wPtntjP9jOXHj?si=L2X71tETRMujmALGs8wzjg" target="_blank"><img src="../static/css/images/icons/spotify.svg"/></a></div>
           </div>
         </div>
         <div class="col-lg sendmsg">
