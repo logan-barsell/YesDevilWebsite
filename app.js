@@ -25,14 +25,6 @@ const express = require('express'),
 	keyPublishable = process.env.PUBLISHABLE_KEY,
 	keySecret = process.env.SECRET_KEY,
 
-	
-
-	// var gulp = require('gulp')
-
-	// gulp.task('views', buildHTML => {
-	// 	return gulp.src(__dirname+'/views/*.pug')
-	// 	.pipe(pug())
-	// })
 
 	app.set('views', __dirname+'/public')
 	// Sets view engine to pug

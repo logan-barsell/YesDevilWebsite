@@ -89,6 +89,8 @@ $(document).ready( f => {
 			$('.nav.merchstore').css('top','81px')
 			$('.nav.thcoll').css('top','81px')
 			$('.nav.upcomingshows').css('top','81px')
+			$('#blog .nav').css('top','81px')
+
 		}
 	if (windoww > 768) {
 			$('#songs .list-group-item').addClass('d-flex')
@@ -109,6 +111,7 @@ $(document).ready( f => {
 			$('.nav.thcoll').css('top','81px')
 			$('.nav.merchstore').css('top','81px')
 			$('.nav.upcomingshows').css('top','81px')
+			$('#blog .nav').css('top','81px')
 		} 
 		console.log("nsdaf")
 
@@ -116,6 +119,7 @@ $(document).ready( f => {
 			$('.nav.thcoll').css('top','95.5px')
 			$('.nav.merchstore').css('top','95.5px')
 			$('.nav.upcomingshows').css('top','95.5px')
+			$('#blog .nav').css('top','95.5px')
 		}
 		// }
 		// i().css({windoww > 991) {
@@ -244,7 +248,7 @@ $(document).ready( f => {
 	$('#credits').hide()
 
 	$('.songs').click( f => {
-		$('.nav-link').removeClass('active')
+		$('.album-tab .nav-link').removeClass('active')
 		$('.songs').addClass('active')
 		$('#songs').show()
 		$('#lyrics').hide()
@@ -252,7 +256,7 @@ $(document).ready( f => {
 	})
 
 	$('.lyrics').click( f => {
-		$('.nav-link').removeClass('active')
+		$('.album-tab .nav-link').removeClass('active')
 		$('.lyrics').addClass('active')
 		$('#lyrics').show()
 		$('#songs').hide()
@@ -260,7 +264,7 @@ $(document).ready( f => {
 	})
 
 	$('.credits').click( f => {
-		$('.nav-link').removeClass('active')
+		$('.album-tab .nav-link').removeClass('active')
 		$('.credits').addClass('active')
 		$('#lyrics').hide()
 		$('#songs').hide()
@@ -268,7 +272,7 @@ $(document).ready( f => {
 	})
 
 
-$('#link2gas').addClass('active')
+	$('#link2dfs').addClass('active')
 	$('#lyrics .list-group-item').hide()
 	$('#dfs').show()
 
