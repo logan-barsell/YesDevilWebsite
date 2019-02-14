@@ -686,6 +686,16 @@ h5.text-center.row {
 	margin: auto;
 }
 
+.sharethis-inline-follow-buttons {
+	margin: auto;
+	color: white;
+
+}
+
+#st-1 span{
+	font-family: 'Sancreek';
+}
+
 #contact a {
 	color: darkred;
 }

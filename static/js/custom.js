@@ -93,10 +93,10 @@ $(document).ready( f => {
 	var windoww = $(window).width()
 
 	if (windoww <= 992) {
-			$('.nav.merchstore').css('top','81px')
-			$('.nav.thcoll').css('top','81px')
+			$('.nav.merchstore').css('top','88px')
+			$('.nav.thcoll').css('top','88px')
 			$('.nav.upcomingshows').css('top','81px')
-			$('#blog .nav').css('top','81px')
+			$('#blog .nav').css('top','88px')
 
 		}
 	if (windoww > 768) {
@@ -115,12 +115,13 @@ $(document).ready( f => {
 
 		// }
 		if (windoww <= 992) {
-			$('.nav.thcoll').css('top','81px')
-			$('.nav.merchstore').css('top','81px')
+			$('.nav.thcoll').css('top','88px')
+			$('.nav.merchstore').css('top','88px')
 			$('.nav.upcomingshows').css('top','81px')
-			$('#blog .nav').css('top','81px')
+			$('#blog .nav').css('top','88px')
+			console.log("nsdaf")
 		} 
-		console.log("nsdaf")
+		
 
 		if (windoww > 992) {
 			$('.nav.thcoll').css('top','95.5px')
@@ -158,6 +159,7 @@ $(document).ready( f => {
 			$('.nav.upcomingshows').css({'position':'sticky', 'z-index': '1', 'top': '95.5px', 'width': '100%'})
 		}
 	if (windowTop > showsNav && windoww <= 992) {
+			console.log("IMHERE")
 			$('.nav.upcomingshows').css({'position':'sticky', 'z-index': '1', 'top': '81px', 'width': '100%'})
 		}
 
