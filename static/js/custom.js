@@ -17,6 +17,7 @@ $(document).ready( f => {
 		$('#blog').hide()
 		$('#aboutus').hide()
 		$('#contact').hide()
+		document.body.scrollTop = document.documentElement.scrollTop = 0
 	})
 
 	$('.link2music').click( f => {
@@ -26,6 +27,7 @@ $(document).ready( f => {
 		$('#blog').hide()
 		$('#aboutus').hide()
 		$('#contact').hide()
+		document.body.scrollTop = document.documentElement.scrollTop = 0
 	})
 
 	$('.link2merch').click( f => {
@@ -35,6 +37,7 @@ $(document).ready( f => {
 		$('#blog').hide()
 		$('#aboutus').hide()
 		$('#contact').hide()
+		document.body.scrollTop = document.documentElement.scrollTop = 0
 	})
 
 	$('.link2blog').click( f => {
@@ -44,6 +47,7 @@ $(document).ready( f => {
 		$('#blog').show()
 		$('#aboutus').hide()
 		$('#contact').hide()
+		document.body.scrollTop = document.documentElement.scrollTop = 0
 	})
 
 	$('.link2aboutus').click( f => {
@@ -53,6 +57,7 @@ $(document).ready( f => {
 		$('#blog').hide()
 		$('#aboutus').show()
 		$('#contact').hide()
+		document.body.scrollTop = document.documentElement.scrollTop = 0
 	})
 
 	$('.link2contact').click( f => {
@@ -62,6 +67,7 @@ $(document).ready( f => {
 		$('#blog').hide()
 		$('#aboutus').hide()
 		$('#contact').show()
+		document.body.scrollTop = document.documentElement.scrollTop = 0
 	})
 
 	$('.link2cart').click( f => {
@@ -71,6 +77,7 @@ $(document).ready( f => {
 		$('#blog').hide()
 		$('#aboutus').hide()
 		$('#contact').hide()
+		document.body.scrollTop = document.documentElement.scrollTop = 0
 	})
 
 	$('#navbarNavAltMarkup .navbar-nav').click( f => {
