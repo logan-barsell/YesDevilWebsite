@@ -692,6 +692,15 @@ h5.text-center.row {
 
 }
 
+.beer {
+	margin: auto;
+}
+
+.beer img {
+	height: 41px;
+	width: 50px;
+}
+
 #st-1 span{
 	font-family: 'Sancreek';
 }
@@ -834,6 +843,7 @@ footer {
 
 #footer-links li {
 	text-shadow: 1.5px 1px darkred;
+	width: fit-content;
 }
 
 #footer-links li:hover {
