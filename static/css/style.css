@@ -63,9 +63,17 @@ nav {
 	opacity: .8;
 }
 
+.socmed.sidebar img:hover {
+	box-shadow: 1px -1px #3B0600;
+}
+
 .socmed a.w img {
 	background-color: white;
 	box-shadow: -1px -1px white;
+}
+
+.socmed a.w img:hover {
+	box-shadow: 1px -1px white;
 }
 
 /*.socmed img:hover {
