@@ -589,6 +589,14 @@ h5.text-center.row {
 	padding: 0px;
 }
 
+#videos {
+	padding-bottom: 13px;
+}
+
+#pictures {
+	padding-bottom: 33px;
+}
+
 
 
 .yt-api-cont {
@@ -627,7 +635,9 @@ h5.text-center.row {
 }
 
 .members h5 {
+	color: darkred;
 	text-align: center;
+	text-shadow: 1px 1px #3B0600;
 
 }
 

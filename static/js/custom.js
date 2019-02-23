@@ -114,6 +114,7 @@ $(document).ready( f => {
 		// 	$('.ghost').show()
 
 		// }
+
 		if (windoww <= 992) {
 			$('.nav.thcoll').css('top','88px')
 			$('.nav.merchstore').css('top','88px')
@@ -169,6 +170,8 @@ $(document).ready( f => {
 	// shows.css('margin-top', carouselHeight)
 
 	$(window).scroll( f => {
+		
+		var windoww = $(window).width() 
 
 		var windowTop = $(window).scrollTop()
 		var showsNav = $('.nav.upcomingshows').offset().top - 95
@@ -177,6 +180,7 @@ $(document).ready( f => {
 			$('.nav.upcomingshows').css({'position':'sticky', 'z-index': '1', 'top': '95.5px', 'width': '100%'})
 		}
 		if (windowTop > showsNav && windoww <= 992) {
+			console.log("hello")
 			$('.nav.upcomingshows').css({'position':'sticky', 'z-index': '1', 'top': '81px', 'width': '100%'})
 		}
 
