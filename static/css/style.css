@@ -57,14 +57,14 @@ nav {
 .socmed.sidebar img {
 	width: 55px;
 	margin-top: 4px;
-	background-color: darkred;
+	background-color: white;
 	border-radius: 13px;
-	box-shadow: -1px -1px #3B0600;
-	opacity: .8;
+	box-shadow: -1px -1px white;
+	opacity: .7;
 }
 
 .socmed.sidebar img:hover {
-	box-shadow: 1px -1px #3B0600;
+	box-shadow: 1px -1px white;
 }
 
 .socmed a.w img {
@@ -102,10 +102,10 @@ nav {
 .nav.upcomingshows {
 	background-color: black;
 	color: darkred;
-	text-shadow: 2px 1px #3B0600;
 	box-shadow: 0px -1px 13px black;
 	opacity: .8;
 	border-bottom: white .5px solid;
+	text-shadow: 1px 1px #3B0600; 
 }
 
 #upcomingshows {
@@ -178,8 +178,8 @@ nav {
 }
 
 #alboom {
-	text-shadow: 1.5px 1px #cf212a;
-	color: white;
+	color: darkred;
+    text-shadow: 1px 1px #3B0600; 
 }
 
 .showinfo .text-center {
@@ -439,7 +439,7 @@ h5#featured{
 #merch h5 {
 	margin-top: 24px;
 	color: darkred;
-	text-shadow: 2px 1px #3B0600;
+    text-shadow: 1px 1px #3B0600; 
 }
 
 #merch .col-sm {
@@ -858,10 +858,10 @@ footer {
 
 #footer-links li {
 	text-shadow: 1.5px 1px darkred;
-	width: fit-content;
+	padding: 0px 16px;
 }
 
-#footer-links li:hover {
+#footer-links li a:hover {
 	color: darkred;
 	text-shadow: 1.5px 1px white;
 }
