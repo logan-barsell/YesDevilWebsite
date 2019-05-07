@@ -169,7 +169,8 @@ nav {
 }
 
 .showinfo .list-group-item {
-	text-shadow: 1px 1px darkred;
+	color: darkred;
+	text-shadow: 1px 1px #3B0600;
 }
 
 .showinfo .list-group-item span {
