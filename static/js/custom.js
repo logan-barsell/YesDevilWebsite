@@ -155,6 +155,7 @@ $(document).ready( f => {
 
 	var windowTop = $(window).scrollTop()
 	var shows = $('.nav.upcomingshows')
+
 	var showsNav = shows.offset().top - 95.5
 	if (windowTop > showsNav && windoww > 992) {
 			$('.nav.upcomingshows').css({'position':'sticky', 'z-index': '1', 'top': '95.5px', 'width': '100%'})
@@ -203,6 +204,7 @@ $(document).ready( f => {
 	// MEDIA.JS
 
 	$('#videos').hide()
+	console.log('hello')
 
 	$('.pictures').click( f=> {
 		$('.nav-link').removeClass('active')
@@ -393,6 +395,36 @@ $(document).ready( f => {
 
 	})
 
+
+	$('.lv').hide()
+	$('.bv').hide()
+
+	$('.live').click( f => {
+		$('.live').addClass('select')
+		$('.mvids').removeClass('select')
+		$('.vlogs').removeClass('select')
+		$('.lv').show()
+		$('.bv').hide()
+		$('.mv').hide()
+	})
+
+	$('.vlogs').click( f => {
+		$('.live').removeClass('select')
+		$('.mvids').removeClass('select')
+		$('.vlogs').addClass('select')
+		$('.lv').hide()
+		$('.bv').show()
+		$('.mv').hide()
+	})
+
+	$('.mvids').click( f => {
+		$('.live').removeClass('select')
+		$('.mvids').addClass('select')
+		$('.vlogs').removeClass('select')
+		$('.lv').hide()
+		$('.bv').hide()
+		$('.mv').show()
+	})
 	
 
 
