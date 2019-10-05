@@ -57,14 +57,20 @@ nav {
 .socmed.sidebar img {
 	width: 55px;
 	margin-top: 4px;
-	background-color: white;
+	background-color: darkred;
 	border-radius: 13px;
-	box-shadow: -1px -1px white;
+	box-shadow: -1px -1px darkred;
 	opacity: .7;
 }
 
+.socmed.sidebar .w img {
+	background-color: white;
+	box-shadow: -1px -1px white;
+
+}
+
 .socmed.sidebar img:hover {
-	box-shadow: 1px -1px white;
+	box-shadow: 1px -1px darkred;
 }
 
 .socmed a.w img {
