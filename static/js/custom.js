@@ -204,7 +204,6 @@ $(document).ready( f => {
 	// MEDIA.JS
 
 	$('#videos').hide()
-	console.log('hello')
 
 	$('.pictures').click( f=> {
 		$('.nav-link').removeClass('active')

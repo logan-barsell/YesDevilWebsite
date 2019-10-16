@@ -1066,3 +1066,7 @@ a.disabled:hover {
   -webkit-transform: translateX(-8px);
   transform: translateX(-8px);
 }
+html {
+    visibility: visible;
+    opacity: 1;
+}
