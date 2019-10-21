@@ -885,7 +885,7 @@ $(document).ready( f => {
 	// 	})
 	// }
 
-	
+	//Defers video loading until after rest of the page finishes loading
 	function init() {
 	var vidDefer = document.getElementsByTagName('iframe')
 	for (var i=0; i<vidDefer.length; i++) {
@@ -893,6 +893,7 @@ $(document).ready( f => {
 	vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'))
 	} } }
 	window.onload = init
+
 
 
 
