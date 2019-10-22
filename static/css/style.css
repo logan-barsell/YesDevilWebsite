@@ -131,6 +131,14 @@ nav {
 	max-width: 366px;
 }
 
+.showinfo .card {
+	background: rgba(0,0,0,.2);
+}
+
+.showinfo li {
+	background: rgba(0,0,0,.0);
+}
+
 .showad img {
 	border: 3px solid black;
     border-radius: 7px;
@@ -166,6 +174,10 @@ nav {
 	text-shadow: 1.5px 1px black;
 }
 
+.showinfo .card-text {
+	color: white;
+}
+
 .showinfo button {
 	margin-top: 5px;
 }
@@ -183,7 +195,7 @@ nav {
 }
 
 .showinfo .list-group-item span {
-	color: black;
+	color: white;
 	text-shadow: none;
 }
 
