@@ -403,12 +403,24 @@ $(document).ready( f => {
 	
 
 	//Defers video loading until after rest of the page finishes loading
+	// function init() {
+	// var vidDefer = document.getElementsByTagName('iframe')
+	// console.log(vidDefer.length)
+	// for (var i=0; i<vidDefer.length; i++) {
+	// if(vidDefer[i].getAttribute('data-src')) {
+	// vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'))
+	// } } }
+	// window.onload = init
+
 	function init() {
-	var vidDefer = document.getElementsByTagName('iframe')
-	for (var i=0; i<vidDefer.length; i++) {
-	if(vidDefer[i].getAttribute('data-src')) {
-	vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'))
-	} } }
+		var vidDefer = document.getElementsByTagName('iframe')
+		var iframes = Array.prototype.slice.call(vidDefer)
+		iframes.forEach(function(iframe) {
+			if(iframe.getAttribute('data-src')) {
+				iframe.setAttribute('src',iframe.getAttribute('data-src'))
+			}
+		})
+	}
 	window.onload = init
 
 
