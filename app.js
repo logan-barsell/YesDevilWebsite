@@ -27,8 +27,7 @@ const express = require('express'),
 
 
 	app.set('views', __dirname+'/public')
-	// Sets view engine to pug
-	// app.set('view engine', 'pug')
+
 	app.use('/', express.static(path.join(
 		__dirname+"/public")))
 
@@ -54,32 +53,14 @@ const express = require('express'),
 	// Serves static files
 	.use('/static', express.static(__dirname+"/static"))
 
-	.use('/api', require('./routes/api').route)
+	// .use('/api', require('./routes/api').route)
 
 	.get('/', (req, res) => {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 		res.render('index')
 	})
 
 
-	// .get('/music', (req, res) => {
-	// 	res.render("music")
-	// })
 
-	// .get('/store', (req, res) => {
-	// 	res.render("store")
-	// })
-
-	// .get('/media', (req, res) => {
-	// 	res.render("media")
-	// })
-
-	// .get('/aboutus', (req, res) => {
-	// 	res.render("aboutus")
-	// })
-
-	// .get('/contact', (req, res) => {
-	// 	res.render("contact")
-	// })
 
 
 http.createServer(app).listen(8080, 'localhost')
