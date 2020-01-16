@@ -119,6 +119,7 @@ $(document).ready( f => {
 			$('.nav.thcoll').css('top','88px')
 			$('.nav.merchstore').css('top','88px')
 			$('.nav.upcomingshows').css('top','81px')
+			$('.nav.membersNav').css('top','88px')
 			$('#blog .nav').css('top','88px')
 			console.log("nsdaf")
 		} 
@@ -128,6 +129,7 @@ $(document).ready( f => {
 			$('.nav.thcoll').css('top','95.5px')
 			$('.nav.merchstore').css('top','95.5px')
 			$('.nav.upcomingshows').css('top','95.5px')
+			$('.nav.membersNav').css('top','95.5px')
 			$('#blog .nav').css('top','95.5px')
 		}
 		// }
@@ -155,29 +157,36 @@ $(document).ready( f => {
 
 	var windowTop = $(window).scrollTop()
 	var shows = $('.nav.upcomingshows')
-
 	var showsNav = shows.offset().top - 95.5
+	var membersNav = $('.nav.membersNav').offset().top - 95.5
+
 	if (windowTop > showsNav && windoww > 992) {
 			$('.nav.upcomingshows').css({'position':'sticky', 'z-index': '1', 'top': '95.5px', 'width': '100%'})
 		}
 	if (windowTop > showsNav && windoww <= 992) {
-			console.log("IMHERE")
 			$('.nav.upcomingshows').css({'position':'sticky', 'z-index': '1', 'top': '81px', 'width': '100%'})
 		}
 
 	$(window).scroll( f => {
+
 		
 		var windoww = $(window).width() 
-
 		var windowTop = $(window).scrollTop()
 		var showsNav = $('.nav.upcomingshows').offset().top - 95
+		var membersNav = $('.nav.membersNav').offset().top - 87.75
 
 		if (windowTop > showsNav && windoww > 992) {
 			$('.nav.upcomingshows').css({'position':'sticky', 'z-index': '1', 'top': '95.5px', 'width': '100%'})
 		}
 		if (windowTop > showsNav && windoww <= 992) {
-			console.log("hello")
 			$('.nav.upcomingshows').css({'position':'sticky', 'z-index': '1', 'top': '81px', 'width': '100%'})
+		}
+
+		if (windowTop > membersNav && windoww > 992) {
+			$('.nav.membersNav').css({'position':'sticky', 'z-index': '1', 'top': '95.5px', 'width': '100%'})
+		}
+		if (windowTop > membersNav && windoww <= 992) {
+			$('.nav.membersNav').css({'position':'sticky', 'z-index': '1', 'top': '88px', 'width': '100%'})
 		}
 
 
@@ -403,44 +412,14 @@ $(document).ready( f => {
 	
 
 	//Defers video loading until after rest of the page finishes loading
-	// function init() {
-	// var vidDefer = document.getElementsByTagName('iframe')
-	// console.log(vidDefer.length)
-	// for (var i=0; i<vidDefer.length; i++) {
-	// if(vidDefer[i].getAttribute('data-src')) {
-	// vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'))
-	// } } }
-	// window.onload = init
-
 	function init() {
-		var vidDefer = document.getElementsByTagName('iframe')
-		var iframes = Array.prototype.slice.call(vidDefer)
-		iframes.forEach(function(iframe) {
-			if(iframe.getAttribute('data-src')) {
-				iframe.setAttribute('src',iframe.getAttribute('data-src'))
-			}
-		})
-	}
+	var vidDefer = document.getElementsByTagName('iframe')
+	console.log(vidDefer.length)
+	for (var i=0; i<vidDefer.length; i++) {
+	if(vidDefer[i].getAttribute('data-src')) {
+	vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'))
+	} } }
 	window.onload = init
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
