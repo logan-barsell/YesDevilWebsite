@@ -2,83 +2,54 @@
 
 $(document).ready( f => {
 
-
-
-	$('#music').hide()
-	$('#merch').hide()
-	$('#blog').hide()
-	$('#aboutus').hide()
-	$('#contact').hide()
-
-	$('.link2home').click( f => {
-		$('#home').show()
+	var hidePages = () => {
+		$('#home').hide()
 		$('#music').hide()
 		$('#merch').hide()
 		$('#blog').hide()
 		$('#aboutus').hide()
 		$('#contact').hide()
+	}
+
+	hidePages()
+	$('#home').show()
+
+	$('.link2home').click( f => {
+		hidePages()
+		$('#home').show()
 		document.body.scrollTop = document.documentElement.scrollTop = 0
 	})
 
 	$('.link2music').click( f => {
-		$('#home').hide()
+		hidePages()
 		$('#music').show()
-		$('#merch').hide()
-		$('#blog').hide()
-		$('#aboutus').hide()
-		$('#contact').hide()
 		document.body.scrollTop = document.documentElement.scrollTop = 0
 	})
 
 	$('.link2merch').click( f => {
-		$('#home').hide()
-		$('#music').hide()
+		hidePages()
 		$('#merch').show()
-		$('#blog').hide()
-		$('#aboutus').hide()
-		$('#contact').hide()
 		document.body.scrollTop = document.documentElement.scrollTop = 0
 	})
 
 	$('.link2blog').click( f => {
-		$('#home').hide()
-		$('#music').hide()
-		$('#merch').hide()
+		hidePages()
 		$('#blog').show()
-		$('#aboutus').hide()
-		$('#contact').hide()
 		document.body.scrollTop = document.documentElement.scrollTop = 0
 	})
 
 	$('.link2aboutus').click( f => {
-		$('#home').hide()
-		$('#music').hide()
-		$('#merch').hide()
-		$('#blog').hide()
+		hidePages()
 		$('#aboutus').show()
-		$('#contact').hide()
 		document.body.scrollTop = document.documentElement.scrollTop = 0
 	})
 
 	$('.link2contact').click( f => {
-		$('#home').hide()
-		$('#music').hide()
-		$('#merch').hide()
-		$('#blog').hide()
-		$('#aboutus').hide()
+		hidePages()
 		$('#contact').show()
 		document.body.scrollTop = document.documentElement.scrollTop = 0
 	})
 
-	$('.link2cart').click( f => {
-		$('#home').hide()
-		$('#music').hide()
-		$('#merch').hide()
-		$('#blog').hide()
-		$('#aboutus').hide()
-		$('#contact').hide()
-		document.body.scrollTop = document.documentElement.scrollTop = 0
-	})
 
 	$('#navbarNavAltMarkup .navbar-nav').click( f => {
 		$('#navbarNavAltMarkup').collapse('hide')
@@ -97,6 +68,7 @@ $(document).ready( f => {
 			$('.nav.thcoll').css('top','88px')
 			$('.nav.upcomingshows').css('top','81px')
 			$('#blog .nav').css('top','88px')
+			$('.nav.membersNav').css('top','87px')
 
 		}
 	if (windoww > 768) {
@@ -119,7 +91,7 @@ $(document).ready( f => {
 			$('.nav.thcoll').css('top','88px')
 			$('.nav.merchstore').css('top','88px')
 			$('.nav.upcomingshows').css('top','81px')
-			$('.nav.membersNav').css('top','88px')
+			$('.nav.membersNav').css('top','87px')
 			$('#blog .nav').css('top','88px')
 			console.log("nsdaf")
 		} 
@@ -186,7 +158,7 @@ $(document).ready( f => {
 			$('.nav.membersNav').css({'position':'sticky', 'z-index': '1', 'top': '95.5px', 'width': '100%'})
 		}
 		if (windowTop > membersNav && windoww <= 992) {
-			$('.nav.membersNav').css({'position':'sticky', 'z-index': '1', 'top': '88px', 'width': '100%'})
+			$('.nav.membersNav').css({'position':'sticky', 'z-index': '1', 'top': '87px', 'width': '100%'})
 		}
 
 
@@ -361,34 +333,37 @@ $(document).ready( f => {
 
 	})
 
+	
 
-	$('.lv').hide()
-	$('.bv').hide()
 
-	$('.live').click( f => {
-		$('.live').addClass('select')
-		$('.mvids').removeClass('select')
-		$('.vlogs').removeClass('select')
-		$('.lv').show()
+	var hidevTabs = () => {
+		$('.lv').hide()
 		$('.bv').hide()
 		$('.mv').hide()
+		$('.mvids').removeClass('select')
+		$('.vlogs').removeClass('select')
+		$('.live').removeClass('select')
+	}
+
+	hidevTabs()
+	$('.mvids').addClass('select')
+	$('.mv').show()
+
+	$('.live').click( f => {
+		hidevTabs()
+		$('.live').addClass('select')
+		$('.lv').show()
 	})
 
 	$('.vlogs').click( f => {
-		$('.live').removeClass('select')
-		$('.mvids').removeClass('select')
+		hidevTabs()
 		$('.vlogs').addClass('select')
-		$('.lv').hide()
 		$('.bv').show()
-		$('.mv').hide()
 	})
 
 	$('.mvids').click( f => {
-		$('.live').removeClass('select')
+		hidevTabs()
 		$('.mvids').addClass('select')
-		$('.vlogs').removeClass('select')
-		$('.lv').hide()
-		$('.bv').hide()
 		$('.mv').show()
 	})
 	

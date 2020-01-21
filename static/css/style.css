@@ -527,9 +527,6 @@ h5#featured{
 	margin-bottom: 10px;
 }
 
-.ghost {
-	display: none;
-}
 
 #blog .img-container {
 	margin-top: 33px;
@@ -683,6 +680,7 @@ h5.text-center.row {
 	color: darkred;
 	text-shadow: 1px 1px #3B0600;
 	border-bottom: .5px solid white;
+	opacity: .8;
 }
 
 .members h5 {
@@ -753,6 +751,7 @@ h5.text-center.row {
 
 #contact .sendmsg {
 	margin: auto;
+	padding-bottom: 33px;
 }
 
 .sharethis-inline-follow-buttons {
