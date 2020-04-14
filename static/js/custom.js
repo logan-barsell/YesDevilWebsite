@@ -2,6 +2,8 @@
 
 $(document).ready( f => {
 
+	$('#loadDEVIL').show()
+
 	var hidePages = () => {
 		$('#home').hide()
 		$('#music').hide()
@@ -182,6 +184,7 @@ $(document).ready( f => {
 		$('.pictures').addClass('active')
 		$('#pictures').show()
 		$('#videos').hide()
+		document.body.scrollTop = document.documentElement.scrollTop = 0
 	})
 
 	$('.videos').click( f=> {
@@ -189,6 +192,7 @@ $(document).ready( f => {
 		$('.videos').addClass('active')
 		$('#videos').show()
 		$('#pictures').hide()
+		document.body.scrollTop = document.documentElement.scrollTop = 0
 	})
 
 
@@ -395,6 +399,18 @@ $(document).ready( f => {
 	vidDefer[i].setAttribute('src',vidDefer[i].getAttribute('data-src'))
 	} } }
 	window.onload = init
+
+
+
+	// Pace.on('hide', function() {
+	// 	$('#loadDEVIL').hide()
+	// })
+
+
+
+
+
+
 
 
 
