@@ -1073,36 +1073,42 @@
 
 
     <nav class="navbar navbar-light justify-content-around">
-      <form class="form-inline newsletter justify-content-center" action="https://formspree.io/contact@yesdevil.com" method="POST">
-        <input class="form-control mr-sm-2" name="email" type="email" placeholder="Enter your email here" required="">
-        <button class="btn btn-outline-light my-2 my-sm-0" value="send" type="submit" data-target="#thankyou">Sign up for our newsletter</button>
-     <!--    <div class="modal fade" id="thankyou" tabindex="-1" role="dialog" aria-labelledby="thankyou" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Thank you!</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-              </div>
-              <div class="modal-body">Keep an eye out for exciting Yes Devil news!</div><span>You're one step closer to exclusive content.</span>
-              <div class="modal-body">
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                    <div class="input-group-text">
-                      <input type="checkbox" aria-label="Checkbox for following text input">
-                    </div>
-                    <div>I want to be notified about special offers and deals, upcoming shows, and other Yes Devil news.</div>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button class="btn btn-secondary tempbutton" type="button" data-dismiss="modal">Close</button>
-                <button class="btn btn-primary" type="button">Sign me up!!!</button>
-              </div>
+
+            <!-- Button trigger modal -->
+      <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#newsletterModal">
+        Subscribe to our Newsletter
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="newsletterModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Yes Devil News</h5>
+           
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form class="form-inline newsletter justify-content-center" action="https://formspree.io/contact@yesdevil.com" method="POST">
+                <input class="form-control mr-sm-2" name="email" type="email" placeholder="Enter your email here" required="">
+                <ul id="newsDetails">
+                  <li>Stay informed on all upcoming events</li>
+                  <li>Recieve updates on new music releases, music videos, and vlogs</li>
+                  <li>Be notified of special deals, new merch, and giveaways</li>
+                </ul>
+                
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+              <button id="newsSub" class="btn btn-outline-light my-2 my-sm-0" value="send" type="submit">Subscribe</button>
+              </form>
             </div>
           </div>
-        </div> -->
-      </form>
-  
+        </div>
+      </div>
+
       <button
           class="snipcart-add-item btn btn-outline-light beer"
           data-item-id="5"
