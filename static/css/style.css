@@ -760,8 +760,7 @@ h5.text-center.row {
 }
 
 .beer {
-	margin: auto;
-
+	margin: 0px 5px;
 }
 
 .beer img {
@@ -770,7 +769,7 @@ h5.text-center.row {
 }
 
 
-@media only screen and (max-width: 903px) {
+@media only screen and (max-width: 618px) {
 	.beer {
 		margin-top: 10px;
 		margin-left: 13px;
@@ -819,6 +818,28 @@ button.close {
 	input.form-control{
 		margin-left: 0px;
 	}
+}
+
+/*BOTTOM NAV ICONS*/
+
+.iconsNav img {
+	border-radius: 11px;
+	width: 40px;
+	margin: 11px 7px;
+}
+
+@media only screen and (max-width: 949px) {
+	.iconsNav {
+		margin-top: 13px;
+	}
+
+	#bottomNav {
+		padding-top: 21px;
+	}
+}
+
+.mailz {
+	border-radius: 4px;
 }
 
 #st-1 span{
