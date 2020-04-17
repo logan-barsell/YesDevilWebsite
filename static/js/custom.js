@@ -15,40 +15,53 @@ $(document).ready( f => {
 
 	hidePages()
 	$('#home').show()
+	$('a.link2home').addClass('active')
 
 	$('.link2home').click( f => {
 		hidePages()
 		$('#home').show()
+		$('a.nav-item').removeClass('active')
+		$('a.link2home').addClass('active')
 		document.body.scrollTop = document.documentElement.scrollTop = 0
 	})
 
 	$('.link2music').click( f => {
 		hidePages()
 		$('#music').show()
+		$('a.nav-item').removeClass('active')
+		$('a.link2music').addClass('active')
 		document.body.scrollTop = document.documentElement.scrollTop = 0
 	})
 
 	$('.link2merch').click( f => {
 		hidePages()
 		$('#merch').show()
+		$('a.nav-item').removeClass('active')
+		$('.link2merch').addClass('active')
 		document.body.scrollTop = document.documentElement.scrollTop = 0
 	})
 
 	$('.link2blog').click( f => {
 		hidePages()
 		$('#blog').show()
+		$('a.nav-item').removeClass('active')
+		$('.link2blog').addClass('active')
 		document.body.scrollTop = document.documentElement.scrollTop = 0
 	})
 
 	$('.link2aboutus').click( f => {
 		hidePages()
 		$('#aboutus').show()
+		$('a.nav-item').removeClass('active')
+		$('.link2aboutus').addClass('active')
 		document.body.scrollTop = document.documentElement.scrollTop = 0
 	})
 
 	$('.link2contact').click( f => {
 		hidePages()
 		$('#contact').show()
+		$('a.nav-item').removeClass('active')
+		$('.link2contact').addClass('active')
 		document.body.scrollTop = document.documentElement.scrollTop = 0
 	})
 

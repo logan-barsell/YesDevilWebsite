@@ -33,6 +33,16 @@ nav {
 	color: darkred;
 }
 
+a.nav-item.active {
+	color: darkred;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+	color: darkred;
+}
+
+
+
 .navbar-nav {
 	width: 100%;
 }
