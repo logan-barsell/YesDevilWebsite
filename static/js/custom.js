@@ -2,7 +2,9 @@
 
 $(document).ready( f => {
 
-	$('#loadDEVIL').show()
+
+
+
 
 	var hidePages = () => {
 		$('#home').hide()
@@ -415,9 +417,10 @@ $(document).ready( f => {
 
 
 
-	// Pace.on('hide', function() {
-	// 	$('#loadDEVIL').hide()
-	// })
+	Pace.on('hide', function() {
+		$('.yesdevil').show()
+		console.log("end")
+	})
 
 
 
