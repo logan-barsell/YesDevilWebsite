@@ -6,7 +6,7 @@
   "dependencies": {
     "@easypost/api": "^3.7.1",
     "body-parser": "^1.18.3",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "express-session": "^1.15.6",
     "fs": "0.0.1-security",
     "gulp": "^3.9.1",
