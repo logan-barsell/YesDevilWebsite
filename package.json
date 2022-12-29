@@ -19,7 +19,7 @@
     "pm2": "^2.10.4",
     "pug": "^2.0.3",
     "stripe": "^6.2.1",
-    "webpack": "^4.15.1"
+    "webpack": "^5.75.0"
   },
   "devDependencies": {},
   "scripts": {
